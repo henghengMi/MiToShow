@@ -1,0 +1,81 @@
+#ifndef TSHeader_pch
+#define TSHeader_pch
+
+/** 常用的类或框架 **/
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Extension.h"
+#import "NSString+SizeWithFont.h"
+#import "UIImage+Mi.h"
+
+/** 快捷定义UIImage对象 **/
+#define IMAGE(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
+
+/** RGB颜色 */
+#define RGB_Color(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+/** RGB颜色（可调透明度）*/
+#define RGBA_Color(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+/**
+ *  16进制颜色
+ */
+#define LJColorHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define LJColorHexA(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
+
+/** 提示 */
+#define  SHOWALERT(mesageString) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:mesageString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];\
+[alert show];
+
+
+/** 数据本地化 */
+#define USERDEFAULTS [NSUserDefaults standardUserDefaults]
+
+/** 屏幕物理尺寸 */
+#define K_Width  [UIScreen mainScreen].bounds.size.width
+#define K_Height [UIScreen mainScreen].bounds.size.height
+#define Public_Height 240
+#define More_Than_568 K_Height > 568 ?
+#define More_Than_667 K_Height > 667 ?
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+/**
+ *  各尺寸的高度
+ */
+#define isiPhone4  ScreenHeight == 480
+#define isiPhone5  ScreenHeight == 568
+#define isiPhone6  ScreenHeight == 667
+#define isiPhone6P ScreenHeight == 736
+
+
+
+/**
+ *  屏幕适配
+ */
+#define autoSizeScaleX (ScreenHeight > 480 ? ScreenWidth/320:1.0)
+#define autoSizeScaleY (ScreenHeight > 480 ? ScreenHeight/568:1.0)
+CG_INLINE CGRect CGRectMakeCustom(CGFloat x, CGFloat y, CGFloat width, CGFloat height) {
+    CGRect rect;
+    rect.origin.x = x * autoSizeScaleX;
+    rect.origin.y = y * autoSizeScaleY;
+    rect.size.width = width * autoSizeScaleX;
+    rect.size.height = height * autoSizeScaleY;
+    return rect;
+}
+
+
+#endif
+/** DEBUG  模式下打印日志,当前行 */
+#ifdef DEBUG
+#define NSLog(format, ...) do {                                                             \
+fprintf(stderr, "<%s : %d> %s\n",                                           \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "-------\n");                                               \
+} while (0)
+#else
+#define NSLog(...)
+#endif
