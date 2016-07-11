@@ -30,6 +30,7 @@
 		0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651841D30E4C500857854 /* UIColor+LJ.m */; };
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
+		6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,9 @@
 		0C3651861D30E4C500857854 /* UIFont+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LJ.m"; sourceTree = "<group>"; };
 		0C3651871D30E4C500857854 /* UIImage+Mi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mi.h"; sourceTree = "<group>"; };
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
+		6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.debug.xcconfig"; sourceTree = "<group>"; };
+		8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mi_ToShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,8 @@
 				0C3651251D30910800857854 /* Mi-ToShowTests */,
 				0C3651301D30910800857854 /* Mi-ToShowUITests */,
 				0C36510A1D30910800857854 /* Products */,
+				3D86F745F3AB2EBBF3A2CCE6 /* Pods */,
+				3AE97AE8A9DCD7F20DD0C2CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,6 +344,23 @@
 			path = Care;
 			sourceTree = "<group>";
 		};
+		3AE97AE8A9DCD7F20DD0C2CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D86F745F3AB2EBBF3A2CCE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */,
+				929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,9 +368,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C3651361D30910800857854 /* Build configuration list for PBXNativeTarget "Mi-ToShow" */;
 			buildPhases = (
+				2530CFA0E4849E7FC23D1C5A /* 📦 Check Pods Manifest.lock */,
 				0C3651051D30910800857854 /* Sources */,
 				0C3651061D30910800857854 /* Frameworks */,
 				0C3651071D30910800857854 /* Resources */,
+				5C160BFF8083CC101DB9AA1A /* 📦 Embed Pods Frameworks */,
+				B497EB9DA70C8939F7EED341 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -461,6 +488,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2530CFA0E4849E7FC23D1C5A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C160BFF8083CC101DB9AA1A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B497EB9DA70C8939F7EED341 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C3651051D30910800857854 /* Sources */ = {
@@ -618,6 +693,7 @@
 		};
 		0C3651371D30910800857854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -634,6 +710,7 @@
 		};
 		0C3651381D30910800857854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
