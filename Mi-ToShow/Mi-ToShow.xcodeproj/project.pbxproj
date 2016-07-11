@@ -19,9 +19,6 @@
 		0C36515C1D30A2C100857854 /* TSBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36515B1D30A2C100857854 /* TSBasicViewController.m */; };
 		0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36515E1D30A2D700857854 /* TSHomeController.m */; };
 		0C3651631D30A34500857854 /* TSMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651621D30A34500857854 /* TSMeController.m */; };
-		0C3651661D30A35600857854 /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651651D30A35600857854 /* TSDrawController.m */; };
-		0C36516F1D30A3AA00857854 /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36516E1D30A3AA00857854 /* TSMessageController.m */; };
-		0C3651761D30A56100857854 /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651751D30A56100857854 /* TSCareController.m */; };
 		0C3651791D30CD1200857854 /* TSCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651781D30CD1200857854 /* TSCustomTabBar.m */; };
 		0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36517B1D30D90500857854 /* UIView+Extension.m */; };
 		0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36517D1D30E49F00857854 /* Foundation+Log.m */; };
@@ -30,6 +27,9 @@
 		0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651841D30E4C500857854 /* UIColor+LJ.m */; };
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
+		0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9411D3335610019A7BA /* TSCareController.m */; };
+		0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9451D33356F0019A7BA /* TSDrawController.m */; };
+		0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9491D33357E0019A7BA /* TSMessageController.m */; };
 		6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,12 +77,6 @@
 		0C36515E1D30A2D700857854 /* TSHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeController.m; sourceTree = "<group>"; };
 		0C3651611D30A34500857854 /* TSMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeController.h; sourceTree = "<group>"; };
 		0C3651621D30A34500857854 /* TSMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeController.m; sourceTree = "<group>"; };
-		0C3651641D30A35600857854 /* TSDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawController.h; sourceTree = "<group>"; };
-		0C3651651D30A35600857854 /* TSDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawController.m; sourceTree = "<group>"; };
-		0C36516D1D30A3AA00857854 /* TSMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageController.h; sourceTree = "<group>"; };
-		0C36516E1D30A3AA00857854 /* TSMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageController.m; sourceTree = "<group>"; };
-		0C3651741D30A56100857854 /* TSCareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareController.h; sourceTree = "<group>"; };
-		0C3651751D30A56100857854 /* TSCareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareController.m; sourceTree = "<group>"; };
 		0C3651771D30CD1200857854 /* TSCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCustomTabBar.h; sourceTree = "<group>"; };
 		0C3651781D30CD1200857854 /* TSCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCustomTabBar.m; sourceTree = "<group>"; };
 		0C36517A1D30D90500857854 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -98,6 +92,12 @@
 		0C3651861D30E4C500857854 /* UIFont+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LJ.m"; sourceTree = "<group>"; };
 		0C3651871D30E4C500857854 /* UIImage+Mi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mi.h"; sourceTree = "<group>"; };
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
+		0CA6F9401D3335610019A7BA /* TSCareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareController.h; sourceTree = "<group>"; };
+		0CA6F9411D3335610019A7BA /* TSCareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareController.m; sourceTree = "<group>"; };
+		0CA6F9441D33356F0019A7BA /* TSDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawController.h; sourceTree = "<group>"; };
+		0CA6F9451D33356F0019A7BA /* TSDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawController.m; sourceTree = "<group>"; };
+		0CA6F9481D33357E0019A7BA /* TSMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageController.h; sourceTree = "<group>"; };
+		0CA6F9491D33357E0019A7BA /* TSMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageController.m; sourceTree = "<group>"; };
 		6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.debug.xcconfig"; sourceTree = "<group>"; };
 		8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mi_ToShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,8 +206,7 @@
 		0C3651411D3096A600857854 /* Draw */ = {
 			isa = PBXGroup;
 			children = (
-				0C3651641D30A35600857854 /* TSDrawController.h */,
-				0C3651651D30A35600857854 /* TSDrawController.m */,
+				0CA6F9431D33356F0019A7BA /* Controller */,
 			);
 			path = Draw;
 			sourceTree = "<group>";
@@ -252,8 +251,7 @@
 		0C3651471D3096A600857854 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				0C36516D1D30A3AA00857854 /* TSMessageController.h */,
-				0C36516E1D30A3AA00857854 /* TSMessageController.m */,
+				0CA6F9471D33357E0019A7BA /* Controller */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -338,10 +336,36 @@
 		0C3651701D30A40200857854 /* Care */ = {
 			isa = PBXGroup;
 			children = (
-				0C3651741D30A56100857854 /* TSCareController.h */,
-				0C3651751D30A56100857854 /* TSCareController.m */,
+				0CA6F93F1D3335610019A7BA /* Controller */,
 			);
 			path = Care;
+			sourceTree = "<group>";
+		};
+		0CA6F93F1D3335610019A7BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6F9401D3335610019A7BA /* TSCareController.h */,
+				0CA6F9411D3335610019A7BA /* TSCareController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CA6F9431D33356F0019A7BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6F9441D33356F0019A7BA /* TSDrawController.h */,
+				0CA6F9451D33356F0019A7BA /* TSDrawController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CA6F9471D33357E0019A7BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6F9481D33357E0019A7BA /* TSMessageController.h */,
+				0CA6F9491D33357E0019A7BA /* TSMessageController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3AE97AE8A9DCD7F20DD0C2CB /* Frameworks */ = {
@@ -542,17 +566,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
 				0C3651501D309FA300857854 /* TSTabBarController.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
+				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
 				0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */,
-				0C3651661D30A35600857854 /* TSDrawController.m in Sources */,
-				0C36516F1D30A3AA00857854 /* TSMessageController.m in Sources */,
-				0C3651761D30A56100857854 /* TSCareController.m in Sources */,
 				0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */,
 				0C3651791D30CD1200857854 /* TSCustomTabBar.m in Sources */,
+				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
 				0C3651531D309FC200857854 /* TSNavigationController.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
