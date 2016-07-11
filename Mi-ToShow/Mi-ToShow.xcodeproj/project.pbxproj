@@ -12,14 +12,8 @@
 		0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C36511A1D30910800857854 /* LaunchScreen.storyboard */; };
 		0C3651271D30910800857854 /* Mi_ToShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651261D30910800857854 /* Mi_ToShowTests.m */; };
 		0C3651321D30910800857854 /* Mi_ToShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651311D30910800857854 /* Mi_ToShowUITests.m */; };
-		0C36514B1D3096A600857854 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651451D3096A600857854 /* AppDelegate.mm */; };
-		0C3651501D309FA300857854 /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36514F1D309FA300857854 /* TSTabBarController.m */; };
-		0C3651531D309FC200857854 /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651521D309FC200857854 /* TSNavigationController.m */; };
-		0C3651561D30A09A00857854 /* TSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651551D30A09A00857854 /* TSTabBar.m */; };
-		0C36515C1D30A2C100857854 /* TSBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36515B1D30A2C100857854 /* TSBasicViewController.m */; };
 		0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36515E1D30A2D700857854 /* TSHomeController.m */; };
 		0C3651631D30A34500857854 /* TSMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651621D30A34500857854 /* TSMeController.m */; };
-		0C3651791D30CD1200857854 /* TSCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651781D30CD1200857854 /* TSCustomTabBar.m */; };
 		0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36517B1D30D90500857854 /* UIView+Extension.m */; };
 		0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36517D1D30E49F00857854 /* Foundation+Log.m */; };
 		0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651801D30E4C500857854 /* NSString+SizeWithFont.m */; };
@@ -30,6 +24,13 @@
 		0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9411D3335610019A7BA /* TSCareController.m */; };
 		0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9451D33356F0019A7BA /* TSDrawController.m */; };
 		0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9491D33357E0019A7BA /* TSMessageController.m */; };
+		0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F94D1D333D610019A7BA /* AppDelegate.mm */; };
+		0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9501D333D610019A7BA /* TSBasicViewController.m */; };
+		0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9521D333D610019A7BA /* TSNavigationController.m */; };
+		0CA6F95D1D333D610019A7BA /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9541D333D610019A7BA /* TSTabBarController.m */; };
+		0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9571D333D610019A7BA /* TSCustomTabBar.m */; };
+		0CA6F95F1D333D610019A7BA /* TSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9591D333D610019A7BA /* TSTabBar.m */; };
+		0CA6F9651D336EBD0019A7BA /* TSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */; };
 		6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,23 +63,11 @@
 		0C36512D1D30910800857854 /* Mi-ToShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mi-ToShowUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3651311D30910800857854 /* Mi_ToShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mi_ToShowUITests.m; sourceTree = "<group>"; };
 		0C3651331D30910800857854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C3651441D3096A600857854 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0C3651451D3096A600857854 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		0C36514D1D30980400857854 /* TSHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSHeader.pch; sourceTree = "<group>"; };
-		0C36514E1D309FA300857854 /* TSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBarController.h; sourceTree = "<group>"; };
-		0C36514F1D309FA300857854 /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
-		0C3651511D309FC200857854 /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
-		0C3651521D309FC200857854 /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
-		0C3651541D30A09A00857854 /* TSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBar.h; sourceTree = "<group>"; };
-		0C3651551D30A09A00857854 /* TSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBar.m; sourceTree = "<group>"; };
-		0C36515A1D30A2C100857854 /* TSBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBasicViewController.h; sourceTree = "<group>"; };
-		0C36515B1D30A2C100857854 /* TSBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBasicViewController.m; sourceTree = "<group>"; };
 		0C36515D1D30A2D700857854 /* TSHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeController.h; sourceTree = "<group>"; };
 		0C36515E1D30A2D700857854 /* TSHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeController.m; sourceTree = "<group>"; };
 		0C3651611D30A34500857854 /* TSMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeController.h; sourceTree = "<group>"; };
 		0C3651621D30A34500857854 /* TSMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeController.m; sourceTree = "<group>"; };
-		0C3651771D30CD1200857854 /* TSCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCustomTabBar.h; sourceTree = "<group>"; };
-		0C3651781D30CD1200857854 /* TSCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCustomTabBar.m; sourceTree = "<group>"; };
 		0C36517A1D30D90500857854 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		0C36517B1D30D90500857854 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		0C36517D1D30E49F00857854 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -98,6 +87,20 @@
 		0CA6F9451D33356F0019A7BA /* TSDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawController.m; sourceTree = "<group>"; };
 		0CA6F9481D33357E0019A7BA /* TSMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageController.h; sourceTree = "<group>"; };
 		0CA6F9491D33357E0019A7BA /* TSMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageController.m; sourceTree = "<group>"; };
+		0CA6F94C1D333D610019A7BA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0CA6F94D1D333D610019A7BA /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		0CA6F94F1D333D610019A7BA /* TSBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBasicViewController.h; sourceTree = "<group>"; };
+		0CA6F9501D333D610019A7BA /* TSBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBasicViewController.m; sourceTree = "<group>"; };
+		0CA6F9511D333D610019A7BA /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
+		0CA6F9521D333D610019A7BA /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
+		0CA6F9531D333D610019A7BA /* TSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBarController.h; sourceTree = "<group>"; };
+		0CA6F9541D333D610019A7BA /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
+		0CA6F9561D333D610019A7BA /* TSCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCustomTabBar.h; sourceTree = "<group>"; };
+		0CA6F9571D333D610019A7BA /* TSCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCustomTabBar.m; sourceTree = "<group>"; };
+		0CA6F9581D333D610019A7BA /* TSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBar.h; sourceTree = "<group>"; };
+		0CA6F9591D333D610019A7BA /* TSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBar.m; sourceTree = "<group>"; };
+		0CA6F9631D336EBD0019A7BA /* TSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationBar.h; sourceTree = "<group>"; };
+		0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationBar.m; sourceTree = "<group>"; };
 		6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.debug.xcconfig"; sourceTree = "<group>"; };
 		8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mi_ToShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,10 +195,10 @@
 		0C36513F1D3096A600857854 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0C3651701D30A40200857854 /* Care */,
-				0C3651411D3096A600857854 /* Draw */,
 				0C3651421D3096A600857854 /* Home */,
 				0C3651431D3096A600857854 /* Main */,
+				0C3651701D30A40200857854 /* Care */,
+				0C3651411D3096A600857854 /* Draw */,
 				0C3651461D3096A600857854 /* Me */,
 				0C3651471D3096A600857854 /* Message */,
 				0C3651481D3096A600857854 /* Other */,
@@ -224,18 +227,9 @@
 		0C3651431D3096A600857854 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0C3651441D3096A600857854 /* AppDelegate.h */,
-				0C3651451D3096A600857854 /* AppDelegate.mm */,
-				0C36514E1D309FA300857854 /* TSTabBarController.h */,
-				0C36514F1D309FA300857854 /* TSTabBarController.m */,
-				0C3651511D309FC200857854 /* TSNavigationController.h */,
-				0C3651521D309FC200857854 /* TSNavigationController.m */,
-				0C3651541D30A09A00857854 /* TSTabBar.h */,
-				0C3651551D30A09A00857854 /* TSTabBar.m */,
-				0C36515A1D30A2C100857854 /* TSBasicViewController.h */,
-				0C36515B1D30A2C100857854 /* TSBasicViewController.m */,
-				0C3651771D30CD1200857854 /* TSCustomTabBar.h */,
-				0C3651781D30CD1200857854 /* TSCustomTabBar.m */,
+				0CA6F94B1D333D610019A7BA /* AppDelegate */,
+				0CA6F94E1D333D610019A7BA /* Controller */,
+				0CA6F9551D333D610019A7BA /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -366,6 +360,41 @@
 				0CA6F9491D33357E0019A7BA /* TSMessageController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CA6F94B1D333D610019A7BA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6F94C1D333D610019A7BA /* AppDelegate.h */,
+				0CA6F94D1D333D610019A7BA /* AppDelegate.mm */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0CA6F94E1D333D610019A7BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6F94F1D333D610019A7BA /* TSBasicViewController.h */,
+				0CA6F9501D333D610019A7BA /* TSBasicViewController.m */,
+				0CA6F9511D333D610019A7BA /* TSNavigationController.h */,
+				0CA6F9521D333D610019A7BA /* TSNavigationController.m */,
+				0CA6F9531D333D610019A7BA /* TSTabBarController.h */,
+				0CA6F9541D333D610019A7BA /* TSTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CA6F9551D333D610019A7BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6F9631D336EBD0019A7BA /* TSNavigationBar.h */,
+				0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */,
+				0CA6F9561D333D610019A7BA /* TSCustomTabBar.h */,
+				0CA6F9571D333D610019A7BA /* TSCustomTabBar.m */,
+				0CA6F9581D333D610019A7BA /* TSTabBar.h */,
+				0CA6F9591D333D610019A7BA /* TSTabBar.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3AE97AE8A9DCD7F20DD0C2CB /* Frameworks */ = {
@@ -568,22 +597,23 @@
 			files = (
 				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
-				0C3651501D309FA300857854 /* TSTabBarController.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
+				0CA6F95D1D333D610019A7BA /* TSTabBarController.m in Sources */,
+				0CA6F95F1D333D610019A7BA /* TSTabBar.m in Sources */,
+				0CA6F9651D336EBD0019A7BA /* TSNavigationBar.m in Sources */,
 				0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */,
 				0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */,
-				0C3651791D30CD1200857854 /* TSCustomTabBar.m in Sources */,
+				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
-				0C3651531D309FC200857854 /* TSNavigationController.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
-				0C3651561D30A09A00857854 /* TSTabBar.m in Sources */,
-				0C36515C1D30A2C100857854 /* TSBasicViewController.m in Sources */,
+				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
-				0C36514B1D3096A600857854 /* AppDelegate.mm in Sources */,
+				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,
+				0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */,
 				0C3651631D30A34500857854 /* TSMeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

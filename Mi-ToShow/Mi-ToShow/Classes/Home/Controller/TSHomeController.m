@@ -17,11 +17,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor redColor];
-    
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+//    self.TSNavTitle = @"首页";
+    self.TSNavLeftImageName = @"addFeed";
+    self.TSNavRightImageName = @"square_03";
+    self.TSNavLeftTitle  = @"画题";
+    self.TSNavRightTitle = @"广场";
 }
 
+- (void)TSNavLeftImageDidClick
+{
+     NSLog(@"TSNavLeftImageDidClick");
+}
+
+- (void)TSNavRightImageDidClick
+{
+    NSLog(@"TSNavRightImageDidClick");
+}
+
+- (void)TSNavLeftTitleDidClick
+{
+    
+    NSLog(@"TSNavLeftTitleDidClick");
+}
+
+- (void)TSNavRightTitleDidClick
+{
+    NSLog(@"TSNavRightTitleDidClick");
+}
 
 
 @end

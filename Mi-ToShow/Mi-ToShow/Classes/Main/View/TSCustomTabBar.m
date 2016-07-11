@@ -66,7 +66,7 @@
     CGFloat tabbarButtonIndex = 0;
   
     for (UIView *child in self.subviews) {
-         NSLog(@"view:%@",child);
+//         NSLog(@"view:%@",child);
         Class class = NSClassFromString(@"UITabBarButton");
         if ([child isKindOfClass:class]) {
             // 设置宽度

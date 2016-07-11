@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 全部隐藏导航栏
     self.navigationBarHidden = YES;
 
 }
@@ -25,8 +26,11 @@
 //拦截push
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
+    viewController.edgesForExtendedLayout = UIRectEdgeNone;//起始点从00开始
+
     if (self.viewControllers.count >0) {
         viewController.hidesBottomBarWhenPushed = YES;
+        
     }
     
     [super pushViewController:viewController animated:animated];

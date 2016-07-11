@@ -1,0 +1,32 @@
+//
+//  TSBasicViewController.h
+//  Mi-ToShow
+//
+//  Created by YuanMiaoHeng on 16/7/9.
+//  Copyright © 2016年 Mi. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface TSBasicViewController : UIViewController
+
+// 标题
+@property(nonatomic,copy)NSString * TSNavTitle;
+
+
+@property(nonatomic, copy) NSString * TSNavLeftImageName ;
+@property(nonatomic, copy) NSString * TSNavRightImageName ;
+@property(nonatomic, copy) NSString * TSNavLeftTitle ;
+@property(nonatomic, copy) NSString * TSNavRightTitle ;
+
+@property(nonatomic, assign,getter=isTSNavOnleftTitle) BOOL TSNavOnleftTitle;
+
+
+-(void)setupNavgation;
+
+-(void)TSNavLeftImageDidClick;
+-(void)TSNavRightImageDidClick;
+-(void)TSNavLeftTitleDidClick;
+-(void)TSNavRightTitleDidClick;
+
+@end

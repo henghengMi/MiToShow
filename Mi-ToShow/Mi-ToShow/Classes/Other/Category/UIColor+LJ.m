@@ -11,7 +11,7 @@
 @implementation UIColor (LJ)
 
 + (UIColor *)LJUserManagerBgColor {
-    return RGB_Color(240, 243, 246);
+    return TSColor(240, 243, 246);
 }
 
 + (UIColor *)LJUserManagerTextFilePlaceHolderColor {
@@ -25,64 +25,64 @@
 
 + (UIColor *)LJUserManagerDoneButtonEnableColor
 {
-    return RGB_Color(28, 195, 210);
+    return TSColor(28, 195, 210);
 }
 
 /** 显示浅色红 */
 //+ (UIColor *)LJShowLightThemeColor {
-//    return RGB_Color(250, 90, 85);
+//    return TSColor(250, 90, 85);
 //}
 
 /** 浅色红 */
 + (UIColor *)LJLightThemeColor {
-    return RGB_Color(250, 125, 125);
+    return TSColor(250, 125, 125);
 }
 
 /** logo颜色、价格、关键部位 */
 + (UIColor *)LJThemeColor {
-    return RGB_Color(250, 90, 85);
+    return TSColor(250, 90, 85);
 }
 
 /** 关键部位显示 */
 + (UIColor *)LJThemeHighlightColor  {
-    return RGB_Color(240, 50, 38);
+    return TSColor(240, 50, 38);
 }
 
 
 
 + (UIColor *)LJNavigationBar_bigTitleColor
 {
-    return  RGB_Color(24, 28, 30);
+    return  TSColor(24, 28, 30);
 }
 
 /** 灰色底 228 */
 + (UIColor *)LJGrayBaseColor {
-    return RGB_Color(228, 228, 228);
+    return TSColor(228, 228, 228);
 }
 
 /** 灰色底 242 */
 + (UIColor *)LJGrayFlashBaseColor {
-    return RGB_Color(242, 242, 242);
+    return TSColor(242, 242, 242);
 }
 
 /** 小标题 灰色 */
 + (UIColor *)LJSmallTitleColor {
-    return RGB_Color(150, 150, 150);
+    return TSColor(150, 150, 150);
 }
 
 /** 文本介绍文字 */
 + (UIColor *)LJIntroductionTextColor {
-    return RGB_Color(198, 199, 200);
+    return TSColor(198, 199, 200);
 }
 
 
 + (UIColor *) LJDividerGrayColor{
-    return  RGB_Color(200, 199, 204);
+    return  TSColor(200, 199, 204);
 }
 
 /** 白底 */
 + (UIColor *)LJBackgroundColor {
-    return RGB_Color(244, 246, 249);
+    return TSColor(244, 246, 249);
 }
 
 + (UIColor *)randomColor
@@ -94,32 +94,32 @@
 }
 
 + (UIColor *)LJWriteOrderTextColor {
-    return RGB_Color(87, 87, 87);
+    return TSColor(87, 87, 87);
 }
 
 + (UIColor *)LJGaryColor {
-    return RGB_Color(238, 238, 238);
+    return TSColor(238, 238, 238);
 }
 
 // add to 12-17
 + (UIColor *)LJSubtitleColor
 {
-    return RGBA_Color(0, 0, 0, 0.5);
+    return TSColor_A(0, 0, 0, 0.5);
 }
 
 + (UIColor *)LJGoodsBGColor
 {
-    return RGBA_Color(228, 228, 228, 0.5);
+    return TSColor_A(228, 228, 228, 0.5);
 }
 
 + (UIColor *)LJTableViewBGColor
 {
-    return RGB_Color(239, 239, 244);
+    return TSColor(239, 239, 244);
 }
 
 // 小标题喜欢用这个颜色。
 + (UIColor *)LJGraySubTitleColor
 {
-    return LJColorHexA(0x181c1e, 0.8);
+    return TSColorHexA(0x181c1e, 0.8);
 }
 @end
