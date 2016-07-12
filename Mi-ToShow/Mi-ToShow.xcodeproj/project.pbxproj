@@ -31,6 +31,8 @@
 		0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9571D333D610019A7BA /* TSCustomTabBar.m */; };
 		0CA6F95F1D333D610019A7BA /* TSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9591D333D610019A7BA /* TSTabBar.m */; };
 		0CA6F9651D336EBD0019A7BA /* TSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */; };
+		0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F96A1D3393160019A7BA /* TSHomeLeftController.m */; };
+		0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */; };
 		6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,10 @@
 		0CA6F9591D333D610019A7BA /* TSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBar.m; sourceTree = "<group>"; };
 		0CA6F9631D336EBD0019A7BA /* TSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationBar.h; sourceTree = "<group>"; };
 		0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationBar.m; sourceTree = "<group>"; };
+		0CA6F9691D3393160019A7BA /* TSHomeLeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeLeftController.h; sourceTree = "<group>"; };
+		0CA6F96A1D3393160019A7BA /* TSHomeLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeLeftController.m; sourceTree = "<group>"; };
+		0CA6F96C1D3393240019A7BA /* TSHomeRightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeRightController.h; sourceTree = "<group>"; };
+		0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeRightController.m; sourceTree = "<group>"; };
 		6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.debug.xcconfig"; sourceTree = "<group>"; };
 		8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mi_ToShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +306,10 @@
 			children = (
 				0C36515D1D30A2D700857854 /* TSHomeController.h */,
 				0C36515E1D30A2D700857854 /* TSHomeController.m */,
+				0CA6F9691D3393160019A7BA /* TSHomeLeftController.h */,
+				0CA6F96A1D3393160019A7BA /* TSHomeLeftController.m */,
+				0CA6F96C1D3393240019A7BA /* TSHomeRightController.h */,
+				0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -597,6 +607,7 @@
 			files = (
 				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
+				0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
@@ -612,6 +623,7 @@
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
 				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
+				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,
 				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,
 				0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */,
 				0C3651631D30A34500857854 /* TSMeController.m in Sources */,

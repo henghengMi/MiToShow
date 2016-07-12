@@ -10,6 +10,8 @@
 
 /** 自定义的高度 **/
 #define TSNavigationHeight 44.0f
+#define TSTableViewHeight ScreenHeight - TSNavigationHeight - 44
+
 
 /** 快捷定义UIImage对象 **/
 #define IMAGE(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]

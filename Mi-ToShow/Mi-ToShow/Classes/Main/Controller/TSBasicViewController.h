@@ -18,6 +18,7 @@
 @property(nonatomic, copy) NSString * TSNavRightImageName ;
 @property(nonatomic, copy) NSString * TSNavLeftTitle ;
 @property(nonatomic, copy) NSString * TSNavRightTitle ;
+@property(nonatomic, copy) UIScrollView * scrollView ;
 
 @property(nonatomic, assign,getter=isTSNavOnleftTitle) BOOL TSNavOnleftTitle;
 
@@ -28,5 +29,10 @@
 -(void)TSNavRightImageDidClick;
 -(void)TSNavLeftTitleDidClick;
 -(void)TSNavRightTitleDidClick;
+- (void)TSNavLeftTitleDidClick_Custom;
+- (void)TSNavRightTitleDidClick_Custom;
+
+- (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass;
+
 
 @end

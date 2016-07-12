@@ -9,7 +9,7 @@
 #import "TSBasicViewController.h"
 #import "TSNavigationBar.h"
 
-@interface TSBasicViewController ()
+@interface TSBasicViewController ()<UIScrollViewDelegate>
 
 @property(nonatomic, weak) TSNavigationBar * navBar ;
 
@@ -17,12 +17,51 @@
 
 @implementation TSBasicViewController
 
+#pragma mark - 懒加载
+- (UIScrollView *)scrollView
+{
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] init];
+        _scrollView.frame = CGRectMake(0, TSNavigationHeight, ScreenWidth, ScreenHeight - TSNavigationHeight );
+        _scrollView.backgroundColor = [UIColor redColor];
+        _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
+        _scrollView.bounces = NO;
+    }
+    return _scrollView;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     // 导航栏
     [self setupNavBar];
     
+    
+    
+}
+
+- (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass
+{
+    // 把scrollView加进去
+    [self.view addSubview:self.scrollView];
+    
+    UIViewController *leftVC = [[leftControlleClass alloc] init];
+    [self addChildViewController:leftVC];
+    [self.scrollView addSubview:leftVC.view];
+    leftVC.view.height = self.scrollView.height;
+    
+    UIViewController *rightVC = [[leftControlleClass alloc] init];
+    [self addChildViewController:rightVC];
+    [self.scrollView addSubview:rightVC.view];
+    rightVC.view.height = self.scrollView.height;
+    rightVC.view.x = ScreenWidth;
+    
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, 0) ;
 }
 
 
@@ -34,7 +73,6 @@
     [self.view addSubview:navBar];
     self.navBar = navBar;
     navBar.backgroundColor = [UIColor blackColor];
-   
 }
 
 #pragma mark 左图名字
@@ -70,6 +108,11 @@
 - (void)TSNavLeftTitleDidClick_Custom
 {
     if (self.TSNavOnleftTitle == YES)  return;
+    
+    CGPoint offset = self.scrollView.contentOffset ;
+    offset.x = 0;
+    self.scrollView.contentOffset = offset;
+    
     [self.navBar leftTitleBtnClick];
     [self TSNavLeftTitleDidClick];
     self.TSNavOnleftTitle = YES;
@@ -78,6 +121,11 @@
 - (void)TSNavRightTitleDidClick_Custom
 {
     if (self.TSNavOnleftTitle == NO)  return;
+    
+    CGPoint offset = self.scrollView.contentOffset ;
+    offset.x = ScreenWidth;
+    self.scrollView.contentOffset = offset;
+    
     [self.navBar rightTitleBtnClick];
     [self TSNavRightTitleDidClick];
     self.TSNavOnleftTitle = NO;
@@ -87,10 +135,8 @@
 - (void)setTSNavTitle:(NSString *)TSNavTitle
 {
     _TSNavTitle = TSNavTitle;
-//    if (TSNavTitle) {
-        self.navBar.traingleImgView.hidden = YES;
-        self.navBar.centerTitleLabel.text = TSNavTitle;
-//    }
+    self.navBar.traingleImgView.hidden = YES;
+    self.navBar.centerTitleLabel.text = TSNavTitle;
 }
 
 #pragma mark 隐藏状态栏
