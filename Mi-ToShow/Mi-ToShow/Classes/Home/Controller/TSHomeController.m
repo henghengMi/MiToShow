@@ -49,43 +49,7 @@
     [self setupChildControllerWithLeftControllerClass:[TSHomeLeftController class] RightControllerClass:[TSHomeRightController class]];
 }
 
-//- (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass
-//{
-//    // 把scrollView加进去
-//    [self.view addSubview:self.scrollView];
-//    
-//     UIViewController *leftVC = [[leftControlleClass alloc] init];
-//    [self addChildViewController:leftVC];
-//    [self.scrollView addSubview:leftVC.view];
-//    leftVC.view.height = self.scrollView.height;
-//    
-//    UIViewController *rightVC = [[leftControlleClass alloc] init];
-//    [self addChildViewController:rightVC];
-//    [self.scrollView addSubview:rightVC.view];
-//    rightVC.view.height = self.scrollView.height;
-//    rightVC.view.x = ScreenWidth;
-//    
-//    self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, 0) ;
-//}
 
-- (void)setupChildController
-{
-    // 把scrollView加进去
-     [self.view addSubview:self.scrollView];
-    
-    // 开始进来自动加载《画题》
-    [self addChildViewController:self.leftVC];
-    [self.scrollView addSubview:self.leftVC.view];
-    self.leftVC.view.height = self.scrollView.height;
-    
-    // 右边的广场
-    [self.scrollView addSubview:self.rightVC.view];
-    self.rightVC.view.height = self.scrollView.height;
-    self.rightVC.view.x = ScreenWidth;
-    
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, 0) ;
-
-}
 
 #pragma mark - 导航栏
 -(void)setupNavgation
@@ -108,22 +72,16 @@
 
 - (void)TSNavLeftTitleDidClick
 {
-    
     NSLog(@"TSNavLeftTitleDidClick");
-//    CGPoint offset = self.scrollView.contentOffset ;
-//    offset.x = 0;
-//    self.scrollView.contentOffset = offset;
+
+    
 }
 
 - (void)TSNavRightTitleDidClick
 {
-//    CGPoint offset = self.scrollView.contentOffset ;
-//    offset.x = ScreenWidth;
-//    self.scrollView.contentOffset = offset;
-    
     NSLog(@"TSNavRightTitleDidClick");
+    
+    
 }
-
-
 
 @end

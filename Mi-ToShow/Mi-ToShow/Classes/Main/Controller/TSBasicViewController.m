@@ -45,6 +45,7 @@
     
 }
 
+#pragma mark 配置左右标题控制器
 - (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass
 {
     // 把scrollView加进去
@@ -55,7 +56,7 @@
     [self.scrollView addSubview:leftVC.view];
     leftVC.view.height = self.scrollView.height;
     
-    UIViewController *rightVC = [[leftControlleClass alloc] init];
+    UIViewController *rightVC = [[rightControllerClass alloc] init];
     [self addChildViewController:rightVC];
     [self.scrollView addSubview:rightVC.view];
     rightVC.view.height = self.scrollView.height;
@@ -143,6 +144,17 @@
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGPoint offset = scrollView.contentOffset;
+    if (offset.x == 0) { // 左边
+        [self TSNavLeftTitleDidClick_Custom];
+    }else if (offset.x == ScreenWidth)
+    {
+        [self TSNavRightTitleDidClick_Custom];
+    }
 }
 
 
