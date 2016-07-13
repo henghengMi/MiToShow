@@ -7,9 +7,7 @@
 //  首页控制器
 
 #import "TSHomeController.h"
-
 #import "TSHomeLeftController.h"
-
 #import "TSHomeRightController.h"
 
 @interface TSHomeController ()<UIScrollViewDelegate>
@@ -73,8 +71,6 @@
 - (void)TSNavLeftTitleDidClick
 {
     NSLog(@"TSNavLeftTitleDidClick");
-
-    
 }
 
 - (void)TSNavRightTitleDidClick

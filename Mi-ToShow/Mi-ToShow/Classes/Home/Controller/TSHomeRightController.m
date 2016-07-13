@@ -19,11 +19,12 @@
 
   self.view.backgroundColor = [UIColor brownColor];
 
-    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, TSTableViewHeight) style:UITableViewStylePlain];
+    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth , TSTableViewHeight) style:UITableViewStylePlain];
     [self.view addSubview:tableview];
     tableview.dataSource = self;
     tableview.delegate = self;
-    
+    tableview.backgroundColor = [UIColor purpleColor];
+
 }
 
 #pragma mark tableView dataSource & dalegate

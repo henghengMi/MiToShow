@@ -22,7 +22,7 @@
 {
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] init];
-        _scrollView.frame = CGRectMake(0, TSNavigationHeight, ScreenWidth, ScreenHeight - TSNavigationHeight );
+        _scrollView.frame = CGRectMake(0, TSNavigationHeight + 5, ScreenWidth, ScreenHeight - TSNavigationHeight - 5);
         _scrollView.backgroundColor = [UIColor redColor];
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
@@ -32,18 +32,15 @@
 }
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
     // 导航栏
     [self setupNavBar];
-    
-    
-    
 }
+
+
 
 #pragma mark 配置左右标题控制器
 - (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass
@@ -51,16 +48,18 @@
     // 把scrollView加进去
     [self.view addSubview:self.scrollView];
     
+    
     UIViewController *leftVC = [[leftControlleClass alloc] init];
     [self addChildViewController:leftVC];
     [self.scrollView addSubview:leftVC.view];
     leftVC.view.height = self.scrollView.height;
+     NSLog(@"leftVC.view.width %f",leftVC.view.width);
     
     UIViewController *rightVC = [[rightControllerClass alloc] init];
     [self addChildViewController:rightVC];
     [self.scrollView addSubview:rightVC.view];
     rightVC.view.height = self.scrollView.height;
-    rightVC.view.x = ScreenWidth;
+    rightVC.view.x = ScreenWidth ;
     
     self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, 0) ;
 }
