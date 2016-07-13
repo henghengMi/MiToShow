@@ -11,6 +11,8 @@
 
 #import "TSDrawHotTableViewCell.h"
 
+#import "TSDrawNewCell.h"
+
 @interface TSHomeLeftController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 @property(nonatomic, weak)  UITableView *tableview ;
 
@@ -103,12 +105,10 @@
     }
     else if (indexPath.section == 1)
     {
-        static NSString *ID = @"id";
-        cell = [tableView dequeueReusableCellWithIdentifier:ID];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"DrawNew"];
+        if (!cell) {
+            cell = (TSDrawNewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TSDrawNewCell" owner:nil options:nil] firstObject];
         }
-        cell.textLabel.text = [NSString stringWithFormat:@"row-%ld",indexPath.row];
     }
     return cell;
 }
@@ -118,7 +118,7 @@
     if (indexPath.section == 0) {
         return 190;
     }
-    return 55;
+    return 60;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
