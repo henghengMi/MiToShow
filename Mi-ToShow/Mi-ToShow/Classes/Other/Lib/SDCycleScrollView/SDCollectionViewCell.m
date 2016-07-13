@@ -101,7 +101,7 @@
     if (self.onlyDisplayText) {
         _titleLabel.frame = self.bounds;
     } else {
-        _imageView.frame = CGRectMake(8, 0, self.width - 16, self.height);  //Mi
+        _imageView.frame = CGRectMake(TSLefrMargin, 0, self.width - (2 * TSLefrMargin), self.height);  //Mi
         CGFloat titleLabelW = self.sd_width;
         CGFloat titleLabelH = _titleLabelHeight;
         CGFloat titleLabelX = 0;

@@ -20,9 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.view.backgroundColor = [UIColor grayColor];
-    
   
     [self setupTableView];
 }
@@ -34,9 +31,9 @@
     [self.view addSubview:tableview];
     tableview.dataSource = self;
     tableview.delegate = self;
-    tableview.backgroundColor = [UIColor whiteColor];
     self.tableview = tableview;
     tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableview.backgroundColor = [UIColor whiteColor];
     
     [self setupHeaderView];
 }
@@ -44,7 +41,7 @@
 #pragma mark 轮播图
 -(void)setupHeaderView
 {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 150 + 8)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 180 + 8)];
     
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
@@ -52,12 +49,12 @@
                                   @"http://it.people.com.cn/mediafile/200808/06/F200808061429286120556353.jpg",
                                   @"http://i4.3conline.com/images/piclib/201101/25/batch/1/82603/129596384425865pgpyq8r8_medium.jpg"
                                   ];
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, ScreenWidth, 150) delegate:self placeholderImage:[UIImage imageWithColor:[UIColor blackColor]]];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, ScreenWidth, 180) delegate:self placeholderImage:[UIImage imageWithColor:[UIColor blackColor]]];
     
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView.imageURLStringsGroup = imagesURLStrings;
-    cycleScrollView.showPageControl = NO; // 不暂时分页控制器
-    cycleScrollView.autoScroll = NO; // 不自动滚动
+    cycleScrollView.showPageControl = NO; // 不展示分页控制器
+//    cycleScrollView.autoScroll = NO; // 不自动滚动
     
     [headerView addSubview:cycleScrollView];
      self.tableview.tableHeaderView = headerView;
@@ -86,37 +83,40 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"id";
-    
     UITableViewCell *cell;
     
     if (indexPath.section == 0) {
         
-         cell = [tableView dequeueReusableCellWithIdentifier:ID];
-        
-        [tableView registerNib:[UINib nibWithNibName:@"TSDrawHotTableViewCell" bundle:nil] forCellReuseIdentifier:@"DrawHot"];
-        
-        cell = [tableView dequeueReusableCellWithIdentifier:@"DrawHot"];
+         cell = [tableView dequeueReusableCellWithIdentifier:@"DrawHot"];
+        if(!cell)
+        {
+            // 第一种方法
+//            UINib *nib =  [UINib nibWithNibName:@"TSDrawHotTableViewCell" bundle:nil];//nil则默认为mainBundle
+//                 NSArray *array = [nib instantiateWithOwner:nil options:nil];
+//                   cell = array[0];
+          cell = (TSDrawHotTableViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TSDrawHotTableViewCell" owner:nil options:nil] firstObject];
+            
+         
+            
+        }
+
     }
     else if (indexPath.section == 1)
     {
+        static NSString *ID = @"id";
         cell = [tableView dequeueReusableCellWithIdentifier:ID];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
         }
         cell.textLabel.text = [NSString stringWithFormat:@"row-%ld",indexPath.row];
     }
-    
-    
-
-    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return 165;
+        return 190;
     }
     return 55;
 }
@@ -128,13 +128,27 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 35;
+    if (section == 0) {
+        return 35+10;
+    }
+    return 0.01;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    
     UIView *hv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-    hv.backgroundColor = [UIColor yellowColor];
+//    hv.backgroundColor = [UIColor yellowColor];
+    
+    UIButton * headerBtn = [UIButton buttonWithType:0];
+    headerBtn.frame = CGRectMake(TSLefrMargin, 0, ScreenWidth - 2 * TSLefrMargin, 40);
+    [hv addSubview:headerBtn];
+    [headerBtn setImage:(section == 0) ? IMAGE(@"commend_03") : IMAGE(@"commend_04") forState:(UIControlStateNormal)];
+    [headerBtn setTitle:(section == 0) ? @"最热画题" : @"最新话题" forState:UIControlStateNormal];
+    headerBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+    [headerBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+    headerBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    headerBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     
     return hv;
     
@@ -142,10 +156,28 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView *fv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 35)];
-    fv.backgroundColor = [UIColor redColor];
-    return fv;
-    
+    if(section == 0)
+    {
+        UIView *fv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
+        fv.backgroundColor = [UIColor whiteColor];
+        
+        UIButton *footBtn = [UIButton buttonWithType:0];
+        footBtn.frame = CGRectMake(0, 0, ScreenWidth, 35);
+        [fv addSubview:footBtn];
+        [footBtn setTitle:@"查看更多热门话题" forState:(UIControlStateNormal)];
+        [footBtn setImage:IMAGE(@"right_gray_arrow") forState:(UIControlStateNormal)];
+        [footBtn setTitleColor:TSColor(167, 167, 167) forState:(UIControlStateNormal)];
+        footBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+        footBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 60);
+        footBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 150, 0, 0);
+        
+        UIView *footV = [[UIView alloc] initWithFrame:CGRectMake(0, 35, ScreenWidth, 10)];
+        footV.backgroundColor = TSColor(243, 243, 243);
+        [fv addSubview:footV];
+        
+        return fv;
+    }
+    return nil;
 }
 
 

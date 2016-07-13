@@ -21,6 +21,7 @@
 		0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651841D30E4C500857854 /* UIColor+LJ.m */; };
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
+		0C36FA3A1D36437A00B5B8F7 /* TSCellBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36FA391D36437A00B5B8F7 /* TSCellBottomLine.m */; };
 		0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9411D3335610019A7BA /* TSCareController.m */; };
 		0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9451D33356F0019A7BA /* TSDrawController.m */; };
 		0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9491D33357E0019A7BA /* TSMessageController.m */; };
@@ -92,6 +93,8 @@
 		0C3651861D30E4C500857854 /* UIFont+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LJ.m"; sourceTree = "<group>"; };
 		0C3651871D30E4C500857854 /* UIImage+Mi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mi.h"; sourceTree = "<group>"; };
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
+		0C36FA381D36437A00B5B8F7 /* TSCellBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCellBottomLine.h; sourceTree = "<group>"; };
+		0C36FA391D36437A00B5B8F7 /* TSCellBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCellBottomLine.m; sourceTree = "<group>"; };
 		0CA6F9401D3335610019A7BA /* TSCareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareController.h; sourceTree = "<group>"; };
 		0CA6F9411D3335610019A7BA /* TSCareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareController.m; sourceTree = "<group>"; };
 		0CA6F9441D33356F0019A7BA /* TSDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawController.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				0CE3A73E1D34F36400D3AC88 /* TSDrawHotTableViewCell.h */,
 				0CE3A73F1D34F36400D3AC88 /* TSDrawHotTableViewCell.m */,
 				0CE3A7401D34F36400D3AC88 /* TSDrawHotTableViewCell.xib */,
+				0C36FA381D36437A00B5B8F7 /* TSCellBottomLine.h */,
+				0C36FA391D36437A00B5B8F7 /* TSCellBottomLine.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +676,7 @@
 				0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
+				0C36FA3A1D36437A00B5B8F7 /* TSCellBottomLine.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
 				0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */,

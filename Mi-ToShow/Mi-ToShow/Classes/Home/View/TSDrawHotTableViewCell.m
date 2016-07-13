@@ -14,7 +14,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+
+     NSLog(@"Cell创建");
+    
 }
 
 
