@@ -36,6 +36,10 @@
 		0CA6F9651D336EBD0019A7BA /* TSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */; };
 		0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F96A1D3393160019A7BA /* TSHomeLeftController.m */; };
 		0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */; };
+		0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */; };
+		0CD5C0DB1D372F5C001689CB /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DA1D372F5C001689CB /* https.cer */; };
+		0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */; };
+		0CD5C0E41D373F11001689CB /* TSBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0E31D373F11001689CB /* TSBanner.m */; };
 		0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72A1D34DFB400D3AC88 /* TAAbstractDotView.m */; };
 		0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72C1D34DFB400D3AC88 /* TAAnimatedDotView.m */; };
 		0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72E1D34DFB400D3AC88 /* TADotView.m */; };
@@ -124,6 +128,13 @@
 		0CA6F96A1D3393160019A7BA /* TSHomeLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeLeftController.m; sourceTree = "<group>"; };
 		0CA6F96C1D3393240019A7BA /* TSHomeRightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeRightController.h; sourceTree = "<group>"; };
 		0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeRightController.m; sourceTree = "<group>"; };
+		0CD5C0D71D372A1C001689CB /* TSNetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNetWorkTool.h; sourceTree = "<group>"; };
+		0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNetWorkTool.m; sourceTree = "<group>"; };
+		0CD5C0DA1D372F5C001689CB /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
+		0CD5C0DC1D372FE9001689CB /* AFNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetAPIClient.h; sourceTree = "<group>"; };
+		0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetAPIClient.m; sourceTree = "<group>"; };
+		0CD5C0E21D373F11001689CB /* TSBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBanner.h; sourceTree = "<group>"; };
+		0CD5C0E31D373F11001689CB /* TSBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBanner.m; sourceTree = "<group>"; };
 		0CE3A7291D34DFB400D3AC88 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		0CE3A72A1D34DFB400D3AC88 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		0CE3A72B1D34DFB400D3AC88 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -206,6 +217,7 @@
 		0C36510C1D30910800857854 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0CD5C0DA1D372F5C001689CB /* https.cer */,
 				0C3651181D30910800857854 /* Assets.xcassets */,
 				0C36511A1D30910800857854 /* LaunchScreen.storyboard */,
 				0C36511D1D30910800857854 /* Info.plist */,
@@ -293,6 +305,7 @@
 		0C3651481D3096A600857854 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				0CD5C0D61D3729EB001689CB /* Tool */,
 				0C36514C1D3097C600857854 /* Header */,
 				0C3651491D3096A600857854 /* Category */,
 				0C36514A1D3096A600857854 /* Lib */,
@@ -352,6 +365,8 @@
 		0C3651581D30A29300857854 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CD5C0E21D373F11001689CB /* TSBanner.h */,
+				0CD5C0E31D373F11001689CB /* TSBanner.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,6 +463,17 @@
 				0CA6F9591D333D610019A7BA /* TSTabBar.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0CD5C0D61D3729EB001689CB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				0CD5C0DC1D372FE9001689CB /* AFNetAPIClient.h */,
+				0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */,
+				0CD5C0D71D372A1C001689CB /* TSNetWorkTool.h */,
+				0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		0CE3A7271D34DFB400D3AC88 /* SDCycleScrollView */ = {
@@ -605,6 +631,7 @@
 			files = (
 				0CE3A7421D34F36400D3AC88 /* TSDrawHotTableViewCell.xib in Resources */,
 				0C36FA3F1D365D3C00B5B8F7 /* TSDrawNewCell.xib in Resources */,
+				0CD5C0DB1D372F5C001689CB /* https.cer in Resources */,
 				0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */,
 				0C3651191D30910800857854 /* Assets.xcassets in Resources */,
 			);
@@ -689,6 +716,7 @@
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
 				0C36FA3E1D365D3C00B5B8F7 /* TSDrawNewCell.m in Sources */,
+				0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */,
 				0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */,
 				0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */,
 				0CA6F95D1D333D610019A7BA /* TSTabBarController.m in Sources */,
@@ -702,8 +730,10 @@
 				0C36510E1D30910800857854 /* main.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
 				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
+				0CD5C0E41D373F11001689CB /* TSBanner.m in Sources */,
 				0CE3A73D1D34DFB400D3AC88 /* UIView+SDExtension.m in Sources */,
 				0CE3A7411D34F36400D3AC88 /* TSDrawHotTableViewCell.m in Sources */,
+				0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */,
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
 				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,

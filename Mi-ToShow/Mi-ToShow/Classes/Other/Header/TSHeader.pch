@@ -1,12 +1,23 @@
 #ifndef TSHeader_pch
 #define TSHeader_pch
 
+
+
+/** 主机协议头 */
+#define TSApiHost @"http://api.toshow.com/"
+#define TSImageHost @"img.toshow.com"
+
+
+
+
 /** 常用的类或框架 **/
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "UIView+Extension.h"
 #import "NSString+SizeWithFont.h"
 #import "UIImage+Mi.h"
+#import "TSNetWorkTool.h" /** 请求类 **/
+#import "MJExtension.h"
 
 /** 自定义的高度 **/
 #define TSNavigationHeight 44.0f

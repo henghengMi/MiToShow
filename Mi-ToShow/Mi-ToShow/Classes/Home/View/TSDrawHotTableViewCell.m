@@ -10,12 +10,10 @@
 
 @implementation TSDrawHotTableViewCell
 
-
-
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-     NSLog(@"Cell创建");
+    
     
 }
 

@@ -24,6 +24,26 @@
     [super viewDidLoad];
   
     [self setupTableView];
+    
+    [self requstBanner];
+}
+
+-(void)requstBanner
+{
+    [TSNetWorkTool TSGetWithURL:@"http://api.toshow.com/api/explore/banner" success:^(id json) {
+        
+//        NSArray *imagesDicArray = json[@"result"];
+//        NSMutableArray *mImages = [NSMutableArray array];
+//        for (int i = 0 ;i < imagesDicArray.count; i ++) {
+//            NSDictionary *dic = imagesDicArray[i];
+//            [mImages addObject:[NSString stringWithFormat:@"%@%@",TSImageHost,dic[@"banner_url"]]];
+//            
+//        }
+       
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 
@@ -56,6 +76,7 @@
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView.imageURLStringsGroup = imagesURLStrings;
     cycleScrollView.showPageControl = NO; // 不展示分页控制器
+    cycleScrollView.autoScrollTimeInterval = 3.5;
 //    cycleScrollView.autoScroll = NO; // 不自动滚动
     
     [headerView addSubview:cycleScrollView];
