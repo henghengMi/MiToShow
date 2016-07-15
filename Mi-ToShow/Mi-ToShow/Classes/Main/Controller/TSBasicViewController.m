@@ -17,13 +17,22 @@
 
 @implementation TSBasicViewController
 
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
+
+
 #pragma mark - 懒加载
 - (UIScrollView *)scrollView
 {
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] init];
         _scrollView.frame = CGRectMake(0, TSNavigationHeight + 5, ScreenWidth, ScreenHeight - TSNavigationHeight - 5);
-        _scrollView.backgroundColor = [UIColor redColor];
+//        _scrollView.backgroundColor = [UIColor redColor];
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
         _scrollView.bounces = NO;

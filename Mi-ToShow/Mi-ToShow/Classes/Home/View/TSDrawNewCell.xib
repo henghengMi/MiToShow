@@ -67,6 +67,12 @@
                     <constraint firstItem="dW0-Nv-pd7" firstAttribute="centerY" secondItem="Wz4-VF-o6i" secondAttribute="centerY" id="xYG-VE-9h4"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="countBtn" destination="dW0-Nv-pd7" id="82o-S1-4CD"/>
+                <outlet property="originImageView" destination="Wz4-VF-o6i" id="Ybw-hT-w6y"/>
+                <outlet property="subTitleLabel" destination="Q1w-6X-lnn" id="hv8-CN-sB7"/>
+                <outlet property="titleLabel" destination="nNv-aZ-3vU" id="Mtt-o0-gXg"/>
+            </connections>
             <point key="canvasLocation" x="281.5" y="372"/>
         </tableViewCell>
     </objects>

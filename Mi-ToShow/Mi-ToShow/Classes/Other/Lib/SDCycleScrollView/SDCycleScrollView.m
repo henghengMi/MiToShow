@@ -35,6 +35,7 @@
 #import "TAPageControl.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
+#import "YYKit.h"
 
 #define kCycleScrollViewInitialPageControlDotSize CGSizeMake(10, 10)
 
@@ -535,6 +536,7 @@ NSString * const ID = @"cycleCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+     NSLog(@"_totalItemsCount : %ld",_totalItemsCount);
     return _totalItemsCount;
 }
 
@@ -546,8 +548,18 @@ NSString * const ID = @"cycleCell";
     NSString *imagePath = self.imagePathsGroup[itemIndex];
     
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
-        if ([imagePath hasPrefix:@"http"] || [imagePath hasPrefix:@"https"]) {
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+        if ([imagePath hasPrefix:@"http"] || [imagePath hasPrefix:@"https"] || [imagePath hasPrefix:@"i"] || [imagePath hasPrefix:@"img"]) {
+//            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+            [cell.imageView setImageWithURL:[NSURL URLWithString:imagePath] placeholder:self.placeholderImage];
+//            [cell.imageView setImageWithURL:[NSURL URLWithString:imagePath] placeholder:self.placeholderImage options:YYWebImageOptionProgressiveBlur | YYWebImageOptionShowNetworkActivity | YYWebImageOptionSetImageWithFadeAnimation manager:nil progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//                
+//            } transform:nil completion:^(UIImage *  image, NSURL *  url, YYWebImageFromType from, YYWebImageStage stage, NSError *  error) {
+//                if (stage == YYWebImageStageFinished) {
+//                     NSLog(@"下载完成");
+////                      cell.imageView.image = image;
+//                }
+//            }];
+            
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
             if (!image) {

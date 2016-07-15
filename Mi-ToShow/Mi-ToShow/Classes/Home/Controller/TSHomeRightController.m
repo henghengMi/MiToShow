@@ -8,63 +8,67 @@
 
 #import "TSHomeRightController.h"
 
-@interface TSHomeRightController ()<UITableViewDataSource,UITableViewDelegate>
+
+@interface TSHomeRightController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @end
 
+static    NSString  * const cellReuserID = @"UICollectionViewCellID";
+
 @implementation TSHomeRightController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
   self.view.backgroundColor = [UIColor brownColor];
 
-    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth , TSTableViewHeight) style:UITableViewStylePlain];
-    [self.view addSubview:tableview];
-    tableview.dataSource = self;
-    tableview.delegate = self;
-    tableview.backgroundColor = [UIColor purpleColor];
-
-}
-
-#pragma mark tableView dataSource & dalegate
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *ID = @"id";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"row-%ld",indexPath.row];
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    
+    
+    CGFloat margin = 10;
+    CGFloat WH = (ScreenWidth - 4 * margin) / 3;
+    layout.itemSize = CGSizeMake(WH, WH);
+    layout.minimumLineSpacing = margin;
+    layout.minimumInteritemSpacing = margin;
+    
+    layout.sectionInset = UIEdgeInsetsMake(layout.minimumLineSpacing,layout.minimumInteritemSpacing, layout.minimumLineSpacing , layout.minimumInteritemSpacing);
+    
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, TSTableViewHeight) collectionViewLayout:layout];
+    [self.view addSubview:collectionView];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellReuserID];
+    collectionView.backgroundColor = [UIColor greenColor];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellReuserID forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor blackColor];
+    
     
     return cell;
+    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 100;
-}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 0.01;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 0.01;
-}
+- ()
 
 
 @end

@@ -105,6 +105,15 @@
                     <constraint firstItem="hSM-Fu-u65" firstAttribute="centerY" secondItem="Jxy-iu-aOK" secondAttribute="centerY" id="y08-nZ-CWG"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="countBtn" destination="Jxy-iu-aOK" id="3Rb-sj-6TN"/>
+                <outlet property="imgView1" destination="00O-LB-mGG" id="X9i-cw-kS1"/>
+                <outlet property="imgView2" destination="eKR-DZ-Ibf" id="t9K-UH-86g"/>
+                <outlet property="imgView3" destination="F8S-BJ-haB" id="RGz-l8-9Tj"/>
+                <outlet property="originImageView" destination="XTV-Pw-SQg" id="mPg-Nd-V8D"/>
+                <outlet property="subTitleLabel" destination="Bgr-nr-zyt" id="DId-xz-2vZ"/>
+                <outlet property="titleLabel" destination="sw9-wb-tfl" id="IlL-YB-4l3"/>
+            </connections>
             <point key="canvasLocation" x="522" y="539.5"/>
         </tableViewCell>
         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="c8v-wd-cDc">

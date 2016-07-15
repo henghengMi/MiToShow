@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DrawTopic.h"
 @interface TSDrawHotTableViewCell : UITableViewCell
+
+@property(nonatomic, strong) DrawTopic *drawTopic  ;
+
 
 @end

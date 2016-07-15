@@ -31,10 +31,11 @@
 
 
 #import <UIKit/UIKit.h>
+#import "YYKit.h"
 
 @interface SDCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) UIImageView *imageView;
+@property (weak, nonatomic) YYAnimatedImageView *imageView;
 @property (copy, nonatomic) NSString *title;
 
 @property (nonatomic, strong) UIColor *titleLabelTextColor;

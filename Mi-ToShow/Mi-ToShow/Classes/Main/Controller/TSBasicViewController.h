@@ -10,15 +10,20 @@
 
 @interface TSBasicViewController : UIViewController
 
-// 标题
+
+@property(nonatomic, strong) NSMutableArray * dataArray ;
+
+
+
+// 导航栏
 @property(nonatomic,copy)NSString * TSNavTitle;
-
-
 @property(nonatomic, copy) NSString * TSNavLeftImageName ;
 @property(nonatomic, copy) NSString * TSNavRightImageName ;
 @property(nonatomic, copy) NSString * TSNavLeftTitle ;
 @property(nonatomic, copy) NSString * TSNavRightTitle ;
 @property(nonatomic, copy) UIScrollView * scrollView ;
+
+
 
 @property(nonatomic, assign,getter=isTSNavOnleftTitle) BOOL TSNavOnleftTitle;
 

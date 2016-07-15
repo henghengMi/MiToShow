@@ -8,13 +8,31 @@
 
 #import "TSDrawNewCell.h"
 
+
+
+@interface TSDrawNewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *originImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *countBtn;
+@end
+
 @implementation TSDrawNewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
+- (void)setDrawTopic:(DrawTopic *)drawTopic
+{
+    _drawTopic = drawTopic;
+    
+    [self.originImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,drawTopic.pngurl]]];
+    self.titleLabel.text = drawTopic.topictitle;
+    self.subTitleLabel.text = [NSString stringWithFormat:@"题主：%@",drawTopic.user.nickname] ;
+    [self.countBtn setTitle:drawTopic.topicworkcount forState:(UIControlStateNormal)];
+    
+}
 
 
 @end

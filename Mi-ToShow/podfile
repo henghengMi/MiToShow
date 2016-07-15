@@ -7,4 +7,5 @@ target ‘Mi-ToShow’ do
     pod 'SDWebImage'
     pod 'MJRefresh'
     pod 'YYKit'
+    pod 'MJExtension'
 end

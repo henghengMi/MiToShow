@@ -8,38 +8,121 @@
 
 #import "TSHomeLeftController.h"
 #import "SDCycleScrollView.h"
-
 #import "TSDrawHotTableViewCell.h"
-
 #import "TSDrawNewCell.h"
+#import "TSBanner.h"
+#import "DrawTopic.h"
+#import "TSAllDrawTopic.h"
+
+#import "MJRefresh.h"
 
 @interface TSHomeLeftController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
+{
+    NSInteger _hascount;
+    NSInteger _requestcount;
+}
 @property(nonatomic, weak)  UITableView *tableview ;
+@property(nonatomic, strong)  NSMutableArray *banners ;
+@property(nonatomic, strong)  NSMutableArray *dataArray ;
+@property(nonatomic, strong) NSMutableArray * pullingImages;
+@property(nonatomic, strong) NSMutableArray * refreshingImages;
 
 @end
 
 @implementation TSHomeLeftController
 
+- (NSMutableArray *)pullingImages
+{
+    if (!_pullingImages) {
+        _pullingImages = [NSMutableArray array];
+        for (int i = 1; i <= 40; i++ ) {
+            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"pull_%d",i]];
+            [_pullingImages addObject:img];
+        }
+    }
+    return _pullingImages;
+}
+
+- (NSMutableArray *)refreshingImages
+{
+    if (!_refreshingImages) {
+        _refreshingImages = [NSMutableArray array];
+        for (int i = 1; i <= 12; i++ ) {
+            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"loading_%d",i]];
+            [_refreshingImages addObject:img];
+        }
+    }
+    return _refreshingImages;
+}
+
+
+- (NSMutableArray *)banners
+{
+    if (!_banners) {
+        _banners = [NSMutableArray array];
+    }
+    return _banners;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    [self setupTableView];
-    
+ 
     [self requstBanner];
 }
+
+#pragma mark 首页数据
+-(void)requstDraw
+{
+    if (self.dataArray.count) [self.dataArray removeAllObjects];
+    
+    [TSNetWorkTool TSGetWithURL:@"http://api.toshow.com/api/explore/topicgroup1?group=0&hascount=0&requestcount=0" success:^(id json) {
+        self.dataArray = [TSAllDrawTopic mj_objectArrayWithKeyValuesArray:json[@"result"]];
+        [self setupRefreshHeader];
+        [self setupTableView];
+        [self.tableview reloadData];
+        
+    } failure:^(NSError *error) {
+    
+    }];
+}
+
+- (void)setupRefreshHeader
+{
+     [self.tableview.mj_header endRefreshing];
+    
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    [header setImages:self.pullingImages forState:MJRefreshStateIdle];
+    [header setImages:self.refreshingImages  forState:MJRefreshStateRefreshing];
+    self.tableview.mj_header = header;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    
+}
+
+#pragma mark 刷新
+- (void)loadNewData
+{
+     NSLog(@"刷新------");
+
+    
+    [self requstDraw];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.tableview.mj_header endRefreshing];
+//    });
+}
+
 
 -(void)requstBanner
 {
     [TSNetWorkTool TSGetWithURL:@"http://api.toshow.com/api/explore/banner" success:^(id json) {
         
-//        NSArray *imagesDicArray = json[@"result"];
-//        NSMutableArray *mImages = [NSMutableArray array];
-//        for (int i = 0 ;i < imagesDicArray.count; i ++) {
-//            NSDictionary *dic = imagesDicArray[i];
-//            [mImages addObject:[NSString stringWithFormat:@"%@%@",TSImageHost,dic[@"banner_url"]]];
-//            
-//        }
-       
+        self.banners = [TSBanner mj_objectArrayWithKeyValuesArray: json[@"result"]] ;
+        
+        [self requstDraw];
         
     } failure:^(NSError *error) {
         
@@ -57,22 +140,29 @@
     tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableview.backgroundColor = [UIColor whiteColor];
     
-    [self setupHeaderView];
+    NSMutableArray *imagesURLStrings = [NSMutableArray array];
+    for (int i = 0; i < self.banners.count; i ++) {
+        TSBanner *banner = self.banners[i];
+        [imagesURLStrings addObject:banner.banner_url];
+    }
+    
+    [self setupHeaderViewWithImageUrlArray:imagesURLStrings];
 }
 
 #pragma mark 轮播图
--(void)setupHeaderView
+-(void)setupHeaderViewWithImageUrlArray:(NSArray *)imageUrlArray
 {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 180 + 8)];
     
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
-                                  @"http://i4.3conline.com/images/piclib/201101/25/batch/1/82603/129596384425865pgpyq8r8_medium.jpg",
+                                  @"http://f.hiphotos.baidu.com/zhidao/pic/item/0b46f21fbe096b634bdfe39b0d338744eaf8ac33.jpg",
                                   @"http://it.people.com.cn/mediafile/200808/06/F200808061429286120556353.jpg",
-                                  @"http://i4.3conline.com/images/piclib/201101/25/batch/1/82603/129596384425865pgpyq8r8_medium.jpg"
-                                  ];
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, ScreenWidth, 180) delegate:self placeholderImage:[UIImage imageWithColor:[UIColor blackColor]]];
+                                  @"http://pic24.nipic.com/20121012/5955207_230020121000_2.jpg"
+                                  ];  
     
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 8, ScreenWidth, 180) delegate:self placeholderImage:[UIImage imageWithColor:[UIColor blackColor]]];
+  
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView.imageURLStringsGroup = imagesURLStrings;
     cycleScrollView.showPageControl = NO; // 不展示分页控制器
@@ -93,34 +183,35 @@
 #pragma mark tableView dataSource & dalegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return 2;
-    }
-    return 40;
+    
+   TSAllDrawTopic *allTopic =  self.dataArray[section];
+
+    return allTopic.topiclist.count;
+    
+//    if (section == 0) {
+//        return ;
+//    }
+//    return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
+     TSAllDrawTopic *allTopic =  self.dataArray[indexPath.section];
     
     if (indexPath.section == 0) {
         
          cell = [tableView dequeueReusableCellWithIdentifier:@"DrawHot"];
         if(!cell)
         {
-            // 第一种方法
-//            UINib *nib =  [UINib nibWithNibName:@"TSDrawHotTableViewCell" bundle:nil];//nil则默认为mainBundle
-//                 NSArray *array = [nib instantiateWithOwner:nil options:nil];
-//                   cell = array[0];
           cell = (TSDrawHotTableViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TSDrawHotTableViewCell" owner:nil options:nil] firstObject];
-            
-         
-            
+            TSDrawHotTableViewCell *hotCell = (TSDrawHotTableViewCell *) cell;
+            hotCell.drawTopic =  allTopic.topiclist[indexPath.row];
         }
 
     }
@@ -129,6 +220,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"DrawNew"];
         if (!cell) {
             cell = (TSDrawNewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TSDrawNewCell" owner:nil options:nil] firstObject];
+            TSDrawNewCell *newCell = (TSDrawNewCell *) cell;
+            newCell.drawTopic =  allTopic.topiclist[indexPath.row];
         }
     }
     return cell;

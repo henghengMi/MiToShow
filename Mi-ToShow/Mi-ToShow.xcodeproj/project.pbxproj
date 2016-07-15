@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1CD41A1D3778290078FF28 /* DrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD4191D3778290078FF28 /* DrawTopic.m */; };
+		0C1CD41D1D37799A0078FF28 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD41C1D37799A0078FF28 /* TSUser.m */; };
+		0C1CD4201D3779EC0078FF28 /* TSWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD41F1D3779EC0078FF28 /* TSWork.m */; };
+		0C1CD4231D377A470078FF28 /* TSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD4221D377A470078FF28 /* TSTopic.m */; };
+		0C1CD4261D3784AE0078FF28 /* TSAllDrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD4251D3784AE0078FF28 /* TSAllDrawTopic.m */; };
 		0C36510E1D30910800857854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36510D1D30910800857854 /* main.m */; };
 		0C3651191D30910800857854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3651181D30910800857854 /* Assets.xcassets */; };
 		0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C36511A1D30910800857854 /* LaunchScreen.storyboard */; };
@@ -70,6 +75,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1CD4181D3778290078FF28 /* DrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTopic.h; sourceTree = "<group>"; };
+		0C1CD4191D3778290078FF28 /* DrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTopic.m; sourceTree = "<group>"; };
+		0C1CD41B1D37799A0078FF28 /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
+		0C1CD41C1D37799A0078FF28 /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
+		0C1CD41E1D3779EC0078FF28 /* TSWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWork.h; sourceTree = "<group>"; };
+		0C1CD41F1D3779EC0078FF28 /* TSWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWork.m; sourceTree = "<group>"; };
+		0C1CD4211D377A470078FF28 /* TSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTopic.h; sourceTree = "<group>"; };
+		0C1CD4221D377A470078FF28 /* TSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTopic.m; sourceTree = "<group>"; };
+		0C1CD4241D3784AE0078FF28 /* TSAllDrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAllDrawTopic.h; sourceTree = "<group>"; };
+		0C1CD4251D3784AE0078FF28 /* TSAllDrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAllDrawTopic.m; sourceTree = "<group>"; };
 		0C3651091D30910800857854 /* Mi-ToShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mi-ToShow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C36510D1D30910800857854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C3651181D30910800857854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -367,6 +382,16 @@
 			children = (
 				0CD5C0E21D373F11001689CB /* TSBanner.h */,
 				0CD5C0E31D373F11001689CB /* TSBanner.m */,
+				0C1CD4181D3778290078FF28 /* DrawTopic.h */,
+				0C1CD4191D3778290078FF28 /* DrawTopic.m */,
+				0C1CD41B1D37799A0078FF28 /* TSUser.h */,
+				0C1CD41C1D37799A0078FF28 /* TSUser.m */,
+				0C1CD41E1D3779EC0078FF28 /* TSWork.h */,
+				0C1CD41F1D3779EC0078FF28 /* TSWork.m */,
+				0C1CD4211D377A470078FF28 /* TSTopic.h */,
+				0C1CD4221D377A470078FF28 /* TSTopic.m */,
+				0C1CD4241D3784AE0078FF28 /* TSAllDrawTopic.h */,
+				0C1CD4251D3784AE0078FF28 /* TSAllDrawTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -714,6 +739,7 @@
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C36FA3A1D36437A00B5B8F7 /* TSCellBottomLine.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
+				0C1CD4261D3784AE0078FF28 /* TSAllDrawTopic.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
 				0C36FA3E1D365D3C00B5B8F7 /* TSDrawNewCell.m in Sources */,
 				0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */,
@@ -728,6 +754,7 @@
 				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
+				0C1CD4201D3779EC0078FF28 /* TSWork.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
 				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
 				0CD5C0E41D373F11001689CB /* TSBanner.m in Sources */,
@@ -737,8 +764,11 @@
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
 				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,
+				0C1CD41A1D3778290078FF28 /* DrawTopic.m in Sources */,
 				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,
+				0C1CD4231D377A470078FF28 /* TSTopic.m in Sources */,
 				0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */,
+				0C1CD41D1D37799A0078FF28 /* TSUser.m in Sources */,
 				0C3651631D30A34500857854 /* TSMeController.m in Sources */,
 				0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */,
 			);
