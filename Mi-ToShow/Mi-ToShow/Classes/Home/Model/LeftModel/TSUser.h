@@ -11,6 +11,7 @@
 @interface TSUser : NSObject
 @property(nonatomic, copy) NSString * uid;
 @property(nonatomic, copy) NSString * nickname;
-
-
+@property(nonatomic, copy) NSString * headpic;
+@property(nonatomic, copy) NSString * profiledescription;
+@property(nonatomic, copy) NSString * role_type;
 @end

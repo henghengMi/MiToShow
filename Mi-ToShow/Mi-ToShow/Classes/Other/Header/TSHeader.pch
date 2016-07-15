@@ -7,8 +7,8 @@
 #define TSApiHost @"http://api.toshow.com/"
 #define TSImageHost @"img.toshow.com"
 
-
-
+/** 请求后的打印 **/
+#define TSLog_AfterRequst(n) NSLog(@"===========上面数据为《%@》请求过后===========",n);
 
 /** 常用的类或框架 **/
 #import <UIKit/UIKit.h>

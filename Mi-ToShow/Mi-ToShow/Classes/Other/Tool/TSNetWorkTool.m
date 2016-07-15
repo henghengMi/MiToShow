@@ -15,7 +15,7 @@
 /**
  * AF网络请求
  */
-+ (void)TSGetWithURL:(NSString *)URLString
++ (void)getWithURL:(NSString *)URLString
                        success:(void (^)( id json))success
                        failure:(void (^)(NSError *error))failure
 {
@@ -31,7 +31,7 @@
 }
 
 
-+ (void)TSPostWithURL:(NSString *)URLString
++ (void)postWithURL:(NSString *)URLString
            parameters:(NSDictionary *)parameters
              success:(void (^)( id json))success
              failure:(void (^)(NSError *error))failure;

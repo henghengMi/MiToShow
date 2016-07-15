@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 
 #import "TSTopic.h"
-
+#import "TSUser.h"
 @interface TSWork : NSObject
 
 @property(nonatomic, assign) BOOL hide;
 @property(nonatomic, copy) NSString * pngurl;
 @property(nonatomic, copy) NSString * workid;
-@property(nonatomic, strong) TSTopic * topic;
+@property(nonatomic, copy) NSString * praisenum;
 
+@property(nonatomic, strong) TSTopic * topic;
+@property(nonatomic, strong) TSUser * user;
 
 @end

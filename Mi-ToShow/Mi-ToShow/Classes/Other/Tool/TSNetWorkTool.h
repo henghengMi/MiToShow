@@ -21,13 +21,13 @@
 //             success:(JLResponseSuccess)Success
 //             failure:(JLResponseFail)Failure
 
-+ (void)TSPostWithURL:(NSString *)URLString
++ (void)postWithURL:(NSString *)URLString
            parameters:(NSDictionary *)parameters
               success:(void (^)( id json))success
               failure:(void (^)(NSError *error))failure;
 
 
-+ (void)TSGetWithURL:(NSString *)URLString
++ (void)getWithURL:(NSString *)URLString
              success:(void (^)( id json))success
              failure:(void (^)(NSError *error))failure;
 

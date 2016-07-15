@@ -23,16 +23,27 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sw9-wb-tfl">
-                        <rect key="frame" x="74" y="18" width="40" height="20"/>
+                        <rect key="frame" x="74" y="18" width="128" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="128" id="VT9-AE-7hG"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-nr-zyt">
-                        <rect key="frame" x="72" y="43" width="31" height="15"/>
+                        <rect key="frame" x="72" y="43" width="128" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="31" id="bDR-G7-EYP"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bDR-G7-EYP"/>
+                            </mask>
+                        </variation>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow_" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-Fu-u65">
                         <rect key="frame" x="292" y="28" width="15" height="15"/>
@@ -42,15 +53,15 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxy-iu-aOK">
-                        <rect key="frame" x="162" y="20" width="120" height="30"/>
+                        <rect key="frame" x="202" y="20" width="80" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="IxX-Ca-tmm"/>
+                            <constraint firstAttribute="width" constant="80" id="IxX-Ca-tmm"/>
                             <constraint firstAttribute="height" constant="30" id="VmV-Ja-ZPF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                         <state key="normal" title="555" image="picture_">
-                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="00O-LB-mGG">
@@ -82,6 +93,7 @@
                     <constraint firstItem="q4y-PV-0U9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CQk-Y5-KQS"/>
                     <constraint firstAttribute="trailing" secondItem="q4y-PV-0U9" secondAttribute="trailing" constant="10" id="Dg7-F3-gxT"/>
                     <constraint firstItem="00O-LB-mGG" firstAttribute="top" secondItem="XTV-Pw-SQg" secondAttribute="bottom" constant="10" id="E0g-aV-o8D"/>
+                    <constraint firstItem="Bgr-nr-zyt" firstAttribute="width" secondItem="sw9-wb-tfl" secondAttribute="width" id="E8n-1T-h1f"/>
                     <constraint firstItem="F8S-BJ-haB" firstAttribute="width" secondItem="00O-LB-mGG" secondAttribute="width" id="ESd-FS-JKX"/>
                     <constraint firstAttribute="trailing" secondItem="hSM-Fu-u65" secondAttribute="trailing" constant="15" id="Ea2-0g-djf"/>
                     <constraint firstItem="Jxy-iu-aOK" firstAttribute="centerY" secondItem="XTV-Pw-SQg" secondAttribute="centerY" id="EeY-Tx-agG"/>
@@ -89,6 +101,7 @@
                     <constraint firstAttribute="bottom" secondItem="00O-LB-mGG" secondAttribute="bottom" constant="15" id="Igg-wl-DQ7"/>
                     <constraint firstItem="Bgr-nr-zyt" firstAttribute="leading" secondItem="XTV-Pw-SQg" secondAttribute="trailing" constant="8" id="QGP-Ku-usr"/>
                     <constraint firstItem="00O-LB-mGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="QT0-wv-0x3"/>
+                    <constraint firstItem="Jxy-iu-aOK" firstAttribute="leading" secondItem="sw9-wb-tfl" secondAttribute="trailing" id="UjQ-ta-kVL"/>
                     <constraint firstItem="sw9-wb-tfl" firstAttribute="leading" secondItem="XTV-Pw-SQg" secondAttribute="trailing" constant="10" id="Uvj-Sm-bb3"/>
                     <constraint firstItem="eKR-DZ-Ibf" firstAttribute="centerY" secondItem="00O-LB-mGG" secondAttribute="centerY" id="Z0C-j3-2Jp"/>
                     <constraint firstItem="eKR-DZ-Ibf" firstAttribute="height" secondItem="00O-LB-mGG" secondAttribute="height" id="azm-4M-8ad"/>
@@ -114,7 +127,7 @@
                 <outlet property="subTitleLabel" destination="Bgr-nr-zyt" id="DId-xz-2vZ"/>
                 <outlet property="titleLabel" destination="sw9-wb-tfl" id="IlL-YB-4l3"/>
             </connections>
-            <point key="canvasLocation" x="522" y="539.5"/>
+            <point key="canvasLocation" x="522" y="539"/>
         </tableViewCell>
         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="c8v-wd-cDc">
             <rect key="frame" x="0.0" y="0.0" width="120" height="99"/>

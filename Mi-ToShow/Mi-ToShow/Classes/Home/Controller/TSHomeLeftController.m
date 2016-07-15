@@ -78,7 +78,7 @@
 {
     if (self.dataArray.count) [self.dataArray removeAllObjects];
     
-    [TSNetWorkTool TSGetWithURL:@"http://api.toshow.com/api/explore/topicgroup1?group=0&hascount=0&requestcount=0" success:^(id json) {
+    [TSNetWorkTool getWithURL:@"http://api.toshow.com/api/explore/topicgroup1?group=0&hascount=0&requestcount=0" success:^(id json) {
         self.dataArray = [TSAllDrawTopic mj_objectArrayWithKeyValuesArray:json[@"result"]];
         [self setupRefreshHeader];
         [self setupTableView];
@@ -118,7 +118,7 @@
 
 -(void)requstBanner
 {
-    [TSNetWorkTool TSGetWithURL:@"http://api.toshow.com/api/explore/banner" success:^(id json) {
+    [TSNetWorkTool getWithURL:@"http://api.toshow.com/api/explore/banner" success:^(id json) {
         
         self.banners = [TSBanner mj_objectArrayWithKeyValuesArray: json[@"result"]] ;
         

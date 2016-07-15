@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1CD41A1D3778290078FF28 /* DrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD4191D3778290078FF28 /* DrawTopic.m */; };
-		0C1CD41D1D37799A0078FF28 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD41C1D37799A0078FF28 /* TSUser.m */; };
-		0C1CD4201D3779EC0078FF28 /* TSWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD41F1D3779EC0078FF28 /* TSWork.m */; };
-		0C1CD4231D377A470078FF28 /* TSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD4221D377A470078FF28 /* TSTopic.m */; };
-		0C1CD4261D3784AE0078FF28 /* TSAllDrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CD4251D3784AE0078FF28 /* TSAllDrawTopic.m */; };
 		0C36510E1D30910800857854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36510D1D30910800857854 /* main.m */; };
 		0C3651191D30910800857854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3651181D30910800857854 /* Assets.xcassets */; };
 		0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C36511A1D30910800857854 /* LaunchScreen.storyboard */; };
@@ -26,9 +21,18 @@
 		0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651841D30E4C500857854 /* UIColor+LJ.m */; };
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
-		0C36FA3A1D36437A00B5B8F7 /* TSCellBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36FA391D36437A00B5B8F7 /* TSCellBottomLine.m */; };
-		0C36FA3E1D365D3C00B5B8F7 /* TSDrawNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36FA3C1D365D3C00B5B8F7 /* TSDrawNewCell.m */; };
-		0C36FA3F1D365D3C00B5B8F7 /* TSDrawNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C36FA3D1D365D3C00B5B8F7 /* TSDrawNewCell.xib */; };
+		0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */; };
+		0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F8E1D388A9A00F76773 /* TSAllDrawTopic.m */; };
+		0C9B0F9A1D388A9A00F76773 /* TSBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F901D388A9A00F76773 /* TSBanner.m */; };
+		0C9B0F9B1D388A9A00F76773 /* TSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F921D388A9A00F76773 /* TSTopic.m */; };
+		0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F941D388A9A00F76773 /* TSUser.m */; };
+		0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F961D388A9A00F76773 /* TSWork.m */; };
+		0C9B0FAA1D388AC400F76773 /* TSCellBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA01D388AC400F76773 /* TSCellBottomLine.m */; };
+		0C9B0FAB1D388AC400F76773 /* TSDrawHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA21D388AC400F76773 /* TSDrawHotTableViewCell.m */; };
+		0C9B0FAC1D388AC400F76773 /* TSDrawHotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA31D388AC400F76773 /* TSDrawHotTableViewCell.xib */; };
+		0C9B0FAD1D388AC400F76773 /* TSDrawNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA51D388AC400F76773 /* TSDrawNewCell.m */; };
+		0C9B0FAE1D388AC400F76773 /* TSDrawNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA61D388AC400F76773 /* TSDrawNewCell.xib */; };
+		0C9B0FAF1D388AC400F76773 /* TSCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA91D388AC400F76773 /* TSCollectionHeaderView.m */; };
 		0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9411D3335610019A7BA /* TSCareController.m */; };
 		0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9451D33356F0019A7BA /* TSDrawController.m */; };
 		0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9491D33357E0019A7BA /* TSMessageController.m */; };
@@ -44,7 +48,6 @@
 		0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */; };
 		0CD5C0DB1D372F5C001689CB /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DA1D372F5C001689CB /* https.cer */; };
 		0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */; };
-		0CD5C0E41D373F11001689CB /* TSBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0E31D373F11001689CB /* TSBanner.m */; };
 		0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72A1D34DFB400D3AC88 /* TAAbstractDotView.m */; };
 		0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72C1D34DFB400D3AC88 /* TAAnimatedDotView.m */; };
 		0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72E1D34DFB400D3AC88 /* TADotView.m */; };
@@ -52,8 +55,6 @@
 		0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A7321D34DFB400D3AC88 /* SDCollectionViewCell.m */; };
 		0CE3A73C1D34DFB400D3AC88 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A7341D34DFB400D3AC88 /* SDCycleScrollView.m */; };
 		0CE3A73D1D34DFB400D3AC88 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A7361D34DFB400D3AC88 /* UIView+SDExtension.m */; };
-		0CE3A7411D34F36400D3AC88 /* TSDrawHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A73F1D34F36400D3AC88 /* TSDrawHotTableViewCell.m */; };
-		0CE3A7421D34F36400D3AC88 /* TSDrawHotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3A7401D34F36400D3AC88 /* TSDrawHotTableViewCell.xib */; };
 		6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,16 +76,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1CD4181D3778290078FF28 /* DrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTopic.h; sourceTree = "<group>"; };
-		0C1CD4191D3778290078FF28 /* DrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTopic.m; sourceTree = "<group>"; };
-		0C1CD41B1D37799A0078FF28 /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
-		0C1CD41C1D37799A0078FF28 /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
-		0C1CD41E1D3779EC0078FF28 /* TSWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWork.h; sourceTree = "<group>"; };
-		0C1CD41F1D3779EC0078FF28 /* TSWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWork.m; sourceTree = "<group>"; };
-		0C1CD4211D377A470078FF28 /* TSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTopic.h; sourceTree = "<group>"; };
-		0C1CD4221D377A470078FF28 /* TSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTopic.m; sourceTree = "<group>"; };
-		0C1CD4241D3784AE0078FF28 /* TSAllDrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAllDrawTopic.h; sourceTree = "<group>"; };
-		0C1CD4251D3784AE0078FF28 /* TSAllDrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAllDrawTopic.m; sourceTree = "<group>"; };
 		0C3651091D30910800857854 /* Mi-ToShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mi-ToShow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C36510D1D30910800857854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C3651181D30910800857854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,11 +105,28 @@
 		0C3651861D30E4C500857854 /* UIFont+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LJ.m"; sourceTree = "<group>"; };
 		0C3651871D30E4C500857854 /* UIImage+Mi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mi.h"; sourceTree = "<group>"; };
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
-		0C36FA381D36437A00B5B8F7 /* TSCellBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCellBottomLine.h; sourceTree = "<group>"; };
-		0C36FA391D36437A00B5B8F7 /* TSCellBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCellBottomLine.m; sourceTree = "<group>"; };
-		0C36FA3B1D365D3C00B5B8F7 /* TSDrawNewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawNewCell.h; sourceTree = "<group>"; };
-		0C36FA3C1D365D3C00B5B8F7 /* TSDrawNewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawNewCell.m; sourceTree = "<group>"; };
-		0C36FA3D1D365D3C00B5B8F7 /* TSDrawNewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSDrawNewCell.xib; sourceTree = "<group>"; };
+		0C9B0F8B1D388A9A00F76773 /* DrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTopic.h; sourceTree = "<group>"; };
+		0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTopic.m; sourceTree = "<group>"; };
+		0C9B0F8D1D388A9A00F76773 /* TSAllDrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAllDrawTopic.h; sourceTree = "<group>"; };
+		0C9B0F8E1D388A9A00F76773 /* TSAllDrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAllDrawTopic.m; sourceTree = "<group>"; };
+		0C9B0F8F1D388A9A00F76773 /* TSBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBanner.h; sourceTree = "<group>"; };
+		0C9B0F901D388A9A00F76773 /* TSBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBanner.m; sourceTree = "<group>"; };
+		0C9B0F911D388A9A00F76773 /* TSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTopic.h; sourceTree = "<group>"; };
+		0C9B0F921D388A9A00F76773 /* TSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTopic.m; sourceTree = "<group>"; };
+		0C9B0F931D388A9A00F76773 /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
+		0C9B0F941D388A9A00F76773 /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
+		0C9B0F951D388A9A00F76773 /* TSWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWork.h; sourceTree = "<group>"; };
+		0C9B0F961D388A9A00F76773 /* TSWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWork.m; sourceTree = "<group>"; };
+		0C9B0F9F1D388AC400F76773 /* TSCellBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCellBottomLine.h; sourceTree = "<group>"; };
+		0C9B0FA01D388AC400F76773 /* TSCellBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCellBottomLine.m; sourceTree = "<group>"; };
+		0C9B0FA11D388AC400F76773 /* TSDrawHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawHotTableViewCell.h; sourceTree = "<group>"; };
+		0C9B0FA21D388AC400F76773 /* TSDrawHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawHotTableViewCell.m; sourceTree = "<group>"; };
+		0C9B0FA31D388AC400F76773 /* TSDrawHotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSDrawHotTableViewCell.xib; sourceTree = "<group>"; };
+		0C9B0FA41D388AC400F76773 /* TSDrawNewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawNewCell.h; sourceTree = "<group>"; };
+		0C9B0FA51D388AC400F76773 /* TSDrawNewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawNewCell.m; sourceTree = "<group>"; };
+		0C9B0FA61D388AC400F76773 /* TSDrawNewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSDrawNewCell.xib; sourceTree = "<group>"; };
+		0C9B0FA81D388AC400F76773 /* TSCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCollectionHeaderView.h; sourceTree = "<group>"; };
+		0C9B0FA91D388AC400F76773 /* TSCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollectionHeaderView.m; sourceTree = "<group>"; };
 		0CA6F9401D3335610019A7BA /* TSCareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareController.h; sourceTree = "<group>"; };
 		0CA6F9411D3335610019A7BA /* TSCareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareController.m; sourceTree = "<group>"; };
 		0CA6F9441D33356F0019A7BA /* TSDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawController.h; sourceTree = "<group>"; };
@@ -148,8 +156,6 @@
 		0CD5C0DA1D372F5C001689CB /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
 		0CD5C0DC1D372FE9001689CB /* AFNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetAPIClient.h; sourceTree = "<group>"; };
 		0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetAPIClient.m; sourceTree = "<group>"; };
-		0CD5C0E21D373F11001689CB /* TSBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBanner.h; sourceTree = "<group>"; };
-		0CD5C0E31D373F11001689CB /* TSBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBanner.m; sourceTree = "<group>"; };
 		0CE3A7291D34DFB400D3AC88 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		0CE3A72A1D34DFB400D3AC88 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		0CE3A72B1D34DFB400D3AC88 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -164,9 +170,6 @@
 		0CE3A7341D34DFB400D3AC88 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		0CE3A7351D34DFB400D3AC88 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		0CE3A7361D34DFB400D3AC88 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-		0CE3A73E1D34F36400D3AC88 /* TSDrawHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawHotTableViewCell.h; sourceTree = "<group>"; };
-		0CE3A73F1D34F36400D3AC88 /* TSDrawHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawHotTableViewCell.m; sourceTree = "<group>"; };
-		0CE3A7401D34F36400D3AC88 /* TSDrawHotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSDrawHotTableViewCell.xib; sourceTree = "<group>"; };
 		6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.debug.xcconfig"; sourceTree = "<group>"; };
 		8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mi_ToShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -380,18 +383,8 @@
 		0C3651581D30A29300857854 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0CD5C0E21D373F11001689CB /* TSBanner.h */,
-				0CD5C0E31D373F11001689CB /* TSBanner.m */,
-				0C1CD4181D3778290078FF28 /* DrawTopic.h */,
-				0C1CD4191D3778290078FF28 /* DrawTopic.m */,
-				0C1CD41B1D37799A0078FF28 /* TSUser.h */,
-				0C1CD41C1D37799A0078FF28 /* TSUser.m */,
-				0C1CD41E1D3779EC0078FF28 /* TSWork.h */,
-				0C1CD41F1D3779EC0078FF28 /* TSWork.m */,
-				0C1CD4211D377A470078FF28 /* TSTopic.h */,
-				0C1CD4221D377A470078FF28 /* TSTopic.m */,
-				0C1CD4241D3784AE0078FF28 /* TSAllDrawTopic.h */,
-				0C1CD4251D3784AE0078FF28 /* TSAllDrawTopic.m */,
+				0C9B0F8A1D388A9A00F76773 /* LeftModel */,
+				0C9B0F971D388A9A00F76773 /* RightModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,14 +392,8 @@
 		0C3651591D30A29300857854 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CE3A73E1D34F36400D3AC88 /* TSDrawHotTableViewCell.h */,
-				0CE3A73F1D34F36400D3AC88 /* TSDrawHotTableViewCell.m */,
-				0CE3A7401D34F36400D3AC88 /* TSDrawHotTableViewCell.xib */,
-				0C36FA381D36437A00B5B8F7 /* TSCellBottomLine.h */,
-				0C36FA391D36437A00B5B8F7 /* TSCellBottomLine.m */,
-				0C36FA3B1D365D3C00B5B8F7 /* TSDrawNewCell.h */,
-				0C36FA3C1D365D3C00B5B8F7 /* TSDrawNewCell.m */,
-				0C36FA3D1D365D3C00B5B8F7 /* TSDrawNewCell.xib */,
+				0C9B0F9E1D388AC400F76773 /* LeftView */,
+				0C9B0FA71D388AC400F76773 /* RightView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,6 +413,56 @@
 				0CA6F93F1D3335610019A7BA /* Controller */,
 			);
 			path = Care;
+			sourceTree = "<group>";
+		};
+		0C9B0F8A1D388A9A00F76773 /* LeftModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C9B0F8B1D388A9A00F76773 /* DrawTopic.h */,
+				0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */,
+				0C9B0F8D1D388A9A00F76773 /* TSAllDrawTopic.h */,
+				0C9B0F8E1D388A9A00F76773 /* TSAllDrawTopic.m */,
+				0C9B0F8F1D388A9A00F76773 /* TSBanner.h */,
+				0C9B0F901D388A9A00F76773 /* TSBanner.m */,
+				0C9B0F911D388A9A00F76773 /* TSTopic.h */,
+				0C9B0F921D388A9A00F76773 /* TSTopic.m */,
+				0C9B0F931D388A9A00F76773 /* TSUser.h */,
+				0C9B0F941D388A9A00F76773 /* TSUser.m */,
+				0C9B0F951D388A9A00F76773 /* TSWork.h */,
+				0C9B0F961D388A9A00F76773 /* TSWork.m */,
+			);
+			path = LeftModel;
+			sourceTree = "<group>";
+		};
+		0C9B0F971D388A9A00F76773 /* RightModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RightModel;
+			sourceTree = "<group>";
+		};
+		0C9B0F9E1D388AC400F76773 /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				0C9B0F9F1D388AC400F76773 /* TSCellBottomLine.h */,
+				0C9B0FA01D388AC400F76773 /* TSCellBottomLine.m */,
+				0C9B0FA11D388AC400F76773 /* TSDrawHotTableViewCell.h */,
+				0C9B0FA21D388AC400F76773 /* TSDrawHotTableViewCell.m */,
+				0C9B0FA31D388AC400F76773 /* TSDrawHotTableViewCell.xib */,
+				0C9B0FA41D388AC400F76773 /* TSDrawNewCell.h */,
+				0C9B0FA51D388AC400F76773 /* TSDrawNewCell.m */,
+				0C9B0FA61D388AC400F76773 /* TSDrawNewCell.xib */,
+			);
+			path = LeftView;
+			sourceTree = "<group>";
+		};
+		0C9B0FA71D388AC400F76773 /* RightView */ = {
+			isa = PBXGroup;
+			children = (
+				0C9B0FA81D388AC400F76773 /* TSCollectionHeaderView.h */,
+				0C9B0FA91D388AC400F76773 /* TSCollectionHeaderView.m */,
+			);
+			path = RightView;
 			sourceTree = "<group>";
 		};
 		0CA6F93F1D3335610019A7BA /* Controller */ = {
@@ -654,8 +691,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE3A7421D34F36400D3AC88 /* TSDrawHotTableViewCell.xib in Resources */,
-				0C36FA3F1D365D3C00B5B8F7 /* TSDrawNewCell.xib in Resources */,
+				0C9B0FAC1D388AC400F76773 /* TSDrawHotTableViewCell.xib in Resources */,
+				0C9B0FAE1D388AC400F76773 /* TSDrawNewCell.xib in Resources */,
 				0CD5C0DB1D372F5C001689CB /* https.cer in Resources */,
 				0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */,
 				0C3651191D30910800857854 /* Assets.xcassets in Resources */,
@@ -734,14 +771,16 @@
 				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
 				0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
+				0C9B0FAA1D388AC400F76773 /* TSCellBottomLine.m in Sources */,
 				0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */,
+				0C9B0F9B1D388A9A00F76773 /* TSTopic.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
+				0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
-				0C36FA3A1D36437A00B5B8F7 /* TSCellBottomLine.m in Sources */,
+				0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
-				0C1CD4261D3784AE0078FF28 /* TSAllDrawTopic.m in Sources */,
+				0C9B0FAD1D388AC400F76773 /* TSDrawNewCell.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
-				0C36FA3E1D365D3C00B5B8F7 /* TSDrawNewCell.m in Sources */,
 				0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */,
 				0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */,
 				0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */,
@@ -754,21 +793,20 @@
 				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
-				0C1CD4201D3779EC0078FF28 /* TSWork.m in Sources */,
+				0C9B0F9A1D388A9A00F76773 /* TSBanner.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
 				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
-				0CD5C0E41D373F11001689CB /* TSBanner.m in Sources */,
+				0C9B0FAB1D388AC400F76773 /* TSDrawHotTableViewCell.m in Sources */,
 				0CE3A73D1D34DFB400D3AC88 /* UIView+SDExtension.m in Sources */,
-				0CE3A7411D34F36400D3AC88 /* TSDrawHotTableViewCell.m in Sources */,
+				0C9B0FAF1D388AC400F76773 /* TSCollectionHeaderView.m in Sources */,
 				0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */,
+				0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */,
+				0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */,
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
 				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,
-				0C1CD41A1D3778290078FF28 /* DrawTopic.m in Sources */,
 				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,
-				0C1CD4231D377A470078FF28 /* TSTopic.m in Sources */,
 				0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */,
-				0C1CD41D1D37799A0078FF28 /* TSUser.m in Sources */,
 				0C3651631D30A34500857854 /* TSMeController.m in Sources */,
 				0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */,
 			);
