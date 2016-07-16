@@ -1,5 +1,5 @@
 //
-//  TSCollectionHeaderView.h
+//  TSSquareCollectionViewCell.h
 //  Mi-ToShow
 //
 //  Created by YuanMiaoHeng on 16/7/15.
@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DrawTopic.h"
 
-@interface TSCollectionHeaderView : UICollectionReusableView
+@interface TSSquareCollectionViewCell : UICollectionViewCell
+
+@property(nonatomic, strong)  DrawTopic * drawTopic;
+
+
 @property(nonatomic, copy) NSString * imgName;
-@property(nonatomic, copy) NSString * titleName;
+
 @end

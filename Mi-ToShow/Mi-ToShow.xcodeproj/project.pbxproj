@@ -33,6 +33,9 @@
 		0C9B0FAD1D388AC400F76773 /* TSDrawNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA51D388AC400F76773 /* TSDrawNewCell.m */; };
 		0C9B0FAE1D388AC400F76773 /* TSDrawNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA61D388AC400F76773 /* TSDrawNewCell.xib */; };
 		0C9B0FAF1D388AC400F76773 /* TSCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA91D388AC400F76773 /* TSCollectionHeaderView.m */; };
+		0C9B0FB21D38B2F900F76773 /* TSSquareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FB11D38B2F900F76773 /* TSSquareCollectionViewCell.m */; };
+		0C9B0FB41D38B33100F76773 /* TSSquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B0FB31D38B33100F76773 /* TSSquareCollectionViewCell.xib */; };
+		0C9B0FB71D38D7D300F76773 /* TSSomeOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FB61D38D7D300F76773 /* TSSomeOneView.m */; };
 		0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9411D3335610019A7BA /* TSCareController.m */; };
 		0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9451D33356F0019A7BA /* TSDrawController.m */; };
 		0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9491D33357E0019A7BA /* TSMessageController.m */; };
@@ -48,6 +51,9 @@
 		0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */; };
 		0CD5C0DB1D372F5C001689CB /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DA1D372F5C001689CB /* https.cer */; };
 		0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */; };
+		0CD9A74D1D3A0D9C0031FA05 /* TSCollectionFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9A74C1D3A0D9C0031FA05 /* TSCollectionFootView.m */; };
+		0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9A74F1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m */; };
+		0CD9A7531D3A2EC10031FA05 /* TSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9A7521D3A2EC10031FA05 /* TSTool.m */; };
 		0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72A1D34DFB400D3AC88 /* TAAbstractDotView.m */; };
 		0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72C1D34DFB400D3AC88 /* TAAnimatedDotView.m */; };
 		0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A72E1D34DFB400D3AC88 /* TADotView.m */; };
@@ -127,6 +133,11 @@
 		0C9B0FA61D388AC400F76773 /* TSDrawNewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSDrawNewCell.xib; sourceTree = "<group>"; };
 		0C9B0FA81D388AC400F76773 /* TSCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCollectionHeaderView.h; sourceTree = "<group>"; };
 		0C9B0FA91D388AC400F76773 /* TSCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollectionHeaderView.m; sourceTree = "<group>"; };
+		0C9B0FB01D38B2F900F76773 /* TSSquareCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSquareCollectionViewCell.h; sourceTree = "<group>"; };
+		0C9B0FB11D38B2F900F76773 /* TSSquareCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSquareCollectionViewCell.m; sourceTree = "<group>"; };
+		0C9B0FB31D38B33100F76773 /* TSSquareCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSSquareCollectionViewCell.xib; sourceTree = "<group>"; };
+		0C9B0FB51D38D7D300F76773 /* TSSomeOneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSomeOneView.h; sourceTree = "<group>"; };
+		0C9B0FB61D38D7D300F76773 /* TSSomeOneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSomeOneView.m; sourceTree = "<group>"; };
 		0CA6F9401D3335610019A7BA /* TSCareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareController.h; sourceTree = "<group>"; };
 		0CA6F9411D3335610019A7BA /* TSCareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareController.m; sourceTree = "<group>"; };
 		0CA6F9441D33356F0019A7BA /* TSDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawController.h; sourceTree = "<group>"; };
@@ -156,6 +167,13 @@
 		0CD5C0DA1D372F5C001689CB /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
 		0CD5C0DC1D372FE9001689CB /* AFNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetAPIClient.h; sourceTree = "<group>"; };
 		0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetAPIClient.m; sourceTree = "<group>"; };
+		0CD9A74B1D3A0D9C0031FA05 /* TSCollectionFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCollectionFootView.h; sourceTree = "<group>"; };
+		0CD9A74C1D3A0D9C0031FA05 /* TSCollectionFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollectionFootView.m; sourceTree = "<group>"; };
+		0CD9A74E1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLeftTitleRightImageButton.h; sourceTree = "<group>"; };
+		0CD9A74F1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLeftTitleRightImageButton.m; sourceTree = "<group>"; };
+		0CD9A7511D3A2EC10031FA05 /* TSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTool.h; sourceTree = "<group>"; };
+		0CD9A7521D3A2EC10031FA05 /* TSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTool.m; sourceTree = "<group>"; };
+		0CD9A7541D3A2FF00031FA05 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		0CE3A7291D34DFB400D3AC88 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		0CE3A72A1D34DFB400D3AC88 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		0CE3A72B1D34DFB400D3AC88 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -459,8 +477,17 @@
 		0C9B0FA71D388AC400F76773 /* RightView */ = {
 			isa = PBXGroup;
 			children = (
+				0CD9A74B1D3A0D9C0031FA05 /* TSCollectionFootView.h */,
+				0CD9A74C1D3A0D9C0031FA05 /* TSCollectionFootView.m */,
 				0C9B0FA81D388AC400F76773 /* TSCollectionHeaderView.h */,
 				0C9B0FA91D388AC400F76773 /* TSCollectionHeaderView.m */,
+				0C9B0FB01D38B2F900F76773 /* TSSquareCollectionViewCell.h */,
+				0C9B0FB11D38B2F900F76773 /* TSSquareCollectionViewCell.m */,
+				0C9B0FB31D38B33100F76773 /* TSSquareCollectionViewCell.xib */,
+				0C9B0FB51D38D7D300F76773 /* TSSomeOneView.h */,
+				0C9B0FB61D38D7D300F76773 /* TSSomeOneView.m */,
+				0CD9A74E1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.h */,
+				0CD9A74F1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m */,
 			);
 			path = RightView;
 			sourceTree = "<group>";
@@ -530,10 +557,13 @@
 		0CD5C0D61D3729EB001689CB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0CD9A7541D3A2FF00031FA05 /* Singleton.h */,
 				0CD5C0DC1D372FE9001689CB /* AFNetAPIClient.h */,
 				0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */,
 				0CD5C0D71D372A1C001689CB /* TSNetWorkTool.h */,
 				0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */,
+				0CD9A7511D3A2EC10031FA05 /* TSTool.h */,
+				0CD9A7521D3A2EC10031FA05 /* TSTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -649,8 +679,9 @@
 		0C3651011D30910800857854 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TS;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = Mi;
+				ORGANIZATIONNAME = TS;
 				TargetAttributes = {
 					0C3651081D30910800857854 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -695,6 +726,7 @@
 				0C9B0FAE1D388AC400F76773 /* TSDrawNewCell.xib in Resources */,
 				0CD5C0DB1D372F5C001689CB /* https.cer in Resources */,
 				0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */,
+				0C9B0FB41D38B33100F76773 /* TSSquareCollectionViewCell.xib in Resources */,
 				0C3651191D30910800857854 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,14 +802,17 @@
 			files = (
 				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
 				0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */,
+				0CD9A74D1D3A0D9C0031FA05 /* TSCollectionFootView.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
 				0C9B0FAA1D388AC400F76773 /* TSCellBottomLine.m in Sources */,
+				0C9B0FB71D38D7D300F76773 /* TSSomeOneView.m in Sources */,
 				0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */,
 				0C9B0F9B1D388A9A00F76773 /* TSTopic.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */,
+				0CD9A7531D3A2EC10031FA05 /* TSTool.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
 				0C9B0FAD1D388AC400F76773 /* TSDrawNewCell.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
@@ -790,6 +825,7 @@
 				0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */,
 				0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */,
 				0CE3A73C1D34DFB400D3AC88 /* SDCycleScrollView.m in Sources */,
+				0C9B0FB21D38B2F900F76773 /* TSSquareCollectionViewCell.m in Sources */,
 				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
@@ -801,6 +837,7 @@
 				0C9B0FAF1D388AC400F76773 /* TSCollectionHeaderView.m in Sources */,
 				0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */,
 				0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */,
+				0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */,
 				0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */,
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,

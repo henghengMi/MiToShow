@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface TSBasicViewController : UIViewController
 
 
@@ -25,6 +26,7 @@
 
 
 
+
 @property(nonatomic, assign,getter=isTSNavOnleftTitle) BOOL TSNavOnleftTitle;
 
 
@@ -38,6 +40,9 @@
 - (void)TSNavRightTitleDidClick_Custom;
 
 - (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass;
+
+-(void)headerWithRefreshingWithView:(UIScrollView *)view Target:(id)target refreshingAction:(SEL)action;
+
 
 
 @end

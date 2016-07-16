@@ -13,6 +13,8 @@
 
 @property(nonatomic, weak) TSNavigationBar * navBar ;
 
+@property(nonatomic, strong) NSMutableArray * pullingImages;
+@property(nonatomic, strong) NSMutableArray * refreshingImages;
 @end
 
 @implementation TSBasicViewController
@@ -25,6 +27,29 @@
     return _dataArray;
 }
 
+- (NSMutableArray *)pullingImages
+{
+    if (!_pullingImages) {
+        _pullingImages = [NSMutableArray array];
+        for (int i = 1; i <= 40; i++ ) {
+            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"pull_%d",i]];
+            [_pullingImages addObject:img];
+        }
+    }
+    return _pullingImages;
+}
+
+- (NSMutableArray *)refreshingImages
+{
+    if (!_refreshingImages) {
+        _refreshingImages = [NSMutableArray array];
+        for (int i = 1; i <= 12; i++ ) {
+            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"loading_%d",i]];
+            [_refreshingImages addObject:img];
+        }
+    }
+    return _refreshingImages;
+}
 
 #pragma mark - 懒加载
 - (UIScrollView *)scrollView
@@ -47,6 +72,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
     // 导航栏
     [self setupNavBar];
+}
+
+#pragma mark 下拉头部刷新配置
+-(void)headerWithRefreshingWithView:(UIScrollView *)view Target:(id)target refreshingAction:(SEL)action;
+{
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:target refreshingAction:action];
+    [header setImages:self.pullingImages forState:MJRefreshStateIdle];
+    [header setImages:self.refreshingImages  forState:MJRefreshStateRefreshing];
+    view.mj_header = header;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
 }
 
 

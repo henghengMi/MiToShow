@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TSSquareCollectionViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="squareCellID" id="XST-0Y-0ae" customClass="TSSquareCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="96" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mi_01" translatesAutoresizingMaskIntoConstraints="NO" id="10y-rQ-2pN">
+                        <rect key="frame" x="0.0" y="0.0" width="96" height="94"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="10y-rQ-2pN" secondAttribute="bottom" id="NKb-Ar-NrF"/>
+                <constraint firstItem="10y-rQ-2pN" firstAttribute="leading" secondItem="XST-0Y-0ae" secondAttribute="leading" id="no2-eS-dOo"/>
+                <constraint firstAttribute="trailing" secondItem="10y-rQ-2pN" secondAttribute="trailing" id="sgL-Bs-VSm"/>
+                <constraint firstItem="10y-rQ-2pN" firstAttribute="top" secondItem="XST-0Y-0ae" secondAttribute="top" id="vf6-eg-ibX"/>
+            </constraints>
+            <size key="customSize" width="96" height="94"/>
+            <connections>
+                <outlet property="imgView" destination="10y-rQ-2pN" id="Rce-Ad-4lz"/>
+            </connections>
+            <point key="canvasLocation" x="623" y="575"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Mi_01" width="1300" height="1300"/>
+    </resources>
+</document>

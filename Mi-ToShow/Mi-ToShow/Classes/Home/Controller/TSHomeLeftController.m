@@ -24,36 +24,13 @@
 @property(nonatomic, weak)  UITableView *tableview ;
 @property(nonatomic, strong)  NSMutableArray *banners ;
 @property(nonatomic, strong)  NSMutableArray *dataArray ;
-@property(nonatomic, strong) NSMutableArray * pullingImages;
-@property(nonatomic, strong) NSMutableArray * refreshingImages;
+
 
 @end
 
 @implementation TSHomeLeftController
 
-- (NSMutableArray *)pullingImages
-{
-    if (!_pullingImages) {
-        _pullingImages = [NSMutableArray array];
-        for (int i = 1; i <= 40; i++ ) {
-            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"pull_%d",i]];
-            [_pullingImages addObject:img];
-        }
-    }
-    return _pullingImages;
-}
 
-- (NSMutableArray *)refreshingImages
-{
-    if (!_refreshingImages) {
-        _refreshingImages = [NSMutableArray array];
-        for (int i = 1; i <= 12; i++ ) {
-            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"loading_%d",i]];
-            [_refreshingImages addObject:img];
-        }
-    }
-    return _refreshingImages;
-}
 
 
 - (NSMutableArray *)banners
@@ -80,9 +57,10 @@
     
     [TSNetWorkTool getWithURL:@"http://api.toshow.com/api/explore/topicgroup1?group=0&hascount=0&requestcount=0" success:^(id json) {
         self.dataArray = [TSAllDrawTopic mj_objectArrayWithKeyValuesArray:json[@"result"]];
-        [self setupRefreshHeader];
+     
         [self setupTableView];
         [self.tableview reloadData];
+        [self setupRefreshHeader];
         
     } failure:^(NSError *error) {
     
@@ -91,15 +69,7 @@
 
 - (void)setupRefreshHeader
 {
-     [self.tableview.mj_header endRefreshing];
-    
-    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    [header setImages:self.pullingImages forState:MJRefreshStateIdle];
-    [header setImages:self.refreshingImages  forState:MJRefreshStateRefreshing];
-    self.tableview.mj_header = header;
-    header.lastUpdatedTimeLabel.hidden = YES;
-    header.stateLabel.hidden = YES;
-    
+    [[TSTool sharedTSTool] headerWithRefreshingWithView:self.tableview Target:self refreshingAction:@selector(loadNewData)];
 }
 
 #pragma mark 刷新
@@ -108,7 +78,7 @@
      NSLog(@"刷新------");
 
     
-    [self requstDraw];
+    [self requstBanner];
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [self.tableview.mj_header endRefreshing];
@@ -132,21 +102,28 @@
 
 -(void)setupTableView
 {
-    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth , TSTableViewHeight) style:UITableViewStyleGrouped];
-    [self.view addSubview:tableview];
-    tableview.dataSource = self;
-    tableview.delegate = self;
-    self.tableview = tableview;
-    tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
-    tableview.backgroundColor = [UIColor whiteColor];
-    
+    // 幻灯片
     NSMutableArray *imagesURLStrings = [NSMutableArray array];
     for (int i = 0; i < self.banners.count; i ++) {
         TSBanner *banner = self.banners[i];
         [imagesURLStrings addObject:banner.banner_url];
     }
     
-    [self setupHeaderViewWithImageUrlArray:imagesURLStrings];
+    if (self.tableview == nil) {
+        UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth , TSTableViewHeight) style:UITableViewStyleGrouped];
+        [self.view addSubview:tableview];
+        tableview.dataSource = self;
+        tableview.delegate = self;
+        self.tableview = tableview;
+        tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+        tableview.backgroundColor = [UIColor whiteColor];
+        
+        [self setupHeaderViewWithImageUrlArray:imagesURLStrings];
+    }else // 已经创建过，所以这里要更新
+    {
+        
+    }
+
 }
 
 #pragma mark 轮播图
