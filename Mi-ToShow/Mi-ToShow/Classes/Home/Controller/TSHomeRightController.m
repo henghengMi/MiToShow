@@ -15,7 +15,6 @@
 #import "TSSomeOneView.h"
 #import "TSCollectionFootView.h"
 @interface TSHomeRightController ()<UICollectionViewDelegate,UICollectionViewDataSource>
-
 {
     BOOL  _showingTop;
 }
@@ -99,7 +98,7 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
         [self.collectionView reloadData];
         TSLog_AfterRequst(@"获取三个推荐用户");
         
-        [self ceateCollectionViewInsetView];
+//        [self ceateCollectionViewInsetView];
         
     } failure:^(NSError *error) {
         
@@ -129,12 +128,12 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
         
         collectionView.backgroundColor = [UIColor whiteColor];
         self.collectionView = collectionView;
-        self.collectionView.contentInset = UIEdgeInsetsMake(65, 0, 0, 0);
+//        self.collectionView.contentInset = UIEdgeInsetsMake(65, 0, 0, 0);
     }
     // 配置刷新
-//  MJRefreshGifHeader  *header = [[TSTool sharedTSTool] headerWithRefreshingWithView:self.collectionView Target:self refreshingAction:@selector(reloadNewData)];
+ [[TSTool sharedTSTool] headerWithRefreshingWithView:self.collectionView Target:self refreshingAction:@selector(reloadNewData)];
 //    header.x = ScreenWidth;
-    [self setupRefreshHeader];
+//    [self setupRefreshHeader];
  
 }
 
@@ -142,20 +141,21 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
 {
 //    [[TSTool sharedTSTool] headerWithRefreshingWithView:self.tableview Target:self refreshingAction:@selector(loadNewData)];
     
-    [self.collectionView.mj_header endRefreshing];
+//    [self.collectionView.mj_header endRefreshing];
     
-    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadNewData)];
-    [header setImages:[TSTool getPullImages] forState:MJRefreshStateIdle];
-    [header setImages:[TSTool getRefreshImages]  forState:MJRefreshStateRefreshing];
-    self.collectionView.mj_header = header;
-    header.lastUpdatedTimeLabel.hidden = NO;
-    header.stateLabel.hidden = NO;
-//    header.x = ScreenWidth;
+//    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadNewData)];
+//    [header setImages:[TSTool getPullImages] forState:MJRefreshStateIdle];
+//    [header setImages:[TSTool getRefreshImages]  forState:MJRefreshStateRefreshing];
+//    self.collectionView.mj_header = header;
+//    header.lastUpdatedTimeLabel.hidden = YES;
+//    header.stateLabel.hidden = YES;
+//    header.width = ScreenWidth * 2;
 }
 
 #pragma mark 刷新
 -(void)reloadNewData
 {
+   [self.collectionView.mj_header endRefreshing];
      NSLog(@"刷新");
     
     [self getSomePerson];
@@ -178,7 +178,6 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
         [topView someOneViewDiscoverBtnAddTager:self action:@selector(someOneViewDiscoverBtn) forControlEvents:(UIControlEventTouchUpInside)];
         self.topView = topView;
         
-        
         UIView *dividerV = [[UIView alloc] initWithFrame:CGRectMake(0, 55,ScreenWidth, 10)];
         [self.topView addSubview:dividerV];
         dividerV.backgroundColor = TSColor(241, 241, 241);
@@ -188,7 +187,6 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
 
 
 #pragma mark collectionView dataSource && delegate
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
   
@@ -233,7 +231,7 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    CGFloat h  =  35;
+    CGFloat h  =  (section == 0) ? 100 : 35;
     return CGSizeMake(ScreenWidth, h);
 }
 
@@ -256,8 +254,18 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
         if (headView == nil)   headView = [[TSCollectionHeaderView alloc] init];
         headView.titleName = (indexPath.section == 0) ? @"最热画题" : @"最新话题";
         headView.imgName = (indexPath.section == 0) ? @"commend_03" : @"commend_04" ;
-        if (indexPath.section == 1) headView.backgroundColor = [UIColor whiteColor];
+//        if (indexPath.section == 1) headView.backgroundColor = [UIColor whiteColor];
         reuseView = headView;
+        // 传递图片
+        headView.someoneView.images = self.DrawTopics;
+        headView.indexPath = indexPath;
+        
+        headView.someoneView.someOneClick =  ^(int index){
+            DrawTopic *d = self.DrawTopics[index];
+            SHOWALERT(d.user.nickname);
+        };
+        [headView.someoneView someOneViewDiscoverBtnAddTager:self action:@selector(someOneViewDiscoverBtn) forControlEvents:(UIControlEventTouchUpInside)];
+        
     }
 
     if (kind == UICollectionElementKindSectionFooter){
@@ -279,11 +287,14 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
     return reuseView;
 }
 
+
+#pragma 查看更多更热话题
 - (void)checkMoreHotTopic:(UIButton *)btn
 {
     SHOWALERT(btn.currentTitle);
 }
 
+#pragma mark 发现途友
 - (void)someOneViewDiscoverBtn
 {
     SHOWALERT(@"发现途友");

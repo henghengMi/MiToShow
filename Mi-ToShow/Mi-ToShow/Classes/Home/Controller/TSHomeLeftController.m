@@ -25,12 +25,9 @@
 @property(nonatomic, strong)  NSMutableArray *banners ;
 @property(nonatomic, strong)  NSMutableArray *dataArray ;
 
-
 @end
 
 @implementation TSHomeLeftController
-
-
 
 
 - (NSMutableArray *)banners
@@ -41,14 +38,24 @@
     return _banners;
 }
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
  
     [self requstBanner];
 }
+
+#pragma mark - scrollView delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    
+     NSLog(@"offsetY: %f",offsetY);
+    
+    
+    
+    
+}
+
 
 #pragma mark 首页数据
 -(void)requstDraw
@@ -71,6 +78,8 @@
 {
     [[TSTool sharedTSTool] headerWithRefreshingWithView:self.tableview Target:self refreshingAction:@selector(loadNewData)];
 }
+
+
 
 #pragma mark 刷新
 - (void)loadNewData

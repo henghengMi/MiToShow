@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSSomeOneView.h"
 
 @interface TSCollectionHeaderView : UICollectionReusableView
 @property(nonatomic, copy) NSString * imgName;
 @property(nonatomic, copy) NSString * titleName;
+@property(nonatomic, copy) UIView * recommendView; ;
+@property(nonatomic, strong) NSIndexPath * indexPath ;
+@property(nonatomic, weak) TSSomeOneView * someoneView;
+
 @end

@@ -21,6 +21,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        self.backgroundColor = [UIColor whiteColor];
+        
         UIButton *discoverToYouBtn = [UIButton buttonWithType:0];
         [discoverToYouBtn setTitle:@"发现途友" forState:0];
         discoverToYouBtn.frame = CGRectMake(ScreenWidth - (ScreenWidth * 0.5) -10, 0, (ScreenWidth * 0.5), 55);
@@ -62,16 +64,15 @@
         button.tag = 100+ i;
         [button addTarget:self action:@selector(btnClick:) forControlEvents:(UIControlEventTouchUpInside)];
         
-        
-        
-        
     }
 
 }
 
 - (void)btnClick:(UIButton *)btn
 {
-    self.someOneClick( (int)btn.tag - 100);
+    if (self.someOneClick) {
+        self.someOneClick( (int)btn.tag - 100);
+    }
 }
 
 

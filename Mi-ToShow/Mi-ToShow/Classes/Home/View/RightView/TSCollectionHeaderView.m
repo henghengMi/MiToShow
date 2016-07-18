@@ -7,10 +7,10 @@
 //
 
 #import "TSCollectionHeaderView.h"
-
 @interface TSCollectionHeaderView ()
 
 @property(nonatomic, weak) UIButton * headerBtn;
+
 
 @end
 
@@ -19,7 +19,6 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-    
         // 最新画题或者最热话题的头部。
         UIButton * headerBtn = [UIButton buttonWithType:0];
         headerBtn.frame = CGRectMake(TSLefrMargin,  0 , ScreenWidth - 2 * TSLefrMargin, 35);
@@ -30,11 +29,24 @@
         headerBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
         headerBtn.userInteractionEnabled = NO;
         self.headerBtn = headerBtn;
+        headerBtn.backgroundColor = [UIColor whiteColor];
         
+        
+        TSSomeOneView * someoneView = [[TSSomeOneView  alloc] init];
+        someoneView.frame = CGRectMake(0, 0, ScreenWidth, 65);
+        self.someoneView = someoneView;
+        [self addSubview:someoneView];
+        someoneView.backgroundColor = [UIColor whiteColor];
+        
+        UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(0, 55, ScreenWidth, 10)] ;
+        [someoneView addSubview:dividerView];
+        dividerView.backgroundColor = [UIColor LJSectionColor];
     }
     
     return self;
 }
+
+
 
 - (void)setImgName:(NSString *)imgName
 {
@@ -48,6 +60,11 @@
     [self.headerBtn setTitle:titleName forState:(UIControlStateNormal)];
 }
 
+- (void)setIndexPath:(NSIndexPath *)indexPath
+{
+    self.someoneView.hidden = !(indexPath.section == 0) ;
+    self.headerBtn.y = (indexPath.section == 0) ? 70 : 5;
+}
 
 
 @end
