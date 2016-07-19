@@ -13,18 +13,34 @@
 #import "TSBanner.h"
 #import "DrawTopic.h"
 #import "TSAllDrawTopic.h"
-
 #import "MJRefresh.h"
+
+/** 刷新控件的状态 */
+typedef NS_ENUM(NSInteger, TSRefreshState) {
+    /** 普通闲置状态 */
+    TSRefreshStateIdle = 1,
+    /** 松开就可以进行刷新的状态 */
+    TSRefreshStatePulling,
+    /** 正在刷新中的状态 */
+    TSRefreshStateRefreshing,
+    /** 即将刷新的状态 */
+    TSRefreshStateWillRefresh,
+    /** 所有数据加载完毕，没有更多的数据了 */
+    TSRefreshStateNoMoreData
+};
 
 @interface TSHomeLeftController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 {
     NSInteger _hascount;
     NSInteger _requestcount;
+    BOOL _isLoadingMore;
+    CGFloat _lastOffsetY;
+    BOOL _isOnleft;
 }
 @property(nonatomic, weak)  UITableView *tableview ;
 @property(nonatomic, strong)  NSMutableArray *banners ;
 @property(nonatomic, strong)  NSMutableArray *dataArray ;
-
+@property(nonatomic, assign) TSRefreshState * refreshState;
 @end
 
 @implementation TSHomeLeftController
@@ -42,20 +58,102 @@
     [super viewDidLoad];
  
     [self requstBanner];
+    
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(leftTitleClick:) name:kTSNotificationName_leftTitleClick object:nil];
+    
+    // 监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabbarIndexClick:) name:kTSNotificationName_tabBarleftItemClick object:nil];
+
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarItemClick object:nil userInfo:@{@"itemIndex":@(item.tag)}];
+    
+}
+
+#pragma mark 左边标题点击
+- (void)leftTitleClick:(NSNotification *)nf
+{
+     NSLog(@"nf.userInfo:%@",nf.userInfo);
+    // 在左边才滚到顶部
+    if([nf.userInfo[@"isonleft"] boolValue]) 
+    [self.tableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
+}
+
+#pragma mark tabBarItem点击
+- (void)tabbarIndexClick:(NSNotification *)nf
+{
+    NSLog(@"左nf.userInfo:%@",nf.userInfo);
+    
+    if(self.tableview.contentOffset.y != 0 && _isLoadingMore == NO && self.tableview.mj_header.state != MJRefreshStateRefreshing )
+    {
+        [self.tableview setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
+
 }
 
 #pragma mark - scrollView delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offsetY = scrollView.contentOffset.y;
+    if (_isLoadingMore) return;
     
-     NSLog(@"offsetY: %f",offsetY);
+    // 实际边界的Y
+   CGFloat boundaryY =  scrollView.contentSize.height - scrollView.height ;
+   CGFloat d = 150.0f;
     
-    
-    
+    // 达到3个条件才能刷新 1. 到达触发值 2.在上拉 3.不是加载中
+    // 用fmaxf来取与0比较后较大值的原因是，当scrollView内容为空时scrollView.contentSize.height可能是0
+    if (offsetY >= fmaxf(.0f, boundaryY) - d && (_isLoadingMore) == NO && _lastOffsetY < offsetY ) //x是触发操作的阀值
+    {
+        //触发上拉刷新
+         NSLog(@"触发加载更多数据");
+        _isLoadingMore = YES;
+        [self loadMoreNewTopicRequst];
+        
+    }
     
 }
 
+#pragma mark 加载更多
+-(void)loadMoreNewTopicRequst
+{
+     NSLog(@"加载更多数据的请求");
+//    http://api.toshow.com/api/explore/topicgroup1?group=3&hascount=3&requestcount=20
+    
+    if (!_hascount) _hascount =3 ;
+    
+    NSString *url = [NSString stringWithFormat:@"http://api.toshow.com/api/explore/topicgroup1?group=3&hascount=%ld&requestcount=20",_hascount];
+    
+    [TSNetWorkTool getWithURL:url success:^(id json) {
+        
+      NSDictionary *newTopicGroupDic =  json[@"result"][0];
+        // 插入20条数据
+        NSMutableArray *newResults = [DrawTopic mj_objectArrayWithKeyValuesArray:newTopicGroupDic[@"topiclist"]];
+        TSAllDrawTopic *newTopic =  self.dataArray[1];
+        
+        // 插入
+         [newResults insertObjects: newTopic.topiclist atIndex:0];
+        // 替换
+        newTopic.topiclist = newResults;
+        [self.dataArray replaceObjectAtIndex:1 withObject:newTopic];
+
+        // 插入后更新有的个数
+        _hascount =  newTopic.topiclist.count;
+
+        // 刷新
+        [self.tableview reloadData];
+        _isLoadingMore = NO;
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+     NSLog(@"scrollViewWillBeginDecelerating");
+      _lastOffsetY =  scrollView.contentOffset.y;
+}
 
 #pragma mark 首页数据
 -(void)requstDraw
@@ -68,6 +166,7 @@
         [self setupTableView];
         [self.tableview reloadData];
         [self setupRefreshHeader];
+        _hascount = 3; // 第一次加载首页有3个。
         
     } failure:^(NSError *error) {
     
@@ -78,8 +177,6 @@
 {
     [[TSTool sharedTSTool] headerWithRefreshingWithView:self.tableview Target:self refreshingAction:@selector(loadNewData)];
 }
-
-
 
 #pragma mark 刷新
 - (void)loadNewData
@@ -162,7 +259,6 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"---点击了第%ld张图片", (long)index);
-    
 
 }
 
@@ -174,9 +270,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-   TSAllDrawTopic *allTopic =  self.dataArray[section];
-
+    TSAllDrawTopic *allTopic =  self.dataArray[section];
     return allTopic.topiclist.count;
     
 //    if (section == 0) {
@@ -279,6 +373,7 @@
     }
     return nil;
 }
+
 
 
 

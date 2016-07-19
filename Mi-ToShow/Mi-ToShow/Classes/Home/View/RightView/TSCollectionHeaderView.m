@@ -66,5 +66,15 @@
     self.headerBtn.y = (indexPath.section == 0) ? 70 : 5;
 }
 
+- (void)setImages:(NSArray *)images
+{
+    _images = images;
+    self.someoneView.images = images;
+    
+    
+    
+}
+
+
 
 @end

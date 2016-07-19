@@ -16,7 +16,7 @@
 
 @property(nonatomic, strong) TSHomeLeftController * leftVC;
 @property(nonatomic, strong)  TSHomeRightController * rightVC;
-
+//@property(nonatomic, assign) BOOL showingRight;
 @end
 
 @implementation TSHomeController
@@ -45,9 +45,50 @@
     [self setupNavgation];
     
     [self setupChildControllerWithLeftControllerClass:[TSHomeLeftController class] RightControllerClass:[TSHomeRightController class]];
+    
+    
+//       [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarItemClick object:nil userInfo:@{@"itemIndex":@(item.tag)}] ;
+    // 监听来自tabBar的消息
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabbarIndexClick:) name:kTSNotificationName_tabBarItemDidClick object:nil];
+
 }
 
+- (void)tabbarIndexClick:(NSNotification *)nf
+{
+    
+    NSInteger index = [nf.userInfo[@"itemIndex"] integerValue];
+    if (index != 0) return;
+        
+    
+    if (self.showingRightVC) { // 发送右边的通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarRightItemClick object:nil userInfo:nil] ;
 
+    }else
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarleftItemClick object:nil userInfo:nil] ;
+
+    }
+    
+    
+}
+
+//#pragma mark 监听到在showing左还是showing右发送通知
+//- (void)setShowingRightVC:(BOOL)showingRightVC
+//{
+//    // 先调用父类
+//    [super setShowingRightVC:showingRightVC];
+//    
+//    if(showingRightVC) // 正在展示左边
+//    {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarItemClick object:nil userInfo:@{@"itemIndex":@(item.tag)}] ;
+//
+//    }else // 正在展示右边
+//    {
+//        
+//    }
+//    
+//    
+//}
 
 #pragma mark - 导航栏
 -(void)setupNavgation
@@ -60,7 +101,13 @@
 
 - (void)TSNavLeftImageDidClick
 {
-     NSLog(@"TSNavLeftImageDidClick");
+    NSLog(@"TSNavLeftImageDidClick");
+    // 发通知
+    
+    
+    
+    
+    
 }
 
 - (void)TSNavRightImageDidClick
@@ -68,16 +115,21 @@
     NSLog(@"TSNavRightImageDidClick");
 }
 
-- (void)TSNavLeftTitleDidClick
+- (void)TSNavLeftTitleDidClickisOnleft:(BOOL)onleft
 {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_leftTitleClick object:nil userInfo:@{@"isonleft": @(onleft)}];
+   
+
     NSLog(@"TSNavLeftTitleDidClick");
+    
 }
 
-- (void)TSNavRightTitleDidClick
+- (void)TSNavRightTitleDidClickOnRight:(BOOL)onRight
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_rightleClick object:nil userInfo:@{@"isonright": @(onRight)}];
+
     NSLog(@"TSNavRightTitleDidClick");
-    
-    
 }
 
 @end

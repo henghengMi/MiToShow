@@ -27,7 +27,10 @@
 {
     _drawTopic = drawTopic;
     
-    [self.originImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,drawTopic.pngurl]]];
+//    [self.originImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,drawTopic.pngurl]]];
+    [self.originImageView ts_setImageWithURLString:drawTopic.pngurl imageWidthAndHeight:40];
+    
+    
     self.titleLabel.text = drawTopic.topictitle;
     self.subTitleLabel.text = [NSString stringWithFormat:@"题主：%@",drawTopic.user.nickname] ;
     [self.countBtn setTitle:drawTopic.topicworkcount forState:(UIControlStateNormal)];

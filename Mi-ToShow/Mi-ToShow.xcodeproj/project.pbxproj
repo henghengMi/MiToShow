@@ -21,6 +21,7 @@
 		0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651841D30E4C500857854 /* UIColor+LJ.m */; };
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
+		0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */; };
 		0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */; };
 		0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F8E1D388A9A00F76773 /* TSAllDrawTopic.m */; };
 		0C9B0F9A1D388A9A00F76773 /* TSBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F901D388A9A00F76773 /* TSBanner.m */; };
@@ -52,6 +53,7 @@
 		0CD5C0DB1D372F5C001689CB /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DA1D372F5C001689CB /* https.cer */; };
 		0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */; };
 		0CD7F3C41D3C71E900F50AD3 /* UIColor+TS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7F3C31D3C71E900F50AD3 /* UIColor+TS.m */; };
+		0CD7F3C71D3CAD7900F50AD3 /* TSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7F3C61D3CAD7900F50AD3 /* TSConst.m */; };
 		0CD9A74D1D3A0D9C0031FA05 /* TSCollectionFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9A74C1D3A0D9C0031FA05 /* TSCollectionFootView.m */; };
 		0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9A74F1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m */; };
 		0CD9A7531D3A2EC10031FA05 /* TSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9A7521D3A2EC10031FA05 /* TSTool.m */; };
@@ -112,6 +114,8 @@
 		0C3651861D30E4C500857854 /* UIFont+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LJ.m"; sourceTree = "<group>"; };
 		0C3651871D30E4C500857854 /* UIImage+Mi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mi.h"; sourceTree = "<group>"; };
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
+		0C852B731D3DBBB800366171 /* UIImageView+TSWebImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TSWebImageView.h"; sourceTree = "<group>"; };
+		0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TSWebImageView.m"; sourceTree = "<group>"; };
 		0C9B0F8B1D388A9A00F76773 /* DrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTopic.h; sourceTree = "<group>"; };
 		0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTopic.m; sourceTree = "<group>"; };
 		0C9B0F8D1D388A9A00F76773 /* TSAllDrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAllDrawTopic.h; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 		0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetAPIClient.m; sourceTree = "<group>"; };
 		0CD7F3C21D3C71E900F50AD3 /* UIColor+TS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TS.h"; sourceTree = "<group>"; };
 		0CD7F3C31D3C71E900F50AD3 /* UIColor+TS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TS.m"; sourceTree = "<group>"; };
+		0CD7F3C51D3CAD7900F50AD3 /* TSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSConst.h; sourceTree = "<group>"; };
+		0CD7F3C61D3CAD7900F50AD3 /* TSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSConst.m; sourceTree = "<group>"; };
 		0CD9A74B1D3A0D9C0031FA05 /* TSCollectionFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCollectionFootView.h; sourceTree = "<group>"; };
 		0CD9A74C1D3A0D9C0031FA05 /* TSCollectionFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollectionFootView.m; sourceTree = "<group>"; };
 		0CD9A74E1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLeftTitleRightImageButton.h; sourceTree = "<group>"; };
@@ -370,6 +376,8 @@
 				0C36517B1D30D90500857854 /* UIView+Extension.m */,
 				0CD7F3C21D3C71E900F50AD3 /* UIColor+TS.h */,
 				0CD7F3C31D3C71E900F50AD3 /* UIColor+TS.m */,
+				0C852B731D3DBBB800366171 /* UIImageView+TSWebImageView.h */,
+				0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -562,6 +570,8 @@
 		0CD5C0D61D3729EB001689CB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0CD7F3C51D3CAD7900F50AD3 /* TSConst.h */,
+				0CD7F3C61D3CAD7900F50AD3 /* TSConst.m */,
 				0CD9A7541D3A2FF00031FA05 /* Singleton.h */,
 				0CD5C0DC1D372FE9001689CB /* AFNetAPIClient.h */,
 				0CD5C0DD1D372FE9001689CB /* AFNetAPIClient.m */,
@@ -806,6 +816,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
+				0CD7F3C71D3CAD7900F50AD3 /* TSConst.m in Sources */,
 				0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */,
 				0CD9A74D1D3A0D9C0031FA05 /* TSCollectionFootView.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
@@ -846,6 +857,7 @@
 				0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */,
 				0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */,
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
+				0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
 				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,
 				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,

@@ -19,10 +19,11 @@
                        success:(void (^)( id json))success
                        failure:(void (^)(NSError *error))failure
 {
+    NSLog(@"URLString:%@",URLString);
     [[AFNetAPIClient sharedJsonClient] GET:URLString parameters:nil progress:^(NSProgress *  downloadProgress) {
        
     } success:^(NSURLSessionDataTask *  task, id   responseObject) {
-         NSLog(@"json:%@",responseObject);
+         NSLog(@"TSjson:%@",responseObject);
         success(responseObject);
     } failure:^(NSURLSessionDataTask *  task, NSError *  error) {
         NSLog(@"TSerror:%@",error);
@@ -36,6 +37,7 @@
              success:(void (^)( id json))success
              failure:(void (^)(NSError *error))failure;
 {
+     NSLog(@"URLString:%@",URLString);
      NSLog(@"POST请求的字典：%@",parameters);
     [[AFNetAPIClient sharedJsonClient] POST:URLString parameters:parameters progress:^(NSProgress *  downloadProgress){
     } success:^(NSURLSessionDataTask *  task, id   responseObject) {

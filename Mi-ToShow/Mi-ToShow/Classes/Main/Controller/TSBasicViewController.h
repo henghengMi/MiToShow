@@ -24,6 +24,7 @@
 @property(nonatomic, copy) NSString * TSNavRightTitle ;
 @property(nonatomic, copy) UIScrollView * scrollView ;
 
+@property(nonatomic, assign,getter=isShowingRightVC) BOOL showingRightVC;
 
 
 
@@ -34,8 +35,8 @@
 
 -(void)TSNavLeftImageDidClick;
 -(void)TSNavRightImageDidClick;
--(void)TSNavLeftTitleDidClick;
--(void)TSNavRightTitleDidClick;
+-(void)TSNavLeftTitleDidClickisOnleft:(BOOL)onleft;
+-(void)TSNavRightTitleDidClickOnRight:(BOOL)onRight;
 - (void)TSNavLeftTitleDidClick_Custom;
 - (void)TSNavRightTitleDidClick_Custom;
 

@@ -17,6 +17,10 @@
 @interface TSHomeRightController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     BOOL  _showingTop;
+    BOOL _isLoadingMore;
+    CGFloat _lastOffsetY;
+    NSInteger _pageCount;
+    
 }
 @property(nonatomic, strong) NSMutableArray * hotWorksArr;
 @property(nonatomic, strong) NSMutableArray * newsWorksArr;
@@ -54,12 +58,94 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
     self.view.backgroundColor = [UIColor brownColor];
    
     [self setupCollectionView];
-    
     [self getSomePerson];
     [self getHotWorks];
     [self getNewWorks];
+    
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rightTitleClick:) name:kTSNotificationName_rightleClick object:nil];
+    // 监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabbarIndexClick:) name:kTSNotificationName_tabBarRightItemClick object:nil];
+}
+
+#pragma mark tabBarItem点击
+- (void)tabbarIndexClick:(NSNotification *)nf
+{
+    NSLog(@"右nf.userInfo:%@",nf.userInfo);
+    
+    if(self.collectionView.contentOffset.y != 0 && _isLoadingMore == NO && self.collectionView.mj_header.state != MJRefreshStateRefreshing )
+    {
+        [self.collectionView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
+}
+
+
+-(void)rightTitleClick:(NSNotification *)nf
+{
+    if ([nf.userInfo[@"isonright"] boolValue])
+    {
+        [self.collectionView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
 
 }
+
+#pragma mark - scrollView delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (_isLoadingMore) return;
+    
+    // 实际边界的Y
+    CGFloat boundaryY =  scrollView.contentSize.height - scrollView.height ;
+    CGFloat d = 180.0f;
+    
+    // 达到3个条件才能刷新 1. 到达触发值 2.在上拉 3.不是加载中
+    // 用fmaxf来取与0比较后较大值的原因是，当scrollView内容为空时scrollView.contentSize.height可能是0
+    if (offsetY >= fmaxf(.0f, boundaryY) - d && (_isLoadingMore) == NO && _lastOffsetY < offsetY ) //x是触发操作的阀值
+    {
+        //触发上拉刷新
+        NSLog(@"触发加载更多数据");
+        _isLoadingMore = YES;
+        [self loadMoreNewTopicRequst];
+    }
+}
+#pragma mark 加载更多
+-(void)loadMoreNewTopicRequst
+{
+    NSLog(@"加载更多数据的请求");
+    //    http://api.toshow.com/api/explore/topicgroup1?group=3&hascount=3&requestcount=20
+    
+    if (!_pageCount) _pageCount = 1 ;
+    
+    NSString *url = [NSString stringWithFormat:@"http://api.toshow.com/api/explore/worklist1?last=1586905&page=%ld&requestcount=24&type=0",_pageCount];
+    
+    [TSNetWorkTool getWithURL:url success:^(id json) {
+        
+        NSMutableArray *newTopics = [TSWork mj_objectArrayWithKeyValuesArray:json[@"result"]];
+        // 插入
+        [newTopics insertObjects:self.newsWorksArr atIndex:0];
+        // 替换
+        self.newsWorksArr = newTopics;
+        // 刷新
+        [self.collectionView reloadData];
+        _pageCount ++;
+        _isLoadingMore = NO;
+        
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"scrollViewWillBeginDecelerating");
+    _lastOffsetY =  scrollView.contentOffset.y;
+}
+
+
+
 
 #pragma mark 获取最热数据
 - (void)getHotWorks
@@ -257,7 +343,7 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
 //        if (indexPath.section == 1) headView.backgroundColor = [UIColor whiteColor];
         reuseView = headView;
         // 传递图片
-        headView.someoneView.images = self.DrawTopics;
+        headView.images = self.DrawTopics;
         headView.indexPath = indexPath;
         
         headView.someoneView.someOneClick =  ^(int index){

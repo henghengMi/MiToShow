@@ -15,5 +15,6 @@
 @property(nonatomic, copy) UIView * recommendView; ;
 @property(nonatomic, strong) NSIndexPath * indexPath ;
 @property(nonatomic, weak) TSSomeOneView * someoneView;
+@property(nonatomic, strong) NSArray * images ;
 
 @end

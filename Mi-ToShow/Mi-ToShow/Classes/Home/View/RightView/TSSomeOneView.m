@@ -46,24 +46,23 @@
 
 }
 
-
-
 - (void)setImages:(NSArray *)images
 {
-    _images = images;
+     NSLog(@"(self.subviews.count:%d",self.subviews.count);
+   
     CGFloat imgWH = 35;
-    
-    for (int i = 0; i < images.count ; i ++) {
-        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(10 + (imgWH + 10 ) * i, (55 - imgWH) * 0.5, imgWH, imgWH)];
-        [button setBackgroundImage:IMAGE(@"Mi_02") forState:(UIControlStateNormal)];
-        [self addSubview:button];
-        button.clipsToBounds = YES;
-        button.layer.cornerRadius = imgWH * 0.5;
-        button.layer.borderWidth = 1;
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-        button.tag = 100+ i;
-        [button addTarget:self action:@selector(btnClick:) forControlEvents:(UIControlEventTouchUpInside)];
-        
+    if (self.subviews.count <= 2) {
+        for (int i = 0; i < images.count ; i ++) {
+            UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(10 + (imgWH + 10 ) * i, (55 - imgWH) * 0.5, imgWH, imgWH)];
+            [button setBackgroundImage:IMAGE(@"Mi_02") forState:(UIControlStateNormal)];
+            [self addSubview:button];
+            button.clipsToBounds = YES;
+            button.layer.cornerRadius = imgWH * 0.5;
+            button.layer.borderWidth = 1;
+            button.layer.borderColor = [UIColor blackColor].CGColor;
+            button.tag = 100+ i;
+            [button addTarget:self action:@selector(btnClick:) forControlEvents:(UIControlEventTouchUpInside)];
+        }
     }
 
 }

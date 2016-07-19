@@ -85,8 +85,6 @@
     header.stateLabel.hidden = YES;
 }
 
-
-
 #pragma mark 配置左右标题控制器
 - (void)setupChildControllerWithLeftControllerClass:(Class)leftControlleClass RightControllerClass:(Class)rightControllerClass
 {
@@ -137,7 +135,7 @@
 {
     self.navBar.traingleImgView.hidden = NO; // 显示三角形
     self.TSNavOnleftTitle = YES;
-
+    
     [self.navBar.leftTitleBtn setTitle:TSNavLeftTitle forState:(UIControlStateNormal)];
     [self.navBar.leftTitleBtn addTarget:self action:@selector(TSNavLeftTitleDidClick_Custom) forControlEvents:(UIControlEventTouchUpInside)];
 
@@ -152,27 +150,24 @@
 #pragma mark 点击左标题响应方法
 - (void)TSNavLeftTitleDidClick_Custom
 {
-    if (self.TSNavOnleftTitle == YES)  return;
-    
     CGPoint offset = self.scrollView.contentOffset ;
     offset.x = 0;
     self.scrollView.contentOffset = offset;
-    
-    [self.navBar leftTitleBtnClick];
-    [self TSNavLeftTitleDidClick];
+    [self.navBar leftTitleBtnClick ];
+    self.showingRightVC = NO;
+    [self TSNavLeftTitleDidClickisOnleft:self.TSNavOnleftTitle];
     self.TSNavOnleftTitle = YES;
+//    }
 }
 #pragma mark 点击右标题响应方法
 - (void)TSNavRightTitleDidClick_Custom
 {
-    if (self.TSNavOnleftTitle == NO)  return;
-    
     CGPoint offset = self.scrollView.contentOffset ;
     offset.x = ScreenWidth;
     self.scrollView.contentOffset = offset;
-    
+    self.showingRightVC = YES;
     [self.navBar rightTitleBtnClick];
-    [self TSNavRightTitleDidClick];
+    [self TSNavRightTitleDidClickOnRight:!self.TSNavOnleftTitle];
     self.TSNavOnleftTitle = NO;
 }
 

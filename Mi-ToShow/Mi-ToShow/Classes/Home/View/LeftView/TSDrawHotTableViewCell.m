@@ -35,7 +35,8 @@
     NSArray *works = drawTopic.works;
     
     
-    [self.originImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,drawTopic.pngurl]]];
+    [self.originImageView ts_setImageWithURLString:drawTopic.pngurl imageWidthAndHeight:50];
+    
     self.titleLabel.text = drawTopic.topictitle;
     self.subTitleLabel.text = [NSString stringWithFormat:@"题主：%@",drawTopic.user.nickname] ;
     [self.countBtn setTitle:drawTopic.topicworkcount forState:(UIControlStateNormal)];
@@ -49,22 +50,31 @@
         
         if (works.count == 1) {
             work1 = works[0];
-            [self.imgView1 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work1.pngurl]]];
-
+//            [self.imgView1 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work1.pngurl]]];
+            
+            [self.imgView1 ts_setImageWithURLString:work1.pngurl imageWidthAndHeight:self.imgView1.size.width];
 
         }else if (works.count == 2)
         {   work1 = works[0];
              work2 = works[1];
-            [self.imgView1 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work1.pngurl]]];
-            [self.imgView2 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work2.pngurl]]];
+            [self.imgView1 ts_setImageWithURLString:work1.pngurl imageWidthAndHeight:self.imgView1.size.width];
+            [self.imgView2 ts_setImageWithURLString:work2.pngurl imageWidthAndHeight:self.imgView2.size.width];
+
+//            [self.imgView1 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work1.pngurl]]];
+//            [self.imgView2 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work2.pngurl]]];
         }else if (works.count == 3)
         {
             work1 = works[0];
             work2 = works[1];
             work3 = works[2];
-            [self.imgView1 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work1.pngurl]]];
-            [self.imgView2 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work2.pngurl]]];
-            [self.imgView3 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work3.pngurl]]];
+            
+            [self.imgView1 ts_setImageWithURLString:work1.pngurl imageWidthAndHeight:self.imgView1.size.width];
+            [self.imgView2 ts_setImageWithURLString:work2.pngurl imageWidthAndHeight:self.imgView2.size.width];
+            [self.imgView3 ts_setImageWithURLString:work3.pngurl imageWidthAndHeight:self.imgView3.size.width];
+
+//            [self.imgView1 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work1.pngurl]]];
+//            [self.imgView2 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work2.pngurl]]];
+//            [self.imgView3 setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TSImageHost,work3.pngurl]]];
         }
     }
 

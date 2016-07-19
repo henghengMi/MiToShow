@@ -13,11 +13,14 @@
 #import "TSMessageController.h"
 #import "TSDrawController.h"
 #import "TSCareController.h"
-#import "TSTabBar.h"
+//#import "TSTabBar.h"
 #import "TSNavigationController.h"
 #import "TSCustomTabBar.h"
-@interface TSTabBarController ()<TSTabBarDelegate>
-@property(nonatomic, weak) TSTabBar * myTabBar;
+@interface TSTabBarController ()
+{
+    NSInteger _indexTag;
+}
+//@property(nonatomic, weak) TSTabBar * myTabBar;
 @end
 
 @implementation TSTabBarController
@@ -80,10 +83,15 @@
     childVc.tabBarItem.image = [UIImage imageNamed:image];
     childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
+    // 赋值tag
+   
     // 先给外面传进来的小控制器 包装 一个导航控制器
     TSNavigationController *nav = [[TSNavigationController alloc] initWithRootViewController:childVc];
     // 添加为子控制器
     [self addChildViewController:nav];
+    
+    nav.tabBarItem.tag = _indexTag;
+    _indexTag++;
 }
 
 
@@ -94,6 +102,16 @@
     NSLog(@"点击加号");
     TSDrawController *drawVC = [[TSDrawController alloc] init];
     [self presentViewController:drawVC animated:YES completion:nil];
+}
+
+#pragma mark 监听点击~~~
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+     NSLog(@"itemtag:%ld",item.tag);
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarItemDidClick object:nil userInfo:@{@"itemIndex":@(item.tag)}] ;
+    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarRightItemClick object:nil userInfo:@{@"itemIndex":@(item.tag)}] ;
+
 }
 
 @end
