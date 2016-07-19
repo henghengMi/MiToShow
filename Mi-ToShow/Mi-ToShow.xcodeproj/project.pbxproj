@@ -22,13 +22,19 @@
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
 		0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */; };
+		0C852B781D3DCD7300366171 /* TSMessageMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B771D3DCD7300366171 /* TSMessageMeController.m */; };
+		0C852B7E1D3DCE2600366171 /* TSMessageLetterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B7D1D3DCE2600366171 /* TSMessageLetterController.m */; };
+		0C852B831D3DD87600366171 /* TSMessageMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B821D3DD87600366171 /* TSMessageMeCell.m */; };
+		0C852B861D3DD97800366171 /* TSBasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B851D3DD97800366171 /* TSBasicCell.m */; };
+		0C852B891D3DF63F00366171 /* TSCellBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B881D3DF63F00366171 /* TSCellBottomLine.m */; };
+		0C852B8C1D3DFA7C00366171 /* TSLetterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B8B1D3DFA7C00366171 /* TSLetterCell.m */; };
+		0C852B8E1D3DFAF800366171 /* TSLetterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C852B8D1D3DFAF800366171 /* TSLetterCell.xib */; };
 		0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */; };
 		0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F8E1D388A9A00F76773 /* TSAllDrawTopic.m */; };
 		0C9B0F9A1D388A9A00F76773 /* TSBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F901D388A9A00F76773 /* TSBanner.m */; };
 		0C9B0F9B1D388A9A00F76773 /* TSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F921D388A9A00F76773 /* TSTopic.m */; };
 		0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F941D388A9A00F76773 /* TSUser.m */; };
 		0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0F961D388A9A00F76773 /* TSWork.m */; };
-		0C9B0FAA1D388AC400F76773 /* TSCellBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA01D388AC400F76773 /* TSCellBottomLine.m */; };
 		0C9B0FAB1D388AC400F76773 /* TSDrawHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA21D388AC400F76773 /* TSDrawHotTableViewCell.m */; };
 		0C9B0FAC1D388AC400F76773 /* TSDrawHotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA31D388AC400F76773 /* TSDrawHotTableViewCell.xib */; };
 		0C9B0FAD1D388AC400F76773 /* TSDrawNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FA51D388AC400F76773 /* TSDrawNewCell.m */; };
@@ -116,6 +122,19 @@
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
 		0C852B731D3DBBB800366171 /* UIImageView+TSWebImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TSWebImageView.h"; sourceTree = "<group>"; };
 		0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TSWebImageView.m"; sourceTree = "<group>"; };
+		0C852B761D3DCD7300366171 /* TSMessageMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageMeController.h; sourceTree = "<group>"; };
+		0C852B771D3DCD7300366171 /* TSMessageMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageMeController.m; sourceTree = "<group>"; };
+		0C852B7C1D3DCE2600366171 /* TSMessageLetterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageLetterController.h; sourceTree = "<group>"; };
+		0C852B7D1D3DCE2600366171 /* TSMessageLetterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageLetterController.m; sourceTree = "<group>"; };
+		0C852B811D3DD87600366171 /* TSMessageMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageMeCell.h; sourceTree = "<group>"; };
+		0C852B821D3DD87600366171 /* TSMessageMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageMeCell.m; sourceTree = "<group>"; };
+		0C852B841D3DD97800366171 /* TSBasicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBasicCell.h; sourceTree = "<group>"; };
+		0C852B851D3DD97800366171 /* TSBasicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBasicCell.m; sourceTree = "<group>"; };
+		0C852B871D3DF63F00366171 /* TSCellBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCellBottomLine.h; sourceTree = "<group>"; };
+		0C852B881D3DF63F00366171 /* TSCellBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCellBottomLine.m; sourceTree = "<group>"; };
+		0C852B8A1D3DFA7C00366171 /* TSLetterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLetterCell.h; sourceTree = "<group>"; };
+		0C852B8B1D3DFA7C00366171 /* TSLetterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLetterCell.m; sourceTree = "<group>"; };
+		0C852B8D1D3DFAF800366171 /* TSLetterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSLetterCell.xib; sourceTree = "<group>"; };
 		0C9B0F8B1D388A9A00F76773 /* DrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTopic.h; sourceTree = "<group>"; };
 		0C9B0F8C1D388A9A00F76773 /* DrawTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTopic.m; sourceTree = "<group>"; };
 		0C9B0F8D1D388A9A00F76773 /* TSAllDrawTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAllDrawTopic.h; sourceTree = "<group>"; };
@@ -128,8 +147,6 @@
 		0C9B0F941D388A9A00F76773 /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
 		0C9B0F951D388A9A00F76773 /* TSWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWork.h; sourceTree = "<group>"; };
 		0C9B0F961D388A9A00F76773 /* TSWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWork.m; sourceTree = "<group>"; };
-		0C9B0F9F1D388AC400F76773 /* TSCellBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCellBottomLine.h; sourceTree = "<group>"; };
-		0C9B0FA01D388AC400F76773 /* TSCellBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCellBottomLine.m; sourceTree = "<group>"; };
 		0C9B0FA11D388AC400F76773 /* TSDrawHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawHotTableViewCell.h; sourceTree = "<group>"; };
 		0C9B0FA21D388AC400F76773 /* TSDrawHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawHotTableViewCell.m; sourceTree = "<group>"; };
 		0C9B0FA31D388AC400F76773 /* TSDrawHotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSDrawHotTableViewCell.xib; sourceTree = "<group>"; };
@@ -152,7 +169,7 @@
 		0CA6F94C1D333D610019A7BA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CA6F94D1D333D610019A7BA /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		0CA6F94F1D333D610019A7BA /* TSBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBasicViewController.h; sourceTree = "<group>"; };
-		0CA6F9501D333D610019A7BA /* TSBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBasicViewController.m; sourceTree = "<group>"; };
+		0CA6F9501D333D610019A7BA /* TSBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = TSBasicViewController.m; sourceTree = "<group>"; };
 		0CA6F9511D333D610019A7BA /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
 		0CA6F9521D333D610019A7BA /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
 		0CA6F9531D333D610019A7BA /* TSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBarController.h; sourceTree = "<group>"; };
@@ -342,6 +359,8 @@
 		0C3651471D3096A600857854 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				0C852B7F1D3DD85700366171 /* Model */,
+				0C852B801D3DD85700366171 /* View */,
 				0CA6F9471D33357E0019A7BA /* Controller */,
 			);
 			path = Message;
@@ -446,6 +465,25 @@
 			path = Care;
 			sourceTree = "<group>";
 		};
+		0C852B7F1D3DD85700366171 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C852B801D3DD85700366171 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C852B811D3DD87600366171 /* TSMessageMeCell.h */,
+				0C852B821D3DD87600366171 /* TSMessageMeCell.m */,
+				0C852B8A1D3DFA7C00366171 /* TSLetterCell.h */,
+				0C852B8B1D3DFA7C00366171 /* TSLetterCell.m */,
+				0C852B8D1D3DFAF800366171 /* TSLetterCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0C9B0F8A1D388A9A00F76773 /* LeftModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,8 +513,6 @@
 		0C9B0F9E1D388AC400F76773 /* LeftView */ = {
 			isa = PBXGroup;
 			children = (
-				0C9B0F9F1D388AC400F76773 /* TSCellBottomLine.h */,
-				0C9B0FA01D388AC400F76773 /* TSCellBottomLine.m */,
 				0C9B0FA11D388AC400F76773 /* TSDrawHotTableViewCell.h */,
 				0C9B0FA21D388AC400F76773 /* TSDrawHotTableViewCell.m */,
 				0C9B0FA31D388AC400F76773 /* TSDrawHotTableViewCell.xib */,
@@ -528,6 +564,10 @@
 			children = (
 				0CA6F9481D33357E0019A7BA /* TSMessageController.h */,
 				0CA6F9491D33357E0019A7BA /* TSMessageController.m */,
+				0C852B761D3DCD7300366171 /* TSMessageMeController.h */,
+				0C852B771D3DCD7300366171 /* TSMessageMeController.m */,
+				0C852B7C1D3DCE2600366171 /* TSMessageLetterController.h */,
+				0C852B7D1D3DCE2600366171 /* TSMessageLetterController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -557,12 +597,16 @@
 		0CA6F9551D333D610019A7BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C852B871D3DF63F00366171 /* TSCellBottomLine.h */,
+				0C852B881D3DF63F00366171 /* TSCellBottomLine.m */,
 				0CA6F9631D336EBD0019A7BA /* TSNavigationBar.h */,
 				0CA6F9641D336EBD0019A7BA /* TSNavigationBar.m */,
 				0CA6F9561D333D610019A7BA /* TSCustomTabBar.h */,
 				0CA6F9571D333D610019A7BA /* TSCustomTabBar.m */,
 				0CA6F9581D333D610019A7BA /* TSTabBar.h */,
 				0CA6F9591D333D610019A7BA /* TSTabBar.m */,
+				0C852B841D3DD97800366171 /* TSBasicCell.h */,
+				0C852B851D3DD97800366171 /* TSBasicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -741,6 +785,7 @@
 				0C9B0FAE1D388AC400F76773 /* TSDrawNewCell.xib in Resources */,
 				0CD5C0DB1D372F5C001689CB /* https.cer in Resources */,
 				0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */,
+				0C852B8E1D3DFAF800366171 /* TSLetterCell.xib in Resources */,
 				0C9B0FB41D38B33100F76773 /* TSSquareCollectionViewCell.xib in Resources */,
 				0C3651191D30910800857854 /* Assets.xcassets in Resources */,
 			);
@@ -820,7 +865,6 @@
 				0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */,
 				0CD9A74D1D3A0D9C0031FA05 /* TSCollectionFootView.m in Sources */,
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
-				0C9B0FAA1D388AC400F76773 /* TSCellBottomLine.m in Sources */,
 				0C9B0FB71D38D7D300F76773 /* TSSomeOneView.m in Sources */,
 				0CD7F3C41D3C71E900F50AD3 /* UIColor+TS.m in Sources */,
 				0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */,
@@ -837,8 +881,10 @@
 				0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */,
 				0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */,
 				0CA6F95D1D333D610019A7BA /* TSTabBarController.m in Sources */,
+				0C852B831D3DD87600366171 /* TSMessageMeCell.m in Sources */,
 				0CA6F95F1D333D610019A7BA /* TSTabBar.m in Sources */,
 				0CA6F9651D336EBD0019A7BA /* TSNavigationBar.m in Sources */,
+				0C852B781D3DCD7300366171 /* TSMessageMeController.m in Sources */,
 				0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */,
 				0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */,
 				0CE3A73C1D34DFB400D3AC88 /* SDCycleScrollView.m in Sources */,
@@ -846,6 +892,7 @@
 				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
+				0C852B891D3DF63F00366171 /* TSCellBottomLine.m in Sources */,
 				0C9B0F9A1D388A9A00F76773 /* TSBanner.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
 				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
@@ -856,9 +903,12 @@
 				0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */,
 				0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */,
 				0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */,
+				0C852B861D3DD97800366171 /* TSBasicCell.m in Sources */,
+				0C852B8C1D3DFA7C00366171 /* TSLetterCell.m in Sources */,
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
 				0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
+				0C852B7E1D3DCE2600366171 /* TSMessageLetterController.m in Sources */,
 				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,
 				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,
 				0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */,

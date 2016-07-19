@@ -14,28 +14,28 @@
 
 //@property(nonatomic, strong) UIScrollView * scrollView;
 
-@property(nonatomic, strong) TSHomeLeftController * leftVC;
-@property(nonatomic, strong)  TSHomeRightController * rightVC;
+//@property(nonatomic, strong) TSHomeLeftController * leftVC;
+//@property(nonatomic, strong)  TSHomeRightController * rightVC;
 //@property(nonatomic, assign) BOOL showingRight;
 @end
 
 @implementation TSHomeController
 
-- (TSHomeLeftController *)leftVC
-{
-    if (!_leftVC) {
-        _leftVC = [[TSHomeLeftController alloc] init];
-    }
-    return _leftVC;
-}
-
-- (TSHomeRightController *)rightVC
-{
-    if (!_rightVC) {
-        _rightVC = [[TSHomeRightController alloc] init];
-    }
-    return _rightVC;
-}
+//- (TSHomeLeftController *)leftVC
+//{
+//    if (!_leftVC) {
+//        _leftVC = [[TSHomeLeftController alloc] init];
+//    }
+//    return _leftVC;
+//}
+//
+//- (TSHomeRightController *)rightVC
+//{
+//    if (!_rightVC) {
+//        _rightVC = [[TSHomeRightController alloc] init];
+//    }
+//    return _rightVC;
+//}
 
 
 - (void)viewDidLoad {

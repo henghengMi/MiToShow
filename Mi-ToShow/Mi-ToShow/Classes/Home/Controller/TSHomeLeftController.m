@@ -282,7 +282,7 @@ typedef NS_ENUM(NSInteger, TSRefreshState) {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-     TSAllDrawTopic *allTopic =  self.dataArray[indexPath.section];
+    TSAllDrawTopic *allTopic =  self.dataArray[indexPath.section];
     
     if (indexPath.section == 0) {
         

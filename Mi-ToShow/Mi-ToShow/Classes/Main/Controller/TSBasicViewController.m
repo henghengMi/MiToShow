@@ -157,8 +157,11 @@
     self.showingRightVC = NO;
     [self TSNavLeftTitleDidClickisOnleft:self.TSNavOnleftTitle];
     self.TSNavOnleftTitle = YES;
-//    }
+
 }
+-(void)TSNavLeftTitleDidClickisOnleft:(BOOL)onleft{};
+
+
 #pragma mark 点击右标题响应方法
 - (void)TSNavRightTitleDidClick_Custom
 {
@@ -170,6 +173,9 @@
     [self TSNavRightTitleDidClickOnRight:!self.TSNavOnleftTitle];
     self.TSNavOnleftTitle = NO;
 }
+
+-(void)TSNavRightTitleDidClickOnRight:(BOOL)onRight{}
+
 
 #pragma mark 导航栏标题
 - (void)setTSNavTitle:(NSString *)TSNavTitle
