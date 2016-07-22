@@ -69,6 +69,7 @@
     drawBtn.size = CGSizeMake(65, 65);
     drawBtn.centerX = ScreenWidth * 0.5;
     drawBtn.centerY = ScreenHeight - drawBtn.size.height * 0.5  ;
+    drawBtn.tag = 999;
     
     [drawBtn addTarget:self action:@selector(drawBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:drawBtn];
@@ -89,14 +90,22 @@
     TSNavigationController *nav = [[TSNavigationController alloc] initWithRootViewController:childVc];
     // 添加为子控制器
     [self addChildViewController:nav];
-    
     nav.tabBarItem.tag = _indexTag;
     _indexTag++;
+    __weak typeof (TSNavigationController *)weakNav =  nav;
+    weakNav.pushBlock = ^{
+        [self hideCenterImage];
+    };
 }
 
+#pragma mark 导航栏push的时候隐藏中间图片
+- (void)hideCenterImage
+{
+    UIButton *drawBtn = [self.view viewWithTag:999];
+    drawBtn.hidden = YES;
+}
 
 #pragma mark 点击加号
-
 - (void)drawBtnClick
 {
     NSLog(@"点击加号");
@@ -111,7 +120,13 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarItemDidClick object:nil userInfo:@{@"itemIndex":@(item.tag)}] ;
     
 //    [[NSNotificationCenter defaultCenter] postNotificationName:kTSNotificationName_tabBarRightItemClick object:nil userInfo:@{@"itemIndex":@(item.tag)}] ;
+}
 
+- (BOOL)prefersStatusBarHidden
+{
+    // iOS7后,[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    // 已经不起作用了
+    return YES;
 }
 
 @end

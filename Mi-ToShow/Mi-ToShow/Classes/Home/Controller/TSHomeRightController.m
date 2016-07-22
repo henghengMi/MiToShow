@@ -268,7 +268,6 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
         [self.topView addSubview:dividerV];
         dividerV.backgroundColor = TSColor(241, 241, 241);
     }
- 
 }
 
 

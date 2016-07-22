@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSCellBottomLine.h"
+
 
 @interface TSBasicCell : UITableViewCell
+
+@property(nonatomic, strong) TSCellBottomLine * bottomLine;
 
 @end

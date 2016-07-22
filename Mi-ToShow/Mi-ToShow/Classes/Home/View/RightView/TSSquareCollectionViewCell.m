@@ -43,6 +43,13 @@
     
 }
 
+- (void)setWork:(TSWork *)work
+{
+    _work = work;
+    
+    
+}
+
 - (void)setDrawTopic:(DrawTopic *)drawTopic
 {
     _drawTopic = drawTopic;

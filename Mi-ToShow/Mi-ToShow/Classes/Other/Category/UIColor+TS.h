@@ -11,6 +11,6 @@
 @interface UIColor (TS)
 
 // 背景颜色
-+ (UIColor *)LJSectionColor;
++ (UIColor *)TSSectionColor;
 
 @end

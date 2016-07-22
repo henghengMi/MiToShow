@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TSTabBarController : UITabBarController
+- (void)hideCenterImage;
 
 @end

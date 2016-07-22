@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TSMeHomeHeaderView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4xS-Ih-MQn" customClass="TSMeHomeHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="544" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhF-N9-xwO" customClass="TSMeHomeButtonsView">
+                    <rect key="frame" x="0.0" y="71" width="544" height="54"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mi_02" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-eX-mV9">
+                    <rect key="frame" x="15" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="lrn-O2-dqE"/>
+                        <constraint firstAttribute="width" constant="50" id="scT-GM-FQi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛叉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggT-09-B0b">
+                    <rect key="frame" x="80" y="25" width="26" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow_" highlightedImage="Arrow_" translatesAutoresizingMaskIntoConstraints="NO" id="hnv-vE-1OE">
+                    <rect key="frame" x="514" y="25" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="2dG-Jd-llU"/>
+                        <constraint firstAttribute="height" constant="15" id="bL2-6k-jZW"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isf-lt-wXz" userLabel="line">
+                    <rect key="frame" x="0.0" y="70" width="544" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ebf-Hx-xut"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="isf-lt-wXz" firstAttribute="leading" secondItem="4xS-Ih-MQn" secondAttribute="leading" id="HZO-l3-WGK"/>
+                <constraint firstItem="ggT-09-B0b" firstAttribute="leading" secondItem="zXY-eX-mV9" secondAttribute="trailing" constant="15" id="Iym-3z-A0D"/>
+                <constraint firstAttribute="trailing" secondItem="isf-lt-wXz" secondAttribute="trailing" id="JJx-mL-HCg"/>
+                <constraint firstItem="zXY-eX-mV9" firstAttribute="leading" secondItem="4xS-Ih-MQn" secondAttribute="leading" constant="15" id="V3c-Ok-md0"/>
+                <constraint firstItem="hnv-vE-1OE" firstAttribute="centerY" secondItem="ggT-09-B0b" secondAttribute="centerY" id="XAG-5Y-T13"/>
+                <constraint firstItem="zXY-eX-mV9" firstAttribute="centerY" secondItem="4xS-Ih-MQn" secondAttribute="centerY" constant="-30" id="b5S-07-FZ7"/>
+                <constraint firstItem="ggT-09-B0b" firstAttribute="centerY" secondItem="zXY-eX-mV9" secondAttribute="centerY" id="m3A-0F-31g"/>
+                <constraint firstAttribute="bottom" secondItem="KhF-N9-xwO" secondAttribute="bottom" id="pbL-oD-uzg"/>
+                <constraint firstItem="KhF-N9-xwO" firstAttribute="top" secondItem="isf-lt-wXz" secondAttribute="bottom" id="qaU-je-TLi"/>
+                <constraint firstAttribute="trailing" secondItem="hnv-vE-1OE" secondAttribute="trailing" constant="15" id="tOt-LO-TR3"/>
+                <constraint firstItem="KhF-N9-xwO" firstAttribute="leading" secondItem="4xS-Ih-MQn" secondAttribute="leading" id="wk8-w9-99E"/>
+                <constraint firstAttribute="trailing" secondItem="KhF-N9-xwO" secondAttribute="trailing" id="wq9-QW-pFj"/>
+                <constraint firstItem="isf-lt-wXz" firstAttribute="centerY" secondItem="4xS-Ih-MQn" secondAttribute="centerY" constant="8" id="zJm-SE-E20"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonsView" destination="KhF-N9-xwO" id="81L-rz-fRN"/>
+            </connections>
+            <point key="canvasLocation" x="548" y="129.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Arrow_" width="15" height="15"/>
+        <image name="Mi_02" width="1300" height="1300"/>
+    </resources>
+</document>

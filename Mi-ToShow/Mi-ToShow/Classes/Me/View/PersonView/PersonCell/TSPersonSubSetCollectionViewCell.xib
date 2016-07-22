@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="subsetCellID" id="gTV-IL-0wX" customClass="TSPersonSubSetCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-ks-W8V">
+                        <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection_" translatesAutoresizingMaskIntoConstraints="NO" id="h6G-wY-LmH">
+                                <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h6G-wY-LmH" secondAttribute="height" multiplier="1:1" id="63h-ho-Ilk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-hI-aW0">
+                                <rect key="frame" x="0.0" y="116" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn5-sm-hIa">
+                                <rect key="frame" x="0.0" y="142" width="106" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mi_01" translatesAutoresizingMaskIntoConstraints="NO" id="Tso-kn-MAP">
+                                <rect key="frame" x="12" y="3" width="82" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tso-kn-MAP" secondAttribute="height" multiplier="1:1" id="0yP-H4-OW2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ps8-hI-aW0" firstAttribute="top" secondItem="h6G-wY-LmH" secondAttribute="bottom" constant="10" id="5aG-Yn-Osq"/>
+                            <constraint firstItem="Tso-kn-MAP" firstAttribute="top" secondItem="zYF-ks-W8V" secondAttribute="top" constant="3" id="7IG-kH-kiR"/>
+                            <constraint firstItem="ps8-hI-aW0" firstAttribute="leading" secondItem="zYF-ks-W8V" secondAttribute="leading" id="7uR-ee-SqW"/>
+                            <constraint firstItem="h6G-wY-LmH" firstAttribute="top" secondItem="zYF-ks-W8V" secondAttribute="top" id="8z7-R7-DTu"/>
+                            <constraint firstAttribute="trailing" secondItem="h6G-wY-LmH" secondAttribute="trailing" id="C0x-qI-rKt"/>
+                            <constraint firstItem="h6G-wY-LmH" firstAttribute="leading" secondItem="zYF-ks-W8V" secondAttribute="leading" id="E1N-bh-EQp"/>
+                            <constraint firstAttribute="trailing" secondItem="Tso-kn-MAP" secondAttribute="trailing" constant="12" id="IE6-Wf-1hr"/>
+                            <constraint firstItem="wn5-sm-hIa" firstAttribute="leading" secondItem="zYF-ks-W8V" secondAttribute="leading" id="axA-M5-CbL"/>
+                            <constraint firstAttribute="trailing" secondItem="wn5-sm-hIa" secondAttribute="trailing" id="c8V-Pg-XGt"/>
+                            <constraint firstAttribute="trailing" secondItem="ps8-hI-aW0" secondAttribute="trailing" id="mDr-lQ-LJ9"/>
+                            <constraint firstItem="Tso-kn-MAP" firstAttribute="leading" secondItem="zYF-ks-W8V" secondAttribute="leading" constant="12" id="svn-Lv-MHM"/>
+                            <constraint firstItem="wn5-sm-hIa" firstAttribute="top" secondItem="ps8-hI-aW0" secondAttribute="bottom" constant="5" id="v3o-TL-Rfr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="zYF-ks-W8V" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WRH-rh-BNG"/>
+                <constraint firstItem="zYF-ks-W8V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aAH-uI-MlQ"/>
+                <constraint firstAttribute="trailing" secondItem="zYF-ks-W8V" secondAttribute="trailing" id="uXf-Ze-1zX"/>
+                <constraint firstAttribute="bottom" secondItem="zYF-ks-W8V" secondAttribute="bottom" id="vCZ-3C-xmq"/>
+            </constraints>
+            <size key="customSize" width="106" height="162"/>
+            <connections>
+                <outlet property="bgImgView" destination="h6G-wY-LmH" id="VNM-2e-Be4"/>
+                <outlet property="countLabel" destination="wn5-sm-hIa" id="esX-jF-WhO"/>
+                <outlet property="imgView" destination="Tso-kn-MAP" id="uhu-yo-kJf"/>
+                <outlet property="titleLabel" destination="ps8-hI-aW0" id="LqL-Eo-XSn"/>
+            </connections>
+            <point key="canvasLocation" x="711" y="530"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Mi_01" width="1300" height="1300"/>
+        <image name="collection_" width="100" height="100"/>
+    </resources>
+</document>

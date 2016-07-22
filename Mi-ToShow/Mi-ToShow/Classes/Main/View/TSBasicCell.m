@@ -7,11 +7,9 @@
 //
 
 #import "TSBasicCell.h"
-#import "TSCellBottomLine.h"
 
 @interface TSBasicCell ()
 
-@property(nonatomic, strong) TSCellBottomLine * bottomLine;
 
 @end
 

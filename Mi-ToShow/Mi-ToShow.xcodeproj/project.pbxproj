@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3285A21D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */; };
+		0C3285A61D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A41D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m */; };
+		0C3285A71D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3285A51D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib */; };
+		0C3285AA1D42050D005CD8B1 /* TSSubSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A91D42050D005CD8B1 /* TSSubSet.m */; };
 		0C36510E1D30910800857854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36510D1D30910800857854 /* main.m */; };
 		0C3651191D30910800857854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3651181D30910800857854 /* Assets.xcassets */; };
 		0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C36511A1D30910800857854 /* LaunchScreen.storyboard */; };
 		0C3651271D30910800857854 /* Mi_ToShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651261D30910800857854 /* Mi_ToShowTests.m */; };
 		0C3651321D30910800857854 /* Mi_ToShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651311D30910800857854 /* Mi_ToShowUITests.m */; };
 		0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36515E1D30A2D700857854 /* TSHomeController.m */; };
-		0C3651631D30A34500857854 /* TSMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651621D30A34500857854 /* TSMeController.m */; };
 		0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36517B1D30D90500857854 /* UIView+Extension.m */; };
 		0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C36517D1D30E49F00857854 /* Foundation+Log.m */; };
 		0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651801D30E4C500857854 /* NSString+SizeWithFont.m */; };
@@ -43,6 +46,14 @@
 		0C9B0FB21D38B2F900F76773 /* TSSquareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FB11D38B2F900F76773 /* TSSquareCollectionViewCell.m */; };
 		0C9B0FB41D38B33100F76773 /* TSSquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B0FB31D38B33100F76773 /* TSSquareCollectionViewCell.xib */; };
 		0C9B0FB71D38D7D300F76773 /* TSSomeOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B0FB61D38D7D300F76773 /* TSSomeOneView.m */; };
+		0CA394E31D407B1200655329 /* TSPersonWorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA394E21D407B1200655329 /* TSPersonWorkView.m */; };
+		0CA394F91D40AF8A00655329 /* TSPersonDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA394F21D40AF8A00655329 /* TSPersonDynamicCell.m */; };
+		0CA394FA1D40AF8A00655329 /* TSPersonSubSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA394F41D40AF8A00655329 /* TSPersonSubSetCell.m */; };
+		0CA394FB1D40AF8A00655329 /* TSPersonTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA394F61D40AF8A00655329 /* TSPersonTopicCell.m */; };
+		0CA394FC1D40AF8A00655329 /* TSPersonWorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA394F81D40AF8A00655329 /* TSPersonWorkCell.m */; };
+		0CA395001D40B64900655329 /* TSDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA394FF1D40B64900655329 /* TSDynamic.m */; };
+		0CA395031D40B6F300655329 /* TSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA395021D40B6F300655329 /* TSAction.m */; };
+		0CA395061D40BF3D00655329 /* TSSubfeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA395051D40BF3D00655329 /* TSSubfeed.m */; };
 		0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9411D3335610019A7BA /* TSCareController.m */; };
 		0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9451D33356F0019A7BA /* TSDrawController.m */; };
 		0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6F9491D33357E0019A7BA /* TSMessageController.m */; };
@@ -70,6 +81,16 @@
 		0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A7321D34DFB400D3AC88 /* SDCollectionViewCell.m */; };
 		0CE3A73C1D34DFB400D3AC88 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A7341D34DFB400D3AC88 /* SDCycleScrollView.m */; };
 		0CE3A73D1D34DFB400D3AC88 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3A7361D34DFB400D3AC88 /* UIView+SDExtension.m */; };
+		0CE838E21D3F651F009058BC /* TSMeHomeButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838DC1D3F651F009058BC /* TSMeHomeButtonsView.m */; };
+		0CE838E31D3F651F009058BC /* TSMeHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838DE1D3F651F009058BC /* TSMeHomeCell.m */; };
+		0CE838E41D3F651F009058BC /* TSMeHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E01D3F651F009058BC /* TSMeHomeHeaderView.m */; };
+		0CE838E51D3F651F009058BC /* TSMeHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE838E11D3F651F009058BC /* TSMeHomeHeaderView.xib */; };
+		0CE838ED1D3F655C009058BC /* TSMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E91D3F655C009058BC /* TSMeController.m */; };
+		0CE838F11D3F658D009058BC /* TSPersonTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838F01D3F658D009058BC /* TSPersonTableHeaderView.m */; };
+		0CE838F31D3F659D009058BC /* TSPersonTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE838F21D3F659D009058BC /* TSPersonTableHeaderView.xib */; };
+		0CE838F61D3F670D009058BC /* TSPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838F51D3F670D009058BC /* TSPersonController.m */; };
+		0CE838F91D3F78E9009058BC /* TSPersonFourButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838F81D3F78E9009058BC /* TSPersonFourButtonsView.m */; };
+		0CE838FC1D3F7977009058BC /* TSFourButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838FB1D3F7977009058BC /* TSFourButton.m */; };
 		6D4E09CD8F029C78BE0372F1 /* Pods_Mi_ToShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +112,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3285A01D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonWorkCollectionviewCell.h; sourceTree = "<group>"; };
+		0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonWorkCollectionviewCell.m; sourceTree = "<group>"; };
+		0C3285A31D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonSubSetCollectionViewCell.h; sourceTree = "<group>"; };
+		0C3285A41D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonSubSetCollectionViewCell.m; sourceTree = "<group>"; };
+		0C3285A51D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPersonSubSetCollectionViewCell.xib; sourceTree = "<group>"; };
+		0C3285A81D42050D005CD8B1 /* TSSubSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSubSet.h; sourceTree = "<group>"; };
+		0C3285A91D42050D005CD8B1 /* TSSubSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSubSet.m; sourceTree = "<group>"; };
 		0C3651091D30910800857854 /* Mi-ToShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mi-ToShow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C36510D1D30910800857854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C3651181D30910800857854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,8 +133,6 @@
 		0C36514D1D30980400857854 /* TSHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSHeader.pch; sourceTree = "<group>"; };
 		0C36515D1D30A2D700857854 /* TSHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeController.h; sourceTree = "<group>"; };
 		0C36515E1D30A2D700857854 /* TSHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeController.m; sourceTree = "<group>"; };
-		0C3651611D30A34500857854 /* TSMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeController.h; sourceTree = "<group>"; };
-		0C3651621D30A34500857854 /* TSMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeController.m; sourceTree = "<group>"; };
 		0C36517A1D30D90500857854 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		0C36517B1D30D90500857854 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		0C36517D1D30E49F00857854 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -160,6 +186,22 @@
 		0C9B0FB31D38B33100F76773 /* TSSquareCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSSquareCollectionViewCell.xib; sourceTree = "<group>"; };
 		0C9B0FB51D38D7D300F76773 /* TSSomeOneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSomeOneView.h; sourceTree = "<group>"; };
 		0C9B0FB61D38D7D300F76773 /* TSSomeOneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSomeOneView.m; sourceTree = "<group>"; };
+		0CA394E11D407B1200655329 /* TSPersonWorkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonWorkView.h; sourceTree = "<group>"; };
+		0CA394E21D407B1200655329 /* TSPersonWorkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonWorkView.m; sourceTree = "<group>"; };
+		0CA394F11D40AF8A00655329 /* TSPersonDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonDynamicCell.h; sourceTree = "<group>"; };
+		0CA394F21D40AF8A00655329 /* TSPersonDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonDynamicCell.m; sourceTree = "<group>"; };
+		0CA394F31D40AF8A00655329 /* TSPersonSubSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonSubSetCell.h; sourceTree = "<group>"; };
+		0CA394F41D40AF8A00655329 /* TSPersonSubSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonSubSetCell.m; sourceTree = "<group>"; };
+		0CA394F51D40AF8A00655329 /* TSPersonTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonTopicCell.h; sourceTree = "<group>"; };
+		0CA394F61D40AF8A00655329 /* TSPersonTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonTopicCell.m; sourceTree = "<group>"; };
+		0CA394F71D40AF8A00655329 /* TSPersonWorkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonWorkCell.h; sourceTree = "<group>"; };
+		0CA394F81D40AF8A00655329 /* TSPersonWorkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonWorkCell.m; sourceTree = "<group>"; };
+		0CA394FE1D40B64900655329 /* TSDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDynamic.h; sourceTree = "<group>"; };
+		0CA394FF1D40B64900655329 /* TSDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDynamic.m; sourceTree = "<group>"; };
+		0CA395011D40B6F300655329 /* TSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAction.h; sourceTree = "<group>"; };
+		0CA395021D40B6F300655329 /* TSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAction.m; sourceTree = "<group>"; };
+		0CA395041D40BF3D00655329 /* TSSubfeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSubfeed.h; sourceTree = "<group>"; };
+		0CA395051D40BF3D00655329 /* TSSubfeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSubfeed.m; sourceTree = "<group>"; };
 		0CA6F9401D3335610019A7BA /* TSCareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareController.h; sourceTree = "<group>"; };
 		0CA6F9411D3335610019A7BA /* TSCareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareController.m; sourceTree = "<group>"; };
 		0CA6F9441D33356F0019A7BA /* TSDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawController.h; sourceTree = "<group>"; };
@@ -214,6 +256,24 @@
 		0CE3A7341D34DFB400D3AC88 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		0CE3A7351D34DFB400D3AC88 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		0CE3A7361D34DFB400D3AC88 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		0CE838DB1D3F651F009058BC /* TSMeHomeButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeHomeButtonsView.h; sourceTree = "<group>"; };
+		0CE838DC1D3F651F009058BC /* TSMeHomeButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeHomeButtonsView.m; sourceTree = "<group>"; };
+		0CE838DD1D3F651F009058BC /* TSMeHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeHomeCell.h; sourceTree = "<group>"; };
+		0CE838DE1D3F651F009058BC /* TSMeHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeHomeCell.m; sourceTree = "<group>"; };
+		0CE838DF1D3F651F009058BC /* TSMeHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeHomeHeaderView.h; sourceTree = "<group>"; };
+		0CE838E01D3F651F009058BC /* TSMeHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeHomeHeaderView.m; sourceTree = "<group>"; };
+		0CE838E11D3F651F009058BC /* TSMeHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSMeHomeHeaderView.xib; sourceTree = "<group>"; };
+		0CE838E81D3F655C009058BC /* TSMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMeController.h; sourceTree = "<group>"; };
+		0CE838E91D3F655C009058BC /* TSMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMeController.m; sourceTree = "<group>"; };
+		0CE838EF1D3F658D009058BC /* TSPersonTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonTableHeaderView.h; sourceTree = "<group>"; };
+		0CE838F01D3F658D009058BC /* TSPersonTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonTableHeaderView.m; sourceTree = "<group>"; };
+		0CE838F21D3F659D009058BC /* TSPersonTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPersonTableHeaderView.xib; sourceTree = "<group>"; };
+		0CE838F41D3F670D009058BC /* TSPersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonController.h; sourceTree = "<group>"; };
+		0CE838F51D3F670D009058BC /* TSPersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonController.m; sourceTree = "<group>"; };
+		0CE838F71D3F78E9009058BC /* TSPersonFourButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonFourButtonsView.h; sourceTree = "<group>"; };
+		0CE838F81D3F78E9009058BC /* TSPersonFourButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonFourButtonsView.m; sourceTree = "<group>"; };
+		0CE838FA1D3F7977009058BC /* TSFourButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSFourButton.h; sourceTree = "<group>"; };
+		0CE838FB1D3F7977009058BC /* TSFourButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSFourButton.m; sourceTree = "<group>"; };
 		6D2E8B77BA4A5E4B0F248EFF /* Pods-Mi-ToShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.debug.xcconfig"; sourceTree = "<group>"; };
 		8B31774FAB52BA628F0B2A2B /* Pods_Mi_ToShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mi_ToShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		929709905FF0C3E405C007CE /* Pods-Mi-ToShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mi-ToShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mi-ToShow/Pods-Mi-ToShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +369,7 @@
 		0C36513F1D3096A600857854 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0CA394FD1D40B39E00655329 /* Model */,
 				0C3651421D3096A600857854 /* Home */,
 				0C3651431D3096A600857854 /* Main */,
 				0C3651701D30A40200857854 /* Care */,
@@ -351,6 +412,7 @@
 		0C3651461D3096A600857854 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				0C852B8F1D3E105C00366171 /* View */,
 				0C3651601D30A33A00857854 /* Controller */,
 			);
 			path = Me;
@@ -451,8 +513,8 @@
 		0C3651601D30A33A00857854 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0C3651611D30A34500857854 /* TSMeController.h */,
-				0C3651621D30A34500857854 /* TSMeController.m */,
+				0CE838EC1D3F655C009058BC /* PersonVC */,
+				0CE838E71D3F655C009058BC /* MeHomeVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -480,6 +542,15 @@
 				0C852B8A1D3DFA7C00366171 /* TSLetterCell.h */,
 				0C852B8B1D3DFA7C00366171 /* TSLetterCell.m */,
 				0C852B8D1D3DFAF800366171 /* TSLetterCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C852B8F1D3E105C00366171 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CE838E61D3F6532009058BC /* PersonView */,
+				0CE838DA1D3F651F009058BC /* MeHomeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,6 +610,41 @@
 				0CD9A74F1D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m */,
 			);
 			path = RightView;
+			sourceTree = "<group>";
+		};
+		0CA394F01D40AF8A00655329 /* PersonCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CA394F11D40AF8A00655329 /* TSPersonDynamicCell.h */,
+				0CA394F21D40AF8A00655329 /* TSPersonDynamicCell.m */,
+				0CA394F71D40AF8A00655329 /* TSPersonWorkCell.h */,
+				0CA394F81D40AF8A00655329 /* TSPersonWorkCell.m */,
+				0C3285A01D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.h */,
+				0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */,
+				0CA394F51D40AF8A00655329 /* TSPersonTopicCell.h */,
+				0CA394F61D40AF8A00655329 /* TSPersonTopicCell.m */,
+				0CA394F31D40AF8A00655329 /* TSPersonSubSetCell.h */,
+				0CA394F41D40AF8A00655329 /* TSPersonSubSetCell.m */,
+				0C3285A31D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.h */,
+				0C3285A41D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m */,
+				0C3285A51D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib */,
+			);
+			path = PersonCell;
+			sourceTree = "<group>";
+		};
+		0CA394FD1D40B39E00655329 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CA394FE1D40B64900655329 /* TSDynamic.h */,
+				0CA394FF1D40B64900655329 /* TSDynamic.m */,
+				0CA395011D40B6F300655329 /* TSAction.h */,
+				0CA395021D40B6F300655329 /* TSAction.m */,
+				0CA395041D40BF3D00655329 /* TSSubfeed.h */,
+				0CA395051D40BF3D00655329 /* TSSubfeed.m */,
+				0C3285A81D42050D005CD8B1 /* TSSubSet.h */,
+				0C3285A91D42050D005CD8B1 /* TSSubSet.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0CA6F93F1D3335610019A7BA /* Controller */ = {
@@ -654,6 +760,55 @@
 				0CE3A7301D34DFB400D3AC88 /* TAPageControl.m */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		0CE838DA1D3F651F009058BC /* MeHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				0CE838DB1D3F651F009058BC /* TSMeHomeButtonsView.h */,
+				0CE838DC1D3F651F009058BC /* TSMeHomeButtonsView.m */,
+				0CE838DD1D3F651F009058BC /* TSMeHomeCell.h */,
+				0CE838DE1D3F651F009058BC /* TSMeHomeCell.m */,
+				0CE838DF1D3F651F009058BC /* TSMeHomeHeaderView.h */,
+				0CE838E01D3F651F009058BC /* TSMeHomeHeaderView.m */,
+				0CE838E11D3F651F009058BC /* TSMeHomeHeaderView.xib */,
+				0CE838FA1D3F7977009058BC /* TSFourButton.h */,
+				0CE838FB1D3F7977009058BC /* TSFourButton.m */,
+			);
+			path = MeHomeView;
+			sourceTree = "<group>";
+		};
+		0CE838E61D3F6532009058BC /* PersonView */ = {
+			isa = PBXGroup;
+			children = (
+				0CA394F01D40AF8A00655329 /* PersonCell */,
+				0CE838EF1D3F658D009058BC /* TSPersonTableHeaderView.h */,
+				0CE838F01D3F658D009058BC /* TSPersonTableHeaderView.m */,
+				0CE838F21D3F659D009058BC /* TSPersonTableHeaderView.xib */,
+				0CE838F71D3F78E9009058BC /* TSPersonFourButtonsView.h */,
+				0CE838F81D3F78E9009058BC /* TSPersonFourButtonsView.m */,
+				0CA394E11D407B1200655329 /* TSPersonWorkView.h */,
+				0CA394E21D407B1200655329 /* TSPersonWorkView.m */,
+			);
+			path = PersonView;
+			sourceTree = "<group>";
+		};
+		0CE838E71D3F655C009058BC /* MeHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				0CE838E81D3F655C009058BC /* TSMeController.h */,
+				0CE838E91D3F655C009058BC /* TSMeController.m */,
+			);
+			path = MeHomeVC;
+			sourceTree = "<group>";
+		};
+		0CE838EC1D3F655C009058BC /* PersonVC */ = {
+			isa = PBXGroup;
+			children = (
+				0CE838F41D3F670D009058BC /* TSPersonController.h */,
+				0CE838F51D3F670D009058BC /* TSPersonController.m */,
+			);
+			path = PersonVC;
 			sourceTree = "<group>";
 		};
 		3AE97AE8A9DCD7F20DD0C2CB /* Frameworks */ = {
@@ -783,11 +938,14 @@
 			files = (
 				0C9B0FAC1D388AC400F76773 /* TSDrawHotTableViewCell.xib in Resources */,
 				0C9B0FAE1D388AC400F76773 /* TSDrawNewCell.xib in Resources */,
+				0CE838E51D3F651F009058BC /* TSMeHomeHeaderView.xib in Resources */,
 				0CD5C0DB1D372F5C001689CB /* https.cer in Resources */,
 				0C36511C1D30910800857854 /* LaunchScreen.storyboard in Resources */,
 				0C852B8E1D3DFAF800366171 /* TSLetterCell.xib in Resources */,
 				0C9B0FB41D38B33100F76773 /* TSSquareCollectionViewCell.xib in Resources */,
 				0C3651191D30910800857854 /* Assets.xcassets in Resources */,
+				0C3285A71D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib in Resources */,
+				0CE838F31D3F659D009058BC /* TSPersonTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,7 +1018,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE838FC1D3F7977009058BC /* TSFourButton.m in Sources */,
 				0CA6F9421D3335610019A7BA /* TSCareController.m in Sources */,
+				0CE838ED1D3F655C009058BC /* TSMeController.m in Sources */,
 				0CD7F3C71D3CAD7900F50AD3 /* TSConst.m in Sources */,
 				0CE3A7371D34DFB400D3AC88 /* TAAbstractDotView.m in Sources */,
 				0CD9A74D1D3A0D9C0031FA05 /* TSCollectionFootView.m in Sources */,
@@ -871,10 +1031,13 @@
 				0C9B0F9B1D388A9A00F76773 /* TSTopic.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */,
+				0C3285A61D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m in Sources */,
+				0CA394F91D40AF8A00655329 /* TSPersonDynamicCell.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */,
 				0CD9A7531D3A2EC10031FA05 /* TSTool.m in Sources */,
 				0C36515F1D30A2D700857854 /* TSHomeController.m in Sources */,
+				0CE838F61D3F670D009058BC /* TSPersonController.m in Sources */,
 				0C9B0FAD1D388AC400F76773 /* TSDrawNewCell.m in Sources */,
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
 				0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */,
@@ -892,28 +1055,41 @@
 				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
+				0CA394E31D407B1200655329 /* TSPersonWorkView.m in Sources */,
 				0C852B891D3DF63F00366171 /* TSCellBottomLine.m in Sources */,
+				0CA395031D40B6F300655329 /* TSAction.m in Sources */,
 				0C9B0F9A1D388A9A00F76773 /* TSBanner.m in Sources */,
 				0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */,
 				0CA6F95E1D333D610019A7BA /* TSCustomTabBar.m in Sources */,
 				0C9B0FAB1D388AC400F76773 /* TSDrawHotTableViewCell.m in Sources */,
 				0CE3A73D1D34DFB400D3AC88 /* UIView+SDExtension.m in Sources */,
 				0C9B0FAF1D388AC400F76773 /* TSCollectionHeaderView.m in Sources */,
+				0CA395061D40BF3D00655329 /* TSSubfeed.m in Sources */,
+				0CE838F11D3F658D009058BC /* TSPersonTableHeaderView.m in Sources */,
+				0CA395001D40B64900655329 /* TSDynamic.m in Sources */,
 				0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */,
 				0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */,
 				0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */,
+				0CA394FB1D40AF8A00655329 /* TSPersonTopicCell.m in Sources */,
+				0CE838E21D3F651F009058BC /* TSMeHomeButtonsView.m in Sources */,
 				0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */,
 				0C852B861D3DD97800366171 /* TSBasicCell.m in Sources */,
 				0C852B8C1D3DFA7C00366171 /* TSLetterCell.m in Sources */,
 				0CE3A73A1D34DFB400D3AC88 /* TAPageControl.m in Sources */,
+				0C3285AA1D42050D005CD8B1 /* TSSubSet.m in Sources */,
 				0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */,
 				0C36518A1D30E4C500857854 /* UIButton+costomBtn.m in Sources */,
+				0CA394FA1D40AF8A00655329 /* TSPersonSubSetCell.m in Sources */,
 				0C852B7E1D3DCE2600366171 /* TSMessageLetterController.m in Sources */,
 				0CA6F96B1D3393160019A7BA /* TSHomeLeftController.m in Sources */,
 				0CA6F95A1D333D610019A7BA /* AppDelegate.mm in Sources */,
+				0CE838E41D3F651F009058BC /* TSMeHomeHeaderView.m in Sources */,
+				0CE838F91D3F78E9009058BC /* TSPersonFourButtonsView.m in Sources */,
 				0CA6F95C1D333D610019A7BA /* TSNavigationController.m in Sources */,
-				0C3651631D30A34500857854 /* TSMeController.m in Sources */,
 				0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */,
+				0CA394FC1D40AF8A00655329 /* TSPersonWorkCell.m in Sources */,
+				0C3285A21D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m in Sources */,
+				0CE838E31D3F651F009058BC /* TSMeHomeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

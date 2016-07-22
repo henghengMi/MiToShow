@@ -9,7 +9,7 @@
 #import "UIColor+TS.h"
 
 @implementation UIColor (TS)
-+ (UIColor *)LJSectionColor
++ (UIColor *)TSSectionColor
 {
     return TSColor(241, 241, 241);
 }

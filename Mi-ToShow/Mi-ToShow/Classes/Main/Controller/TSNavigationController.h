@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^PushBlock)();
+
 @interface TSNavigationController : UINavigationController
+
+@property(nonatomic, copy) PushBlock pushBlock ;
+
 
 @end

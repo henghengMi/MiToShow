@@ -16,8 +16,8 @@
 singleton_interface(TSTool);
 
 + (NSArray *)getPullImages;
-
 + (NSArray *)getRefreshImages;
++ (NSArray *)getCenterXs;
 
 
 - (MJRefreshGifHeader *)headerWithRefreshingWithView:(UIScrollView *)view Target:(id)target refreshingAction:(SEL)action;

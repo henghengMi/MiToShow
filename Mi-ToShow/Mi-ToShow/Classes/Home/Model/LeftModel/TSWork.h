@@ -16,6 +16,8 @@
 @property(nonatomic, copy) NSString * pngurl;
 @property(nonatomic, copy) NSString * workid;
 @property(nonatomic, copy) NSString * praisenum;
+@property(nonatomic, copy) NSString * workdescription;
+@property(nonatomic, strong) NSArray * collections ;
 
 @property(nonatomic, strong) TSTopic * topic;
 @property(nonatomic, strong) TSUser * user;

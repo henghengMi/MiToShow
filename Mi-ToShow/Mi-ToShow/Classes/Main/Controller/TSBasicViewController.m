@@ -188,7 +188,7 @@
 #pragma mark 隐藏状态栏
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+     return YES;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

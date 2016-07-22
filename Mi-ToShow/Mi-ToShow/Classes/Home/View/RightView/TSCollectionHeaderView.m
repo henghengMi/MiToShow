@@ -40,7 +40,7 @@
         
         UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(0, 55, ScreenWidth, 10)] ;
         [someoneView addSubview:dividerView];
-        dividerView.backgroundColor = [UIColor LJSectionColor];
+        dividerView.backgroundColor = [UIColor TSSectionColor];
     }
     
     return self;

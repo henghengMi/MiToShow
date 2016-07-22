@@ -13,6 +13,7 @@ singleton_implementation(TSTool)
 
 static  NSMutableArray * refreshingImages;
 static NSMutableArray * pullImages;
+static NSMutableArray * centerXs;
 
 + (NSArray *)getPullImages
 {
@@ -37,6 +38,20 @@ static NSMutableArray * pullImages;
         }
     }
     return refreshingImages;
+}
+
+
++ (NSArray *)getCenterXs
+{
+    if (!centerXs) {
+        centerXs = [NSMutableArray array];
+        CGFloat w = ScreenWidth / 4;
+        for (int i = 0;  i < 4; i++) {
+            CGFloat centerX = (i * w) + (w * 0.5);
+            [centerXs addObject:@(centerX)];
+        }
+    }
+    return centerXs;
 }
 
 - (MJRefreshGifHeader *)headerWithRefreshingWithView:(UIScrollView *)view Target:(id)target refreshingAction:(SEL)action
