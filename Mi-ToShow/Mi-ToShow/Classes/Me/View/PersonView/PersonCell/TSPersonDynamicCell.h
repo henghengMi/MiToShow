@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSBasicCell.h"
+#import "TSDynamic.h"
 
-@interface TSPersonDynamicCell : UITableViewCell
+#import "TSComentsView.h"
+
+@interface TSPersonDynamicCell : TSBasicCell
+
+@property(nonatomic, strong) TSDynamic * dynamic ;
+
+@property(nonatomic, strong) TSComentsView * commentsView ;
+
+
 
 @end

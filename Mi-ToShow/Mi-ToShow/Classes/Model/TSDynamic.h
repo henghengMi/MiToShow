@@ -13,7 +13,9 @@
 @interface TSDynamic : NSObject
 
 
-@property(nonatomic, strong) NSArray * commentcount;
+@property(nonatomic, strong) NSArray * comments;
+@property(nonatomic, assign) NSString * commentcount;
+
 @property(nonatomic, assign) BOOL hide;
 @property(nonatomic, copy) NSString * timestamp;
 @property(nonatomic, copy) NSString * forwardcount;

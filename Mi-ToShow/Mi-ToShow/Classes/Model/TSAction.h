@@ -15,5 +15,5 @@
 @property(nonatomic, copy) NSString * pngurl;
 @property(nonatomic, copy) NSString * uid;
 @property(nonatomic, copy) NSString * topicworkcount;
-
+@property(nonatomic, copy) NSString * topictitle;
 @end

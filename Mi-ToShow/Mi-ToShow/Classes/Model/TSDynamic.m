@@ -7,9 +7,20 @@
 //
 
 #import "TSDynamic.h"
-
+#import "TSComment.h"
 @implementation TSDynamic
 
 
-
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [TSDynamic mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"comments" : [TSComment class],
+                     };
+        }];
+    }
+    return self;
+    
+}
 @end

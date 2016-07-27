@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C02599F1D484B1A00E2436B /* UIView+TSAddShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C02599E1D484B1A00E2436B /* UIView+TSAddShadow.m */; };
 		0C3285A21D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */; };
 		0C3285A61D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A41D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m */; };
 		0C3285A71D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3285A51D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib */; };
@@ -24,6 +25,8 @@
 		0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651841D30E4C500857854 /* UIColor+LJ.m */; };
 		0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651861D30E4C500857854 /* UIFont+LJ.m */; };
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
+		0C4D448F1D4758FA0049B30C /* TSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D448E1D4758FA0049B30C /* TSComment.m */; };
+		0C4D44921D475D880049B30C /* TSComentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D44911D475D880049B30C /* TSComentsView.m */; };
 		0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */; };
 		0C852B781D3DCD7300366171 /* TSMessageMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B771D3DCD7300366171 /* TSMessageMeController.m */; };
 		0C852B7E1D3DCE2600366171 /* TSMessageLetterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B7D1D3DCE2600366171 /* TSMessageLetterController.m */; };
@@ -112,6 +115,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C02599D1D484B1A00E2436B /* UIView+TSAddShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TSAddShadow.h"; sourceTree = "<group>"; };
+		0C02599E1D484B1A00E2436B /* UIView+TSAddShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TSAddShadow.m"; sourceTree = "<group>"; };
 		0C3285A01D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonWorkCollectionviewCell.h; sourceTree = "<group>"; };
 		0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonWorkCollectionviewCell.m; sourceTree = "<group>"; };
 		0C3285A31D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonSubSetCollectionViewCell.h; sourceTree = "<group>"; };
@@ -146,6 +151,10 @@
 		0C3651861D30E4C500857854 /* UIFont+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LJ.m"; sourceTree = "<group>"; };
 		0C3651871D30E4C500857854 /* UIImage+Mi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mi.h"; sourceTree = "<group>"; };
 		0C3651881D30E4C500857854 /* UIImage+Mi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mi.m"; sourceTree = "<group>"; };
+		0C4D448D1D4758FA0049B30C /* TSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSComment.h; sourceTree = "<group>"; };
+		0C4D448E1D4758FA0049B30C /* TSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSComment.m; sourceTree = "<group>"; };
+		0C4D44901D475D880049B30C /* TSComentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSComentsView.h; sourceTree = "<group>"; };
+		0C4D44911D475D880049B30C /* TSComentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSComentsView.m; sourceTree = "<group>"; };
 		0C852B731D3DBBB800366171 /* UIImageView+TSWebImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TSWebImageView.h"; sourceTree = "<group>"; };
 		0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TSWebImageView.m"; sourceTree = "<group>"; };
 		0C852B761D3DCD7300366171 /* TSMessageMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageMeController.h; sourceTree = "<group>"; };
@@ -305,6 +314,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0259A01D48541600E2436B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C0259A11D48541600E2436B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0C3651001D30910800857854 = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +482,8 @@
 				0CD7F3C31D3C71E900F50AD3 /* UIColor+TS.m */,
 				0C852B731D3DBBB800366171 /* UIImageView+TSWebImageView.h */,
 				0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */,
+				0C02599D1D484B1A00E2436B /* UIView+TSAddShadow.h */,
+				0C02599E1D484B1A00E2436B /* UIView+TSAddShadow.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -523,6 +548,8 @@
 			isa = PBXGroup;
 			children = (
 				0CA6F93F1D3335610019A7BA /* Controller */,
+				0C0259A01D48541600E2436B /* Model */,
+				0C0259A11D48541600E2436B /* View */,
 			);
 			path = Care;
 			sourceTree = "<group>";
@@ -643,6 +670,8 @@
 				0CA395051D40BF3D00655329 /* TSSubfeed.m */,
 				0C3285A81D42050D005CD8B1 /* TSSubSet.h */,
 				0C3285A91D42050D005CD8B1 /* TSSubSet.m */,
+				0C4D448D1D4758FA0049B30C /* TSComment.h */,
+				0C4D448E1D4758FA0049B30C /* TSComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -789,6 +818,8 @@
 				0CE838F81D3F78E9009058BC /* TSPersonFourButtonsView.m */,
 				0CA394E11D407B1200655329 /* TSPersonWorkView.h */,
 				0CA394E21D407B1200655329 /* TSPersonWorkView.m */,
+				0C4D44901D475D880049B30C /* TSComentsView.h */,
+				0C4D44911D475D880049B30C /* TSComentsView.m */,
 			);
 			path = PersonView;
 			sourceTree = "<group>";
@@ -1032,6 +1063,7 @@
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */,
 				0C3285A61D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m in Sources */,
+				0C4D448F1D4758FA0049B30C /* TSComment.m in Sources */,
 				0CA394F91D40AF8A00655329 /* TSPersonDynamicCell.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */,
@@ -1042,6 +1074,7 @@
 				0CA6F9461D33356F0019A7BA /* TSDrawController.m in Sources */,
 				0CD5C0D91D372A1C001689CB /* TSNetWorkTool.m in Sources */,
 				0CE3A73B1D34DFB400D3AC88 /* SDCollectionViewCell.m in Sources */,
+				0C02599F1D484B1A00E2436B /* UIView+TSAddShadow.m in Sources */,
 				0CE3A7381D34DFB400D3AC88 /* TAAnimatedDotView.m in Sources */,
 				0CA6F95D1D333D610019A7BA /* TSTabBarController.m in Sources */,
 				0C852B831D3DD87600366171 /* TSMessageMeCell.m in Sources */,
@@ -1054,6 +1087,7 @@
 				0C9B0FB21D38B2F900F76773 /* TSSquareCollectionViewCell.m in Sources */,
 				0CA6F95B1D333D610019A7BA /* TSBasicViewController.m in Sources */,
 				0CA6F94A1D33357E0019A7BA /* TSMessageController.m in Sources */,
+				0C4D44921D475D880049B30C /* TSComentsView.m in Sources */,
 				0C36510E1D30910800857854 /* main.m in Sources */,
 				0CA394E31D407B1200655329 /* TSPersonWorkView.m in Sources */,
 				0C852B891D3DF63F00366171 /* TSCellBottomLine.m in Sources */,

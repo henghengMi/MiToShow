@@ -40,7 +40,6 @@
         collectionView.scrollEnabled = NO;
         collectionView.backgroundColor = [UIColor whiteColor];
         
-        
     }
     return  self;
 }
@@ -52,11 +51,11 @@
     [super layoutSubviews];
 
     // 根据collectionView的contentSize设置collectionView的height
-    
     // 10 +  _count / 3 * (wh + 10)
-//    CGFloat wh = (ScreenWidth - (4 * 10)) / 3 ;
+    //    CGFloat wh = (ScreenWidth - (4 * 10)) / 3 ;
+    
     self.collectionView.frame = CGRectMake(0, 0,ScreenWidth,self.height);
-     NSLog(@"%f",self.collectionView.contentSize.height);
+    NSLog(@"%f",self.collectionView.contentSize.height);
     
 }
 

@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "TSUser.h"
+#import "TSAction.h"
 @interface TSSubfeed : NSObject
+@property(nonatomic, strong) TSUser * user ;
+@property(nonatomic, copy) NSString * text;
+@property(nonatomic, strong) TSAction * action;
+@property(nonatomic, copy) NSString *feedid;
 
 @end

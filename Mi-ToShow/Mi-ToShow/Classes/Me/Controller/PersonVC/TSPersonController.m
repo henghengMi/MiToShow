@@ -10,6 +10,7 @@
 #import "TSPersonTableHeaderView.h"
 #import "TSMeHomeButtonsView.h"
 #import "TSPersonWorkView.h"
+#import "TSPersonDynamicCell.h"
 #import "TSPersonWorkCell.h"
 #import "TSPersonTopicCell.h"
 #import "TSPersonSubSetCell.h"
@@ -131,6 +132,7 @@
     tableView.backgroundColor = [UIColor whiteColor];
     self.tableView = tableView;
     [self.view addSubview:tableView];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // 插入view 用于head的停留
     tableView.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
@@ -180,21 +182,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (!self.currentIndex )  return 78; //动态
+    if (!self.currentIndex )  return self.dynamics.count; //动态
     else return 1; // 其他
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"id";
+//    static NSString *ID = @"id";
     UITableViewCell *cell ;
     if(self.currentIndex == 0) // 动态
     {
-      cell = [tableView dequeueReusableCellWithIdentifier:ID];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-        }
-        cell.textLabel.text = [NSString stringWithFormat:@"row-%ld",indexPath.row];
+//      cell = [tableView dequeueReusableCellWithIdentifier:ID];
+        TSPersonDynamicCell *  dynamicCell = [[TSPersonDynamicCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"TSPersonDynamicCell"];
+        
+        dynamicCell.backgroundColor = [UIColor whiteColor];
+        
+        dynamicCell.dynamic = self.dynamics[indexPath.row];
+         cell = dynamicCell;
     }else if (self.currentIndex == 1) // 作品
     {
         TSPersonWorkCell *workCell = [[TSPersonWorkCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TSPersonWorkCell"];
@@ -222,27 +226,45 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.currentIndex == 0) {
-        
+        TSDynamic *dynamic = self.dynamics[indexPath.row];
         // 1.有题目；340 图 230 * 230
         // 2.没题目 320
         // 3. 转发 ： h = 170;
         
         
-//        if (self.dynamics.count) {
-//            TSDynamic *dynamic = self.dynamics[indexPath.row];
-//            if (dynamic.action) { // 有题目
-//                
-//                
-//                if (dynamic.subfeed) { // 有转发
-//                    return 285;
-//                    
-//                }
-//                return 340;
-//            }
-//            
-//            return 320;
-//        }
-        return 30;
+//        
+//    self.commentsView.frame = CGRectMake(self.stateBtn.x, CGRectGetMaxY(self.commonCountBtn.frame) + 20, ScreenWidth - self.stateBtn.x - 10, 8 * 2  + 13 * commentsCount + ( (commentsCount -1) * 8) );
+        
+        
+        CGFloat bottomMargin = 40;
+        
+        
+        NSInteger commentsCount = dynamic.comments.count;
+        if (commentsCount) {
+            CGFloat commontH = 8 * 2  + 13 * commentsCount + ( (commentsCount -1) * 8);
+            bottomMargin  +=  commontH;
+        }
+        
+        
+        if (dynamic.subfeed) {
+        
+            if (dynamic.text.length) {
+                return 273 + bottomMargin;
+            }else
+            {
+                return 273 - 28 + bottomMargin;
+            }
+        }
+        
+        if (dynamic.text.length) {
+             return 358 + bottomMargin;
+        }else
+        {
+            return 330 + bottomMargin;
+        }
+        
+            
+
     }
     
     else if (self.currentIndex == 1) { // 作品
@@ -258,9 +280,7 @@
          int count = (int)self.subsets.count ;
         return 10 +  count / 3 * (160 + 10);
     }
-    
 
-    
     return 44;
 }
 
@@ -310,15 +330,15 @@
 #pragma mark scrollViewDidScroll
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"scrollView.contentOffset.y :%f",scrollView.contentOffset.y);
+//    NSLog(@"scrollView.contentOffset.y :%f",scrollView.contentOffset.y);
     CGFloat offsetY = scrollView.contentOffset.y;
     
     if (offsetY >= 280 - 44) {
         self.navView.backgroundColor = [UIColor blackColor];
-        NSLog(@"变黑");
+//        NSLog(@"变黑");
     }else
     {
-        NSLog(@"变透明");
+//        NSLog(@"变透明");
         self.navView.backgroundColor = [UIColor clearColor];
     }
     
