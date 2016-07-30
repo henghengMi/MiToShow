@@ -12,5 +12,6 @@
 
 // 背景颜色
 + (UIColor *)TSSectionColor;
-
+/** 取随机色 */
++ (UIColor *)randomColor;
 @end

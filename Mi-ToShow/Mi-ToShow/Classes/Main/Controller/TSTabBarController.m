@@ -110,7 +110,12 @@
 {
     NSLog(@"点击加号");
     TSDrawController *drawVC = [[TSDrawController alloc] init];
-    [self presentViewController:drawVC animated:YES completion:nil];
+//    TSNavigationController *nav = [[TSNavigationController alloc] initWithRootViewController:self];
+//    [nav  pushViewController:drawVC animated:YES];
+    [self.navigationController pushViewController:drawVC animated:YES];
+    
+    
+    
 }
 
 #pragma mark 监听点击~~~

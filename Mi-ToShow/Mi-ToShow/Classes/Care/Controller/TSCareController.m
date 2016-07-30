@@ -8,23 +8,54 @@
 
 #import "TSCareController.h"
 
+#import "TSCareCell.h"
+
 @interface TSCareController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, weak) UITableView * tableView;
-
+@property(nonatomic, strong) NSMutableArray * comments;
 @end
 
 @implementation TSCareController
 
+- (NSMutableArray *)comments
+{
+    if (!_comments) {
+        
+        NSArray *array =   @[
+                             @"怎么写君：666",
+                             @"网络科技 : 677645",
+                             @"cv：我爱你打两局",
+                             @"暗算：我怎么知道你在干嘛呢。-"
+                             ];
+
+        _comments = [NSMutableArray arrayWithArray:array];
+    }
+    return _comments;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupTableView];
-    
     [self nav];
+    [self getWorks];
+    
 }
+
+- (void)getWorks
+{
+    [TSNetWorkTool getWithURL:@"http://api.toshow.com/api/feed/getfeed?requestcount=20&timestamp=0" success:^(id json) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+
 
 - (void)setupTableView
 {
@@ -32,6 +63,9 @@
     [self.view addSubview:tableView];
     tableView.delegate = self;
     tableView.dataSource = self;
+    tableView.backgroundColor =[UIColor whiteColor];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 }
 
 -(void)nav
@@ -55,20 +89,37 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"id";
+    static NSString *ID = @"TSCareCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    TSCareCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell =   [TSCareCell careCell]; //[[TSCareCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"row-%ld",indexPath.row];
+    
+    cell.comments = self.comments;
+//    cell.textLabel.text = [NSString stringWithFormat:@"row-%ld",indexPath.row];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    NSInteger count = self.comments.count;
+    
+    CGFloat  h = 2*8;
+    for (int i = 0; i < count; i ++) {
+        NSString *str = self.comments[i];
+        h += [str sizeWithFont:[UIFont systemFontOfSize:12] maxSize:CGSizeMake(ScreenWidth - 60 - 10 - 16, MAXFLOAT)].height;
+        h += 5 ;
+    }
+    
+     NSLog(@"h:%f",h);
+    
+//    CGFloat commentH = count * 15 + (count - 1) * 5 + 2*8;
+    
+
+    
+    return 433 + h ;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

@@ -243,9 +243,7 @@
         if (commentsCount) {
             CGFloat commontH = 8 * 2  + 13 * commentsCount + ( (commentsCount -1) * 8);
             bottomMargin  +=  commontH;
-        }
-        
-        
+        }        
         if (dynamic.subfeed) {
         
             if (dynamic.text.length) {
@@ -262,9 +260,6 @@
         {
             return 330 + bottomMargin;
         }
-        
-            
-
     }
     
     else if (self.currentIndex == 1) { // 作品

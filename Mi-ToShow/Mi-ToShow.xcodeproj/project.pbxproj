@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C02599F1D484B1A00E2436B /* UIView+TSAddShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C02599E1D484B1A00E2436B /* UIView+TSAddShadow.m */; };
+		0C0259AD1D48AB2400E2436B /* TSCareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0259AB1D48AB2400E2436B /* TSCareCell.m */; };
+		0C0259AE1D48AB2400E2436B /* TSCareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0259AC1D48AB2400E2436B /* TSCareCell.xib */; };
+		0C0259B11D48BA5B00E2436B /* TSCareCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0259B01D48BA5B00E2436B /* TSCareCommentsView.m */; };
+		0C190D0B1D4B3CEF006F00EE /* TSDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C190D0A1D4B3CEF006F00EE /* TSDrawView.m */; };
+		0C190D0E1D4B4F5E006F00EE /* TSBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C190D0D1D4B4F5E006F00EE /* TSBezierPath.m */; };
 		0C3285A21D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */; };
 		0C3285A61D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3285A41D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m */; };
 		0C3285A71D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3285A51D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib */; };
@@ -117,6 +122,15 @@
 /* Begin PBXFileReference section */
 		0C02599D1D484B1A00E2436B /* UIView+TSAddShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TSAddShadow.h"; sourceTree = "<group>"; };
 		0C02599E1D484B1A00E2436B /* UIView+TSAddShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TSAddShadow.m"; sourceTree = "<group>"; };
+		0C0259AA1D48AB2400E2436B /* TSCareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareCell.h; sourceTree = "<group>"; };
+		0C0259AB1D48AB2400E2436B /* TSCareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareCell.m; sourceTree = "<group>"; };
+		0C0259AC1D48AB2400E2436B /* TSCareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSCareCell.xib; sourceTree = "<group>"; };
+		0C0259AF1D48BA5B00E2436B /* TSCareCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCareCommentsView.h; sourceTree = "<group>"; };
+		0C0259B01D48BA5B00E2436B /* TSCareCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCareCommentsView.m; sourceTree = "<group>"; };
+		0C190D091D4B3CEF006F00EE /* TSDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawView.h; sourceTree = "<group>"; };
+		0C190D0A1D4B3CEF006F00EE /* TSDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawView.m; sourceTree = "<group>"; };
+		0C190D0C1D4B4F5E006F00EE /* TSBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBezierPath.h; sourceTree = "<group>"; };
+		0C190D0D1D4B4F5E006F00EE /* TSBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBezierPath.m; sourceTree = "<group>"; };
 		0C3285A01D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonWorkCollectionviewCell.h; sourceTree = "<group>"; };
 		0C3285A11D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPersonWorkCollectionviewCell.m; sourceTree = "<group>"; };
 		0C3285A31D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPersonSubSetCollectionViewCell.h; sourceTree = "<group>"; };
@@ -324,6 +338,11 @@
 		0C0259A11D48541600E2436B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C0259AA1D48AB2400E2436B /* TSCareCell.h */,
+				0C0259AB1D48AB2400E2436B /* TSCareCell.m */,
+				0C0259AC1D48AB2400E2436B /* TSCareCell.xib */,
+				0C0259AF1D48BA5B00E2436B /* TSCareCommentsView.h */,
+				0C0259B01D48BA5B00E2436B /* TSCareCommentsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -690,6 +709,10 @@
 			children = (
 				0CA6F9441D33356F0019A7BA /* TSDrawController.h */,
 				0CA6F9451D33356F0019A7BA /* TSDrawController.m */,
+				0C190D091D4B3CEF006F00EE /* TSDrawView.h */,
+				0C190D0A1D4B3CEF006F00EE /* TSDrawView.m */,
+				0C190D0C1D4B4F5E006F00EE /* TSBezierPath.h */,
+				0C190D0D1D4B4F5E006F00EE /* TSBezierPath.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -975,6 +998,7 @@
 				0C852B8E1D3DFAF800366171 /* TSLetterCell.xib in Resources */,
 				0C9B0FB41D38B33100F76773 /* TSSquareCollectionViewCell.xib in Resources */,
 				0C3651191D30910800857854 /* Assets.xcassets in Resources */,
+				0C0259AE1D48AB2400E2436B /* TSCareCell.xib in Resources */,
 				0C3285A71D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.xib in Resources */,
 				0CE838F31D3F659D009058BC /* TSPersonTableHeaderView.xib in Resources */,
 			);
@@ -1058,12 +1082,14 @@
 				0C36518B1D30E4C500857854 /* UIColor+LJ.m in Sources */,
 				0C9B0FB71D38D7D300F76773 /* TSSomeOneView.m in Sources */,
 				0CD7F3C41D3C71E900F50AD3 /* UIColor+TS.m in Sources */,
+				0C190D0E1D4B4F5E006F00EE /* TSBezierPath.m in Sources */,
 				0CA6F96E1D3393240019A7BA /* TSHomeRightController.m in Sources */,
 				0C9B0F9B1D388A9A00F76773 /* TSTopic.m in Sources */,
 				0C36518C1D30E4C500857854 /* UIFont+LJ.m in Sources */,
 				0C9B0F991D388A9A00F76773 /* TSAllDrawTopic.m in Sources */,
 				0C3285A61D41C73F005CD8B1 /* TSPersonSubSetCollectionViewCell.m in Sources */,
 				0C4D448F1D4758FA0049B30C /* TSComment.m in Sources */,
+				0C190D0B1D4B3CEF006F00EE /* TSDrawView.m in Sources */,
 				0CA394F91D40AF8A00655329 /* TSPersonDynamicCell.m in Sources */,
 				0C36517E1D30E49F00857854 /* Foundation+Log.m in Sources */,
 				0C9B0F9C1D388A9A00F76773 /* TSUser.m in Sources */,
@@ -1082,6 +1108,7 @@
 				0CA6F9651D336EBD0019A7BA /* TSNavigationBar.m in Sources */,
 				0C852B781D3DCD7300366171 /* TSMessageMeController.m in Sources */,
 				0C36517C1D30D90500857854 /* UIView+Extension.m in Sources */,
+				0C0259AD1D48AB2400E2436B /* TSCareCell.m in Sources */,
 				0C3651891D30E4C500857854 /* NSString+SizeWithFont.m in Sources */,
 				0CE3A73C1D34DFB400D3AC88 /* SDCycleScrollView.m in Sources */,
 				0C9B0FB21D38B2F900F76773 /* TSSquareCollectionViewCell.m in Sources */,
@@ -1123,6 +1150,7 @@
 				0CE3A7391D34DFB400D3AC88 /* TADotView.m in Sources */,
 				0CA394FC1D40AF8A00655329 /* TSPersonWorkCell.m in Sources */,
 				0C3285A21D41B70C005CD8B1 /* TSPersonWorkCollectionviewCell.m in Sources */,
+				0C0259B11D48BA5B00E2436B /* TSCareCommentsView.m in Sources */,
 				0CE838E31D3F651F009058BC /* TSMeHomeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
