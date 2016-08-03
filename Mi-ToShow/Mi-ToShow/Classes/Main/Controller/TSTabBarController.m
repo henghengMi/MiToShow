@@ -113,9 +113,7 @@
 //    TSNavigationController *nav = [[TSNavigationController alloc] initWithRootViewController:self];
 //    [nav  pushViewController:drawVC animated:YES];
     [self.navigationController pushViewController:drawVC animated:YES];
-    
-    
-    
+
 }
 
 #pragma mark 监听点击~~~

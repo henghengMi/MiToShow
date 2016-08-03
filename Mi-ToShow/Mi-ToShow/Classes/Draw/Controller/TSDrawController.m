@@ -8,16 +8,35 @@
 
 #import "TSDrawController.h"
 #import "TSDrawView.h"
-@interface TSDrawController ()
+@interface TSDrawController ()<UIScrollViewDelegate>
 
 @property(nonatomic, weak) UIButton * menueBtn;
 @property(nonatomic, weak) UIButton * arrow;
 @property(nonatomic, weak) UIButton * lastSelectedBtn;
 @property(nonatomic, weak) TSDrawView * drawView;
 @property(nonatomic, weak) UIButton * forwardBtn;
+@property(nonatomic, strong) UIScrollView * scr;
+@property(nonatomic, weak) UIImageView * imgView;
 @end
 
 @implementation TSDrawController
+
+
+- (UIScrollView *)scr
+{
+    if (!_scr) {
+        _scr = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44 , ScreenWidth, ScreenHeight - 44 - 70  )];
+        _scr.backgroundColor = TSColor(38, 38, 38);
+        //只有contentSize比frame.size大，才能滚动
+        
+        //设置代理
+        _scr.delegate = self;
+        _scr.minimumZoomScale = 0.5;
+        _scr.maximumZoomScale = 3;
+    }
+    return _scr;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,12 +45,53 @@
     [self UI];
 }
 
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    CGFloat scale = scrollView.zoomScale;
+//    NSLog(@"%f",scale);
+    
+    if (scale < 1.0) {
+//        self.drawView.center = self.scr.center;
+        
+    }
+    
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
+{
+    if (scale < 1.0) {
+          NSLog(@"%f",scale);
+        [UIView animateWithDuration:0.25 animations:^{
+//            self.drawView.frame = CGRectMake(0, 70, ScreenWidth, ScreenHeight - 44 - 70 - 70 - 70);
+            self.drawView.origin = CGPointMake(0,  70);
+            self.drawView.size = CGSizeMake(ScreenWidth, ScreenHeight - 44 - 70 - 70 - 70);
+        }];
+    }else if (scale > 1.0)
+    {
+        scrollView.scrollEnabled =  NO;
+    }
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+//    UIImageView *imgView = [scrollView viewWithTag:200];
+    return self.drawView;
+}
+
 -(void)UI
 {
-   TSDrawView * drawView = [[TSDrawView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 60 - 44 - 10 - 70*2)];
-    drawView.centerY = self.view.centerY;
-    [self.view addSubview:drawView];
+    [self.view addSubview:self.scr];
+
+   TSDrawView * drawView = [[TSDrawView alloc] initWithFrame:CGRectMake(0, 70, ScreenWidth, ScreenHeight - 44 - 70 - 70 - 70)];
     self.drawView = drawView;
+    [self.scr addSubview:drawView];
+    drawView.backgroundColor = [UIColor whiteColor];
+    
+    // 加双指手势
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    pan.minimumNumberOfTouches = 2;
+    [drawView addGestureRecognizer:pan];
     
     UILabel *bbLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 18)];
     bbLabel.textColor = [UIColor randomColor];
@@ -52,6 +112,26 @@
     self.menueBtn = menueBtn;
     [self addBottomWithMenueBtn:menueBtn];
 }
+
+- (void)pan:(UIPanGestureRecognizer *)pan
+{
+     NSLog(@"------pan----");
+     CGPoint panPoint =  [pan translationInView:self.view];
+    if (pan.state  == UIGestureRecognizerStateBegan) {
+        
+    }else if (pan.state == UIGestureRecognizerStateEnded || pan.state == UIGestureRecognizerStateCancelled )
+    {
+        
+    }else
+    {
+        // 要累加
+        pan.view.transform = CGAffineTransformTranslate(pan.view.transform, panPoint.x, panPoint.y);
+        //         清空transform
+        [pan setTranslation:CGPointZero inView:pan.view];
+    }
+}
+
+
 #pragma mark 增加底部按钮
 - (void)addBottomWithMenueBtn:(UIButton *)menueBtn
 {
@@ -74,7 +154,6 @@
         [menueBtn addSubview:btn];
         [btn setImage:IMAGE(images[i]) forState:(UIControlStateNormal)];
     }
-    
 }
 
 #pragma mark drawHanddleView
@@ -125,7 +204,6 @@
 
 - (void)handdleBtnClick:(UIButton *)handdleBtn
 {
-
     // 右边
     if (handdleBtn.tag>= 522) {
         

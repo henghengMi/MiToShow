@@ -60,31 +60,66 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    // 拿出手势
-    UITouch *touch = [touches anyObject];
-    CGPoint beginPoint = [touch locationInView:touch.view];
-    TSBezierPath *beginPath = [[TSBezierPath alloc] init];
-    [beginPath moveToPoint:beginPoint];
-    beginPath.lineCapStyle = kCGLineCapRound;
-    beginPath.lineJoinStyle = kCGLineJoinBevel;
-    beginPath.lineWidth = self.lineW;
-    beginPath.pathColor = self.pathColor;
-    [self.lines addObject:beginPath];
-    [self setNeedsDisplay];
+    NSArray *touchArr = [[event allTouches] allObjects];
+    if (touchArr.count == 2) {
+         NSLog(@"两个手指");
+//        CGPoint p1 = [[touchArr objectAtIndex:0] locationInView:self];
+//        CGPoint p2 = [[touchArr objectAtIndex:1] locationInView:self];
+//        // 两点之间的中点
+//        CGPoint center = CGPointMake((p1.x + p2.x) / 2 ,(p1.y + p2.y) / 2);
+//        self.transform = CGAffineTransformMakeScale(center.x, center.y);
+        
+        
+    }else if (touchArr.count == 1)
+    {
+         NSLog(@"一个手指");
+        // 拿出手势
+        UITouch *touch = [touches anyObject];
+        CGPoint beginPoint = [touch locationInView:touch.view];
+        TSBezierPath *beginPath = [[TSBezierPath alloc] init];
+        [beginPath moveToPoint:beginPoint];
+        beginPath.lineCapStyle = kCGLineCapRound;
+        beginPath.lineJoinStyle = kCGLineJoinBevel;
+        beginPath.lineWidth = self.lineW;
+        beginPath.pathColor = self.pathColor;
+        [self.lines addObject:beginPath];
+        [self setNeedsDisplay];
+    }
+    
+    
+
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
-    UITouch *touch = [touches anyObject];
-    CGPoint movePoin =  [touch locationInView:touch.view];
-    TSBezierPath *movePath = [self.lines lastObject];
-    movePath.lineCapStyle = kCGLineCapRound;
-    movePath.lineJoinStyle = kCGLineJoinBevel;
-    movePath.lineWidth = self.lineW;
-    movePath.pathColor = self.pathColor;
-    [movePath addLineToPoint:movePoin];
-    [self setNeedsDisplay];
+    NSArray *touchArr = [[event allTouches] allObjects];
+    if (touchArr.count == 2) {
+//            NSLog(@"两个手指");
+//        UITouch *touch = [touches anyObject];
+//        
+//        
+//        
+//        
+//        
+//        CGPoint p1 = [[touchArr objectAtIndex:0] locationInView:self];
+//        CGPoint p2 = [[touchArr objectAtIndex:1] locationInView:self];
+//        // 两点之间的中点
+//        CGPoint center = CGPointMake((p1.x + p2.x) / 2 ,(p1.y + p2.y) / 2);
+//        self.transform = CGAffineTransformMakeScale(center.x, center.y);
+        
+        
+    }else if (touchArr.count == 1)
+    {
+        UITouch *touch = [touches anyObject];
+        CGPoint movePoin =  [touch locationInView:touch.view];
+        TSBezierPath *movePath = [self.lines lastObject];
+        movePath.lineCapStyle = kCGLineCapRound;
+        movePath.lineJoinStyle = kCGLineJoinBevel;
+        movePath.lineWidth = self.lineW;
+        movePath.pathColor = self.pathColor;
+        [movePath addLineToPoint:movePoin];
+        [self setNeedsDisplay];
+    }
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

@@ -32,6 +32,7 @@
 		0C36518D1D30E4C500857854 /* UIImage+Mi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3651881D30E4C500857854 /* UIImage+Mi.m */; };
 		0C4D448F1D4758FA0049B30C /* TSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D448E1D4758FA0049B30C /* TSComment.m */; };
 		0C4D44921D475D880049B30C /* TSComentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D44911D475D880049B30C /* TSComentsView.m */; };
+		0C7D614F1D4C817700612269 /* TSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D614E1D4C817700612269 /* TSScrollView.m */; };
 		0C852B751D3DBBB800366171 /* UIImageView+TSWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */; };
 		0C852B781D3DCD7300366171 /* TSMessageMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B771D3DCD7300366171 /* TSMessageMeController.m */; };
 		0C852B7E1D3DCE2600366171 /* TSMessageLetterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C852B7D1D3DCE2600366171 /* TSMessageLetterController.m */; };
@@ -169,6 +170,8 @@
 		0C4D448E1D4758FA0049B30C /* TSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSComment.m; sourceTree = "<group>"; };
 		0C4D44901D475D880049B30C /* TSComentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSComentsView.h; sourceTree = "<group>"; };
 		0C4D44911D475D880049B30C /* TSComentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSComentsView.m; sourceTree = "<group>"; };
+		0C7D614D1D4C817700612269 /* TSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSScrollView.h; sourceTree = "<group>"; };
+		0C7D614E1D4C817700612269 /* TSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSScrollView.m; sourceTree = "<group>"; };
 		0C852B731D3DBBB800366171 /* UIImageView+TSWebImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TSWebImageView.h"; sourceTree = "<group>"; };
 		0C852B741D3DBBB800366171 /* UIImageView+TSWebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TSWebImageView.m"; sourceTree = "<group>"; };
 		0C852B761D3DCD7300366171 /* TSMessageMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageMeController.h; sourceTree = "<group>"; };
@@ -713,6 +716,8 @@
 				0C190D0A1D4B3CEF006F00EE /* TSDrawView.m */,
 				0C190D0C1D4B4F5E006F00EE /* TSBezierPath.h */,
 				0C190D0D1D4B4F5E006F00EE /* TSBezierPath.m */,
+				0C7D614D1D4C817700612269 /* TSScrollView.h */,
+				0C7D614E1D4C817700612269 /* TSScrollView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1131,6 +1136,7 @@
 				0CD5C0DE1D372FE9001689CB /* AFNetAPIClient.m in Sources */,
 				0C9B0F9D1D388A9A00F76773 /* TSWork.m in Sources */,
 				0CD9A7501D3A0EE30031FA05 /* TSLeftTitleRightImageButton.m in Sources */,
+				0C7D614F1D4C817700612269 /* TSScrollView.m in Sources */,
 				0CA394FB1D40AF8A00655329 /* TSPersonTopicCell.m in Sources */,
 				0CE838E21D3F651F009058BC /* TSMeHomeButtonsView.m in Sources */,
 				0C9B0F981D388A9A00F76773 /* DrawTopic.m in Sources */,
