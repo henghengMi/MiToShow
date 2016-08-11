@@ -24,7 +24,7 @@
 #import "UIColor+TS.h"
 #import "TSConst.h"
 #import "UIImageView+TSWebImageView.h"
-
+#import "ReactiveCocoa.h"
 /** 自定义的高度 **/
 #define TSNavigationHeight 44.0f
 #define TSTableViewHeight ScreenHeight - TSNavigationHeight - 44 - 10

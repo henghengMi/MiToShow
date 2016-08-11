@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^PushBlock)();
+typedef void (^PopBlock)();
 
 @interface TSNavigationController : UINavigationController
 
 @property(nonatomic, copy) PushBlock pushBlock ;
+@property(nonatomic, copy) PopBlock  popBlock ;
 
 
 @end

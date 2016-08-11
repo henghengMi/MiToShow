@@ -8,6 +8,7 @@
 
 #import "TSNavigationController.h"
 #import "TSTabBarController.h"
+
 @interface TSNavigationController ()
 
 @end
@@ -29,9 +30,9 @@
 //拦截push
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-
     viewController.edgesForExtendedLayout = UIRectEdgeNone;//起始点从00开始
 
+    
     if (self.viewControllers.count >0) {
 //        TSTabBarController * tabBar =  (TSTabBarController *)[self.superclass class];
 //        [tabBar hideCenterImage];
@@ -40,7 +41,25 @@
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
-
 }
+
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated
+{
+     NSLog(@"---%ld",self.viewControllers.count);
+    
+    if(self.viewControllers.count == 2)
+    {
+        // 发出信号
+      TSTabBarController *  tb = (TSTabBarController *)self.parentViewController ;
+        [tb showCenterImage];
+        NSLog(@"返回跟页面，通知显示");
+    }
+    
+    return   [super popViewControllerAnimated:animated];;
+}
+
+
+
 
 @end

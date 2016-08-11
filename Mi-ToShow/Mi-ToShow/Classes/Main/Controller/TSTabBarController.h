@@ -10,5 +10,5 @@
 
 @interface TSTabBarController : UITabBarController
 - (void)hideCenterImage;
-
+- (void)showCenterImage;
 @end

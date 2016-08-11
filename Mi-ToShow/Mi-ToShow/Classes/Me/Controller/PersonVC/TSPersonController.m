@@ -27,6 +27,9 @@
 @property(nonatomic, strong) NSMutableArray * dynamics;
 @property(nonatomic, strong) NSMutableArray * works;
 @property(nonatomic, strong) NSMutableArray * subsets;
+
+
+
 @end
 
 @implementation TSPersonController
@@ -166,7 +169,9 @@
 #pragma mark - action
 - (void)backBtnClick
 {
+    
     [self.navigationController popViewControllerAnimated:YES];
+    // 通知tabBar要浮现！
 }
 
 - (void)shareBtnClick

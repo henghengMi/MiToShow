@@ -251,7 +251,7 @@
 		0CA6F9691D3393160019A7BA /* TSHomeLeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeLeftController.h; sourceTree = "<group>"; };
 		0CA6F96A1D3393160019A7BA /* TSHomeLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeLeftController.m; sourceTree = "<group>"; };
 		0CA6F96C1D3393240019A7BA /* TSHomeRightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHomeRightController.h; sourceTree = "<group>"; };
-		0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeRightController.m; sourceTree = "<group>"; };
+		0CA6F96D1D3393240019A7BA /* TSHomeRightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHomeRightController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		0CD5C0D71D372A1C001689CB /* TSNetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNetWorkTool.h; sourceTree = "<group>"; };
 		0CD5C0D81D372A1C001689CB /* TSNetWorkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNetWorkTool.m; sourceTree = "<group>"; };
 		0CD5C0DA1D372F5C001689CB /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };

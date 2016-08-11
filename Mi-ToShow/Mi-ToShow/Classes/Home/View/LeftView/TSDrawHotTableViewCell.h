@@ -12,5 +12,4 @@
 
 @property(nonatomic, strong) DrawTopic *drawTopic  ;
 
-
 @end

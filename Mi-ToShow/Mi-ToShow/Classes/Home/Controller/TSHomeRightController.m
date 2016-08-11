@@ -54,7 +54,6 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.view.backgroundColor = [UIColor brownColor];
    
     [self setupCollectionView];
@@ -274,7 +273,6 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
 #pragma mark collectionView dataSource && delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-  
     if (indexPath.section == 0) {
           DrawTopic *d = self.hotWorksArr[indexPath.row];
         SHOWALERT(d.user.nickname);
@@ -282,7 +280,6 @@ static  NSString  * const footCellIdentifier = @"footCellIdentifier";
           DrawTopic *d = self.newsWorksArr[indexPath.row];
          SHOWALERT(d.user.nickname);
     }
-    
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

@@ -11,6 +11,7 @@
 
 @interface TSPersonController : UIViewController
 
+@property (nonatomic, strong) RACSubject *subject;
 
 
 @end

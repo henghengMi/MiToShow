@@ -157,7 +157,7 @@
     self.showingRightVC = NO;
     [self TSNavLeftTitleDidClickisOnleft:self.TSNavOnleftTitle];
     self.TSNavOnleftTitle = YES;
-
+	
 }
 -(void)TSNavLeftTitleDidClickisOnleft:(BOOL)onleft{};
 

@@ -8,4 +8,5 @@ target ‘Mi-ToShow’ do
     pod 'MJRefresh'
     pod 'YYKit'
     pod 'MJExtension'
+    pod 'ReactiveCocoa', '~> 4.1.0'
 end

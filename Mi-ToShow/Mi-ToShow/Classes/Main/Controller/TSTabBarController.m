@@ -37,8 +37,17 @@
     TSCustomTabBar *tabBar = [[TSCustomTabBar alloc] init];
     [self setValue:tabBar forKeyPath:@"tabBar"];
     
+    
     // 3.增加中间的按钮
-    [self setupDrawButton];
+    UIButton *drawBtn = [self setupDrawButton];
+    [tabBar addSubview:drawBtn];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+    
+     NSLog(@"viewWillAppear");
 }
 
 -(void)setupChildVC
@@ -60,7 +69,7 @@
 }
 
 #pragma mark 设置中间的按钮
-- (void)setupDrawButton
+- (UIButton *)setupDrawButton
 {
     // 添加一个按钮到tabbar中
     UIButton *drawBtn = [[UIButton alloc] init];
@@ -68,13 +77,14 @@
     [drawBtn setImage:[UIImage imageNamed:@"drawicon_"] forState:UIControlStateHighlighted];
     drawBtn.size = CGSizeMake(65, 65);
     drawBtn.centerX = ScreenWidth * 0.5;
-    drawBtn.centerY = ScreenHeight - drawBtn.size.height * 0.5  ;
+    drawBtn.centerY = 22 * 0.5;//ScreenHeight - drawBtn.size.height * 0.5  ;
     drawBtn.tag = 999;
     
     [drawBtn addTarget:self action:@selector(drawBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:drawBtn];
     drawBtn.clipsToBounds = YES;
     drawBtn.layer.cornerRadius = 35;
+    return drawBtn;
 }
 
 #pragma mark 增加子控制器 并且包装导航栏
@@ -88,14 +98,29 @@
    
     // 先给外面传进来的小控制器 包装 一个导航控制器
     TSNavigationController *nav = [[TSNavigationController alloc] initWithRootViewController:childVc];
+    
     // 添加为子控制器
-    [self addChildViewController:nav];
+    [self addChildViewController:nav]; 
     nav.tabBarItem.tag = _indexTag;
     _indexTag++;
     __weak typeof (TSNavigationController *)weakNav =  nav;
     weakNav.pushBlock = ^{
         [self hideCenterImage];
     };
+    
+//    if ([childVc isKindOfClass:[TSMeController class]]) {
+//    
+//        childVc.subject = [RACSubject subject];
+//        
+//        [childVc.subject subscribeNext:^(id x) {
+//            
+//            NSLog(@"通知了ViewController");
+//        }];
+//        
+//        
+//    }
+
+    
 }
 
 #pragma mark 导航栏push的时候隐藏中间图片
@@ -103,6 +128,13 @@
 {
     UIButton *drawBtn = [self.view viewWithTag:999];
     drawBtn.hidden = YES;
+}
+
+- (void)showCenterImage
+{
+    UIButton *drawBtn = [self.view viewWithTag:999];
+    drawBtn.hidden = NO;
+    [self.view bringSubviewToFront:drawBtn];
 }
 
 #pragma mark 点击加号
